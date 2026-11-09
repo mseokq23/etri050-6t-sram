@@ -1,0 +1,63 @@
+
+Magic 8.3 revision 685 - Compiled on Thu Oct 15 02:29:39 PM CEST 2026.
+Starting magic under Tcl interpreter
+Using the terminal as the console.
+WARNING: RLIMIT_NOFILE is above 1024 and Tcl_Version<9 this may cause runtime issues [rlim_cur=20000]
+Using NULL graphics device.
+Processing system .magicrc file
+Switching to WIRING tool.
+Switching to NETLIST tool.
+Switching to PICK tool.
+Switching to BOX tool.
+Input style lambda=0.30(p): scaleFactor=30, multiplier=1
+Contact size value ignored (using GDS generation rules).
+Contact size value ignored (using GDS generation rules).
+Contact size value ignored (using GDS generation rules).
+Contact size value ignored (using GDS generation rules).
+Contact size value ignored (using GDS generation rules).
+Contact size value ignored (using GDS generation rules).
+The following types are not handled by extraction and will be treated as non-electrical types:
+    n_field_implant p_field_implant nselect pselect glass filln filla fillb xp m1p m2p m3p comment bb 
+2 Magic internal units = 1 Lambda
+Using technology "scmos", version 2001a
+Cell sram_array read from current working directory
+Scaled magic input cell sram_array geometry by factor of 2
+CIF output style is now "lambda=0.30(ETRI)"
+Cell sram6t_4x4 read from current working directory
+Scaled magic input cell sram6t_4x4 geometry by factor of 2
+Cell sram6t_x2 read from current working directory
+Scaled magic input cell sram6t_x2 geometry by factor of 2
+Cell sram6t read from current working directory
+Scaled magic input cell sram6t geometry by factor of 2
+   Generating output for cell sram6t
+   Generating output for cell sram6t_x2
+   Generating output for cell sram6t_4x4
+   Generating output for cell sram_array
+-rw-rw-rw- 1 designer designer 10466 Nov  9 19:26 sram_array.gds
+
+Magic 8.3 revision 685 - Compiled on Thu Oct 15 02:29:39 PM CEST 2026.
+Starting magic under Tcl interpreter
+Using the terminal as the console.
+WARNING: RLIMIT_NOFILE is above 1024 and Tcl_Version<9 this may cause runtime issues [rlim_cur=20000]
+Using NULL graphics device.
+Processing system .magicrc file
+Switching to WIRING tool.
+Switching to NETLIST tool.
+Switching to PICK tool.
+Switching to BOX tool.
+Input style lambda=0.30(p): scaleFactor=30, multiplier=1
+Contact size value ignored (using GDS generation rules).
+Contact size value ignored (using GDS generation rules).
+Contact size value ignored (using GDS generation rules).
+Contact size value ignored (using GDS generation rules).
+Contact size value ignored (using GDS generation rules).
+Contact size value ignored (using GDS generation rules).
+The following types are not handled by extraction and will be treated as non-electrical types:
+    n_field_implant p_field_implant nselect pselect glass filln filla fillb xp m1p m2p m3p comment bb 
+2 Magic internal units = 1 Lambda
+Using technology "scmos", version 2001a
+Cell sram6t read from current working directory
+Scaled magic input cell sram6t geometry by factor of 2
+CIF output style is now "lambda=0.30(ETRI)"
+   Generating output for cell sram6t
+-rw-rw-rw- 1 designer designer 4538 Nov  9 19:26 sram6t.gds

@@ -1,0 +1,61 @@
+
+Subcircuit summary:
+Circuit 1: sram6t                          |Circuit 2: sram6t                          
+-------------------------------------------|-------------------------------------------
+pfet (2)                                   |pfet (2)                                   
+nfet (4)                                   |nfet (4)                                   
+Number of devices: 6                       |Number of devices: 6                       
+Number of nets: 7                          |Number of nets: 7                          
+---------------------------------------------------------------------------------------
+Resolving symmetries by property value.
+Resolving symmetries by pin name.
+Netlists match uniquely.
+
+Subcircuit pins:
+Circuit 1: sram6t                          |Circuit 2: sram6t                          
+-------------------------------------------|-------------------------------------------
+BLB                                        |BLB                                        
+BL                                         |BL                                         
+WL                                         |WL                                         
+VSS                                        |VSS                                        
+VDD                                        |VDD                                        
+---------------------------------------------------------------------------------------
+Cell pin lists are equivalent.
+Device classes sram6t and sram6t are equivalent.
+Flattening unmatched subcell sram6t_4x4 in circuit sram_array (0)(1 instance)
+Flattening unmatched subcell sram6t_x2 in circuit sram_array (0)(8 instances)
+
+Subcircuit summary:
+Circuit 1: sram_array                      |Circuit 2: sram_array                      
+-------------------------------------------|-------------------------------------------
+sram6t (16)                                |sram6t (16)                                
+Number of devices: 16                      |Number of devices: 16                      
+Number of nets: 14                         |Number of nets: 14                         
+---------------------------------------------------------------------------------------
+Resolving symmetries by property value.
+Resolving symmetries by pin name.
+Netlists match uniquely.
+
+Subcircuit pins:
+Circuit 1: sram_array                      |Circuit 2: sram_array                      
+-------------------------------------------|-------------------------------------------
+VDD                                        |VDD                                        
+VSS                                        |VSS                                        
+BL3                                        |BL3                                        
+BL2                                        |BL2                                        
+BL1                                        |BL1                                        
+BL0                                        |BL0                                        
+BLB1                                       |BLB1                                       
+BLB2                                       |BLB2                                       
+BLB3                                       |BLB3                                       
+BLB0                                       |BLB0                                       
+WL2                                        |WL2                                        
+WL0                                        |WL0                                        
+WL3                                        |WL3                                        
+WL1                                        |WL1                                        
+---------------------------------------------------------------------------------------
+Cell pin lists are equivalent.
+Device classes sram_array and sram_array are equivalent.
+
+Final result: Circuits match uniquely.
+.

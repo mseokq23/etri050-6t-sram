@@ -1,0 +1,28 @@
+
+Note: No compatibility mode selected!
+
+
+Circuit: * 6t sram write trip voltage: the cell holds q = 1, wl = blb = 5 v,
+
+Warning: Model issue on line 38 :
+  .model nfet nmos ( level=49 version=3.2 tnom=27 tox=1.05e-8 xj=2.7e-7 nc ...
+unrecognized parameter (n) - ignored
+unrecognized parameter (fc) - ignored
+
+Warning: Model issue on line 85 :
+  .model pfet pmos ( level=49 version=3.2 tnom=27 tox=1.05e-8 xj=2.2e-7 nc ...
+unrecognized parameter (n) - ignored
+unrecognized parameter (fc) - ignored
+
+Doing analysis at TEMP = 27.000000 and TNOM = 27.000000
+
+Using SPARSE 1.3 as Direct Linear Solver
+
+No. of Data Rows : 1001
+
+Warning: command 'plot' is not available during batch simulation, ignored!
+    You may use Gnuplot instead.
+
+wtv                 =  2.00859e+00
+write trip voltage = 2.00859 V (BL must go below this to write 0)
+Note: Simulation executed from .control section 

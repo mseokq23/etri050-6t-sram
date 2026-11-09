@@ -1,0 +1,29 @@
+* NGSPICE file created from sram6t.ext - technology: scmos
+
+.subckt sram6t BL BLB WL VDD VSS
+M1000 VDD QB Q VDD pfet w=1.8u l=0.6u
++  ad=2.7p pd=4.8u as=4.32p ps=8.4u
+M1001 VSS QB Q VSS nfet w=3.6u l=0.6u
++  ad=5.4p pd=6.6u as=4.86p ps=6.6u
+M1002 QB Q VDD VDD pfet w=1.8u l=0.6u
++  ad=4.32p pd=8.4u as=2.7p ps=4.8u
+M1003 QB Q VSS VSS nfet w=3.6u l=0.6u
++  ad=4.86p pd=6.6u as=5.4p ps=6.6u
+M1004 Q WL BL VSS nfet w=1.8u l=0.6u
++  ad=4.86p pd=6.6u as=4.32p ps=8.4u
+M1005 BLB WL QB VSS nfet w=1.8u l=0.6u
++  ad=4.32p pd=8.4u as=4.86p ps=6.6u
+C0 WL BLB 0.0108f
+C1 WL BL 0.0108f
+C2 Q VDD 0.40455f
+C3 VDD BLB 0.15696f
+C4 VDD QB 0.22716f
+C5 VDD BL 0.15696f
+C6 Q QB 0.11232f
+C7 BLB VSS 4.04094f
+C8 BL VSS 4.04094f
+C9 WL VSS 1.22832f
+C10 VDD VSS 8.6394f
+C11 Q VSS 3.43875f ; **FLOATING
+C12 QB VSS 3.61614f ; **FLOATING
+.ends

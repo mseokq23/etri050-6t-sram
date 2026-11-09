@@ -1,0 +1,10 @@
+** sch_path: /workspaces/etri050-6t-sram/sch/sram6t.sch
+.subckt sram6t BL BLB WL VDD VSS
+*.PININFO WL:I BL:B BLB:B VDD:B VSS:B
+MPUL Q QB VDD VDD pfet w=1.8u l=0.6u
+MPDL Q QB VSS VSS nfet w=3.6u l=0.6u
+MPUR QB Q VDD VDD pfet w=1.8u l=0.6u
+MPDR QB Q VSS VSS nfet w=3.6u l=0.6u
+MPGL Q WL BL VSS nfet w=1.8u l=0.6u
+MPGR BLB WL QB VSS nfet w=1.8u l=0.6u
+.ends

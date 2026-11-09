@@ -1,0 +1,136 @@
+
+Note: No compatibility mode selected!
+
+
+Circuit: * 4 x 4 array + 4 column circuits: write a pattern into every row, then read it back
+
+Warning: Model issue on line 38 :
+  .model nfet nmos ( level=49 version=3.2 tnom=27 tox=1.05e-8 xj=2.7e-7 nc ...
+unrecognized parameter (n) - ignored
+unrecognized parameter (fc) - ignored
+
+Warning: Model issue on line 85 :
+  .model pfet pmos ( level=49 version=3.2 tnom=27 tox=1.05e-8 xj=2.2e-7 nc ...
+unrecognized parameter (n) - ignored
+unrecognized parameter (fc) - ignored
+
+Doing analysis at TEMP = 27.000000 and TNOM = 27.000000
+
+Using SPARSE 1.3 as Direct Linear Solver
+
+Initial Transient Solution
+--------------------------
+
+Node                                   Voltage
+----                                   -------
+vdd                                          5
+pre_n                                        0
+we                                           0
+din0                                         0
+din1                                         0
+din2                                         0
+din3                                         0
+wl0                                          0
+wl1                                          0
+wl2                                          0
+wl3                                          0
+xa.sram6t_4x4_0/sram6t_x2_2/sram6t_1/qb               5
+xa.sram6t_4x4_0/sram6t_x2_2/sram6t_1/q     3.90635e-09
+bl1                                          5
+blb1                                         5
+xa.sram6t_4x4_0/sram6t_x2_2/sram6t_0/qb               5
+xa.sram6t_4x4_0/sram6t_x2_2/sram6t_0/q     3.90635e-09
+xa.sram6t_4x4_0/sram6t_x2_3/sram6t_1/qb               5
+xa.sram6t_4x4_0/sram6t_x2_3/sram6t_1/q     3.90635e-09
+xa.sram6t_4x4_0/sram6t_x2_3/sram6t_0/qb               5
+xa.sram6t_4x4_0/sram6t_x2_3/sram6t_0/q     3.90635e-09
+xa.sram6t_4x4_0/sram6t_x2_4/sram6t_1/qb               5
+xa.sram6t_4x4_0/sram6t_x2_4/sram6t_1/q     3.90635e-09
+bl2                                          5
+blb2                                         5
+xa.sram6t_4x4_0/sram6t_x2_4/sram6t_0/qb               5
+xa.sram6t_4x4_0/sram6t_x2_4/sram6t_0/q     3.90635e-09
+xa.sram6t_4x4_0/sram6t_x2_5/sram6t_1/qb               5
+xa.sram6t_4x4_0/sram6t_x2_5/sram6t_1/q     3.90635e-09
+xa.sram6t_4x4_0/sram6t_x2_5/sram6t_0/qb               5
+xa.sram6t_4x4_0/sram6t_x2_5/sram6t_0/q     3.90635e-09
+xa.sram6t_4x4_0/sram6t_x2_6/sram6t_1/qb               5
+xa.sram6t_4x4_0/sram6t_x2_6/sram6t_1/q     3.90635e-09
+bl3                                          5
+blb3                                         5
+xa.sram6t_4x4_0/sram6t_x2_6/sram6t_0/qb               5
+xa.sram6t_4x4_0/sram6t_x2_6/sram6t_0/q     3.90635e-09
+xa.sram6t_4x4_0/sram6t_x2_7/sram6t_1/qb               5
+xa.sram6t_4x4_0/sram6t_x2_7/sram6t_1/q     3.90635e-09
+xa.sram6t_4x4_0/sram6t_x2_7/sram6t_0/qb               5
+xa.sram6t_4x4_0/sram6t_x2_7/sram6t_0/q     3.90635e-09
+xa.sram6t_4x4_0/sram6t_x2_0/sram6t_1/qb               5
+xa.sram6t_4x4_0/sram6t_x2_0/sram6t_1/q     3.90635e-09
+bl0                                          5
+blb0                                         5
+xa.sram6t_4x4_0/sram6t_x2_0/sram6t_0/qb               5
+xa.sram6t_4x4_0/sram6t_x2_0/sram6t_0/q     3.90635e-09
+xa.sram6t_4x4_0/sram6t_x2_1/sram6t_1/qb               5
+xa.sram6t_4x4_0/sram6t_x2_1/sram6t_1/q     3.90635e-09
+xa.sram6t_4x4_0/sram6t_x2_1/sram6t_0/qb               5
+xa.sram6t_4x4_0/sram6t_x2_1/sram6t_0/q     3.90635e-09
+xcol0.d                            8.29102e-09
+xcol0.db                                     5
+dout0                              8.27029e-09
+xcol1.d                            8.29102e-09
+xcol1.db                                     5
+dout1                              8.27029e-09
+xcol2.d                            8.29102e-09
+xcol2.db                                     5
+dout2                              8.27029e-09
+xcol3.d                            8.29102e-09
+xcol3.db                                     5
+dout3                              8.27029e-09
+vwl3#branch                                  0
+vwl2#branch                                  0
+vwl1#branch                                  0
+vwl0#branch                                  0
+vdin3#branch                                 0
+vdin2#branch                                 0
+vdin1#branch                                 0
+vdin0#branch                                 0
+vwe#branch                                   0
+vpre#branch                                  0
+vdd#branch                        -5.20729e-10
+
+ Reference value :  2.04250e-08 Reference value :  4.13250e-08 Reference value :  5.91250e-08 Reference value :  7.67250e-08 Reference value :  9.83250e-08 Reference value :  1.18875e-07 Reference value :  1.41375e-07 Reference value :  1.65175e-07 Reference value :  1.87313e-07 Reference value :  2.12718e-07 Reference value :  2.38125e-07
+Warning: command 'plot' is not available during batch simulation, ignored!
+    You may use Gnuplot instead.
+
+
+Warning: command 'plot' is not available during batch simulation, ignored!
+    You may use Gnuplot instead.
+
+
+Warning: command 'plot' is not available during batch simulation, ignored!
+    You may use Gnuplot instead.
+
+
+No. of Data Rows : 5472
+r0b0                =  5.00000e+00
+r0b1                =  6.19439e-09
+r0b2                =  5.00000e+00
+r0b3                =  6.24114e-09
+r1b0                =  6.10714e-09
+r1b1                =  5.00000e+00
+r1b2                =  6.12829e-09
+r1b3                =  5.00000e+00
+r2b0                =  5.00000e+00
+r2b1                =  5.00000e+00
+r2b2                =  6.19999e-09
+r2b3                =  6.24111e-09
+r3b0                =  6.01296e-09
+r3b1                =  6.17123e-09
+r3b2                =  5.00000e+00
+r3b3                =  5.00000e+00
+row | written | read
+  0 |  1010   |  1010
+  1 |  0101   |  0101
+  2 |  1100   |  1100
+  3 |  0011   |  0011
+Note: Simulation executed from .control section 

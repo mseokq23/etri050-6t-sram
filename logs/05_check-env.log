@@ -1,0 +1,21 @@
+[1] tools
+  OK   xschem
+  OK   ngspice
+  OK   magic
+  OK   netgen
+  OK   klayout
+  OK   python3
+       magic 8.3.685 | ngspice-47 | KLayout 0.30.12
+[2] ETRI kit
+  OK   spice/05cmos_model_240201.lib
+  OK   tech/etri050.magicrc
+  OK   tech/etri050_setup.tcl
+  OK   tech/Klayout_DRC_Script/etri_05um_generated_final.drc
+  OK   tech/ETRI050_CMOS.lyp
+  OK   ~/ETRI050_DesignKit link
+[3] ngspice + kit model
+  OK   NMOS 1.8/0.6 Vt = 0.763986 V
+[4] Magic + ETRI tech
+  OK   Magic DRC of a test NMOS: 0 errors
+
+check-env: 14 OK, 0 FAIL

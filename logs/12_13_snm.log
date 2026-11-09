@@ -1,0 +1,6 @@
+No. of Data Rows : 1001
+wrote butterfly_hold.txt, butterfly_read.txt
+Note: Simulation executed from .control section 
+hold   SNM = 1.313 V   (lobes 1.313 / 1.313 V)
+read   SNM = 0.621 V   (lobes 0.621 / 0.621 V)
+saved butterfly.png

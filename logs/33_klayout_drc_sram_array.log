@@ -1,0 +1,2 @@
+ETRI-DRC-KLAYOUT: 0 marker(s) 
+report: sram_array_drc.lyrdb   (klayout-etri sram_array.gds -m sram_array_drc.lyrdb)

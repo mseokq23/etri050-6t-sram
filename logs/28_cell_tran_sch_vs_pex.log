@@ -1,0 +1,7 @@
+t_write             =  4.84104e-10 targ=  1.27341e-08 trig=  1.22500e-08
+t_read              =  7.39708e-10 targ=  4.29897e-08 trig=  4.22500e-08
+qb_bump             =  5.72401e-01 at=  4.25750e-08
+--- post-layout
+t_write             =  5.66707e-10 targ=  1.28167e-08 trig=  1.22500e-08
+t_read              =  7.62893e-10 targ=  4.30129e-08 trig=  4.22500e-08
+qb_bump             =  5.72592e-01 at=  4.26250e-08

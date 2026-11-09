@@ -1,0 +1,2 @@
+ETRI-DRC-KLAYOUT: 1 marker(s) 3.PL1.bad1:1
+report: sram6t_drc.lyrdb   (klayout-etri sram6t.gds -m sram6t_drc.lyrdb)
