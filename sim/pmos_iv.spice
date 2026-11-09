@@ -1,0 +1,35 @@
+* PMOS I-V with the ETRI 0.5um kit model (pfet)
+* run: cd sim && ngspice pmos_iv.spice
+.include ../.pdk/ETRI050_DesignKit/spice/05cmos_model_240201.lib
+
+* W/L = 1.8u/0.6u (pull-up size of the 6T cell), source and body at 5 V
+VDD vdd 0 5
+VG g 0 5
+VD d 0 4.9
+M1 d g vdd vdd pfet W=1.8u L=0.6u
+
+.control
+* 1) Id-Vg at |VDS| = 0.1 V
+dc VG 5 0 -0.01
+let id = i(VD)
+let vsg = 5 - v(g)
+meas dc vsgt find vsg when id=0.3u
+set vtp = $&vsgt
+plot id*1e6 vs vsg xlabel '|VGS| [V]' ylabel '|ID| [uA]' title 'PMOS 1.8/0.6  Id-Vg (|VDS|=0.1V)'
+
+* 2) Id-Vd for |VGS| = 1..5 V
+alter VD dc=5
+dc VD 5 0 -0.01 VG 4 0 -1
+let id = i(VD)
+let vsd = 5 - v(d)
+plot id*1e6 vs vsd xlabel '|VDS| [V]' ylabel '|ID| [uA]' title 'PMOS 1.8/0.6  Id-Vd (|VGS|=1..5V)'
+
+* 3) saturation current at |VGS| = |VDS| = 5 V
+alter VG dc=0
+alter VD dc=0
+op
+let idsat = i(VD)*1e6
+set idp = $&idsat
+echo "PMOS 1.8/0.6 : |Vt| = $vtp V,  |Idsat| = $idp uA"
+.endc
+.end

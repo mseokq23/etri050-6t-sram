@@ -1,0 +1,10 @@
+* 6T SRAM cell, W/L in um: PU 1.8/0.6, PD 3.6/0.6, PG 1.8/0.6
+* (same netlist as Xschem writes for sch/sram6t.sch with "top level is a .subckt")
+.subckt sram6t BL BLB WL VDD VSS
+MPUL Q QB VDD VDD pfet w=1.8u l=0.6u
+MPDL Q QB VSS VSS nfet w=3.6u l=0.6u
+MPUR QB Q VDD VDD pfet w=1.8u l=0.6u
+MPDR QB Q VSS VSS nfet w=3.6u l=0.6u
+MPGL Q WL BL VSS nfet w=1.8u l=0.6u
+MPGR BLB WL QB VSS nfet w=1.8u l=0.6u
+.ends

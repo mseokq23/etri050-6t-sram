@@ -1,0 +1,39 @@
+* one 6T cell + column circuit: write 1, read, write 0, read
+* run: cd sim && ngspice cell_tran.spice
+.include ../.pdk/ETRI050_DesignKit/spice/05cmos_model_240201.lib
+.include sram6t_cell.spice
+.include column.spice
+
+VDD vdd 0 5
+* 0-10 precharge | 10-30 write 1 | 30-40 pre | 40-60 read | 60-70 pre | 70-90 write 0 | 90-100 pre | 100-120 read
+VPRE pre_n 0 PWL(0 0  10n 0 10.5n 5  30n 5 30.5n 0  40n 0 40.5n 5  60n 5 60.5n 0  70n 0 70.5n 5  90n 5 90.5n 0  100n 0 100.5n 5  120n 5 120.5n 0)
+VWE  we    0 PWL(0 0  11n 0 11.5n 5  29n 5 29.5n 0  71n 0 71.5n 5  89n 5 89.5n 0)
+VDIN din   0 PWL(0 5  60n 5 60.5n 0)
+VWL  wl    0 PWL(0 0  12n 0 12.5n 5  28n 5 28.5n 0  42n 0 42.5n 5  58n 5 58.5n 0  72n 0 72.5n 5  88n 5 88.5n 0  102n 0 102.5n 5  118n 5 118.5n 0)
+
+XC  bl blb wl vdd 0 sram6t
+XCOL bl blb pre_n we din dout vdd 0 column
+* bit-line load: wire + other cells of the column
+CBL  bl  0 100f
+CBLB blb 0 100f
+
+* the cell starts with Q = 0
+.ic v(xc.q)=0 v(xc.qb)=5
+
+.control
+tran 0.05n 130n uic
+plot v(wl) v(xc.q)+6 v(xc.qb)+6 xlabel 't [s]' title 'WL, Q / QB (+6 V)'
+plot v(bl) v(blb) v(dout)-6 title 'BL, BLB, DOUT (-6 V)'
+meas tran q_after_w1 find v(xc.q) at=29n
+meas tran dout_r1   find v(dout) at=57n
+meas tran q_after_w0 find v(xc.q) at=89n
+meas tran dout_r0   find v(dout) at=117n
+* write time: WL rises (12.25 ns) -> Q crosses 2.5 V
+meas tran t_write trig v(wl) val=2.5 rise=1 targ v(xc.q) val=2.5 rise=1
+* read time: WL rises (42.25 ns) -> DOUT crosses 2.5 V
+meas tran t_read trig v(wl) val=2.5 rise=2 targ v(dout) val=2.5 rise=1 td=42n
+* read disturb: how far QB (=0) is pulled up while reading Q=1
+meas tran qb_bump max v(xc.qb) from=42n to=58n
+wrdata cell_tran_out.txt v(wl) v(xc.q) v(xc.qb) v(bl) v(blb) v(dout)
+.endc
+.end

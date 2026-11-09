@@ -1,0 +1,20 @@
+* column circuit (netlist of sch/column.sch, Xschem with "top level is a .subckt")
+*   precharge / equalize : PRE_N = 0 pulls BL and BLB to VDD
+*   write switches       : WE = 1 connects BL to D (= DIN) and BLB to DB (= not DIN)
+*   sense                : DOUT = not BLB  (= Q of the selected cell)
+.subckt column BL BLB PRE_N WE DIN DOUT VDD VSS
+MPC1 BL PRE_N VDD VDD pfet w=3.6u l=0.6u
+MPC2 BLB PRE_N VDD VDD pfet w=3.6u l=0.6u
+MPEQ BL PRE_N BLB VDD pfet w=1.8u l=0.6u
+MNW1 BL WE D VSS nfet w=3.6u l=0.6u
+MNW2 BLB WE DB VSS nfet w=3.6u l=0.6u
+xdrv1 DIN DB VDD VSS inv
+xdrv2 DB D VDD VSS inv
+xsense BLB DOUT VDD VSS inv
+.ends
+
+.subckt inv A Y VDD VSS
+M1 Y A VDD VDD pfet w=3.6u l=0.6u
+M2 Y A VSS VSS nfet w=1.8u l=0.6u
+.ends
+

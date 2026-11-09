@@ -1,0 +1,30 @@
+* 6T SRAM write trip voltage: the cell holds Q = 1, WL = BLB = 5 V,
+* BL is lowered from 5 V to 0 V. The BL voltage where Q flips is the write trip voltage.
+* run: cd sim && ngspice write_trip.spice
+.include ../.pdk/ETRI050_DesignKit/spice/05cmos_model_240201.lib
+.param wpu=1.8u wpd=3.6u wpg=1.8u lch=0.6u
+
+VDD vdd 0 5
+VWL wl  0 5
+VBL bl  0 5
+VBLB blb 0 5
+
+MPUL q  qb vdd vdd pfet W={wpu} L={lch}
+MPDL q  qb 0   0   nfet W={wpd} L={lch}
+MPGL bl wl q   0   nfet W={wpg} L={lch}
+MPUR qb q  vdd vdd pfet W={wpu} L={lch}
+MPDR qb q  0   0   nfet W={wpd} L={lch}
+MPGR blb wl qb 0   nfet W={wpg} L={lch}
+
+* start from Q = 1
+.nodeset v(q)=5 v(qb)=0
+
+.control
+dc VBL 5 0 -0.005
+let diff = v(q) - v(qb)
+meas dc wtv find v(bl) when diff=0
+set wt = $&wtv
+plot v(q) v(qb) vs v(bl) xlabel 'V(BL) [V]' ylabel '[V]' title 'write trip (WL=BLB=5V)'
+echo "write trip voltage = $wt V (BL must go below this to write 0)"
+.endc
+.end

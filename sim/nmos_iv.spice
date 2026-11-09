@@ -1,0 +1,32 @@
+* NMOS I-V with the ETRI 0.5um kit model (nfet)
+* run: cd sim && ngspice nmos_iv.spice
+.include ../.pdk/ETRI050_DesignKit/spice/05cmos_model_240201.lib
+
+* W/L = 1.8u/0.6u (pass gate size of the 6T cell)
+VG g 0 0
+VD d 0 0.1
+M1 d g 0 0 nfet W=1.8u L=0.6u
+
+.control
+* 1) Id-Vg at VDS = 0.1 V
+dc VG 0 5 0.01
+let id = -i(VD)
+meas dc vt find v(g) when id=0.3u
+set vtn = $&vt
+plot id*1e6 xlabel 'VGS [V]' ylabel 'ID [uA]' title 'NMOS 1.8/0.6  Id-Vg (VDS=0.1V)'
+
+* 2) Id-Vd for VGS = 1..5 V
+alter VD dc=0
+dc VD 0 5 0.01 VG 1 5 1
+let id = -i(VD)
+plot id*1e6 xlabel 'VDS [V]' ylabel 'ID [uA]' title 'NMOS 1.8/0.6  Id-Vd (VGS=1..5V)'
+
+* 3) saturation current at VGS = VDS = 5 V
+alter VG dc=5
+alter VD dc=5
+op
+let idsat = -i(VD)*1e6
+set idn = $&idsat
+echo "NMOS 1.8/0.6 : Vt = $vtn V,  Idsat = $idn uA"
+.endc
+.end

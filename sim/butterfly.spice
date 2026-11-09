@@ -1,0 +1,31 @@
+* 6T SRAM butterfly curve: two half cells swept with the same input
+*   hold : WL = 0 V
+*   read : WL = 5 V, BL = BLB = 5 V (precharged)
+* run: cd sim && ngspice -b butterfly.spice   (python3 ../scripts/snm.py draws the plot)
+.include ../.pdk/ETRI050_DesignKit/spice/05cmos_model_240201.lib
+.param wpu=1.8u wpd=3.6u wpg=1.8u lch=0.6u
+
+VDD vdd 0 5
+VBL bl  0 5
+VWL wl  0 0
+VIN x   0 0
+
+* half cell A : input x (=QB) -> output qa (=Q)
+MPUA qa x vdd vdd pfet W={wpu} L={lch}
+MPDA qa x 0   0   nfet W={wpd} L={lch}
+MPGA bl wl qa 0   nfet W={wpg} L={lch}
+
+* half cell B : input x (=Q) -> output qb (=QB)
+MPUB qb x vdd vdd pfet W={wpu} L={lch}
+MPDB qb x 0   0   nfet W={wpd} L={lch}
+MPGB bl wl qb 0   nfet W={wpg} L={lch}
+
+.control
+dc VIN 0 5 0.005
+wrdata butterfly_hold.txt v(qa) v(qb)
+alter VWL dc=5
+dc VIN 0 5 0.005
+wrdata butterfly_read.txt v(qa) v(qb)
+echo "wrote butterfly_hold.txt, butterfly_read.txt"
+.endc
+.end

@@ -1,0 +1,23 @@
+* 4 x 4 array of 6T cells (schematic netlist for LVS and simulation)
+* rows: WL0..WL3, columns: BL0/BLB0 .. BL3/BLB3
+* (pin order = the order Magic writes for layout/sram_array, so both netlists plug into the same testbench)
+.include sram6t_cell.spice
+
+.subckt sram_array WL0 WL1 WL2 WL3 VSS VDD BL0 BLB0 BL1 BLB1 BL2 BLB2 BL3 BLB3
+X00 BL0 BLB0 WL0 VDD VSS sram6t
+X01 BL1 BLB1 WL0 VDD VSS sram6t
+X02 BL2 BLB2 WL0 VDD VSS sram6t
+X03 BL3 BLB3 WL0 VDD VSS sram6t
+X10 BL0 BLB0 WL1 VDD VSS sram6t
+X11 BL1 BLB1 WL1 VDD VSS sram6t
+X12 BL2 BLB2 WL1 VDD VSS sram6t
+X13 BL3 BLB3 WL1 VDD VSS sram6t
+X20 BL0 BLB0 WL2 VDD VSS sram6t
+X21 BL1 BLB1 WL2 VDD VSS sram6t
+X22 BL2 BLB2 WL2 VDD VSS sram6t
+X23 BL3 BLB3 WL2 VDD VSS sram6t
+X30 BL0 BLB0 WL3 VDD VSS sram6t
+X31 BL1 BLB1 WL3 VDD VSS sram6t
+X32 BL2 BLB2 WL3 VDD VSS sram6t
+X33 BL3 BLB3 WL3 VDD VSS sram6t
+.ends

@@ -1,0 +1,73 @@
+* 4 x 4 array + 4 column circuits: write a pattern into every row, then read it back
+* run: cd sim && ngspice array_tran.spice
+*   array netlist: post-layout (../layout/sram_array_pex.spice) or schematic (sram_array.spice)
+.include ../.pdk/ETRI050_DesignKit/spice/05cmos_model_240201.lib
+.include column.spice
+.include ../layout/sram_array_pex.spice
+*.include sram_array.spice
+
+VDD vdd 0 5
+* pattern written to rows 0..3 (bit 0 .. bit 3): 1010, 0101, 1100, 0011
+* 30 ns per access: writes at 10/40/70/100 ns, reads at 130/160/190/220 ns
+VPRE pre_n 0 PWL(0n 0  10n 0  10.5n 5  30n 5  30.5n 0  40n 0  40.5n 5  60n 5  60.5n 0  70n 0  70.5n 5  90n 5  90.5n 0  100n 0  100.5n 5  120n 5  120.5n 0  130n 0  130.5n 5  150n 5  150.5n 0  160n 0  160.5n 5  180n 5  180.5n 0  190n 0  190.5n 5  210n 5  210.5n 0  220n 0  220.5n 5  240n 5  240.5n 0)
+VWE  we    0 PWL(0n 0  11n 0  11.5n 5  29n 5  29.5n 0  41n 0  41.5n 5  59n 5  59.5n 0  71n 0  71.5n 5  89n 5  89.5n 0  101n 0  101.5n 5  119n 5  119.5n 0)
+VDIN0 din0 0 PWL(0n 0  8n 0  8.5n 5  38n 5  38.5n 0  68n 0  68.5n 5  98n 5  98.5n 0)
+VDIN1 din1 0 PWL(0n 0  8n 0  8.5n 0  38n 0  38.5n 5  68n 5  68.5n 5  98n 5  98.5n 0)
+VDIN2 din2 0 PWL(0n 0  8n 0  8.5n 5  38n 5  38.5n 0  68n 0  68.5n 0  98n 0  98.5n 5)
+VDIN3 din3 0 PWL(0n 0  8n 0  8.5n 0  38n 0  38.5n 5  68n 5  68.5n 0  98n 0  98.5n 5)
+VWL0 wl0 0 PWL(0n 0  12n 0  12.5n 5  28n 5  28.5n 0  132n 0  132.5n 5  148n 5  148.5n 0)
+VWL1 wl1 0 PWL(0n 0  42n 0  42.5n 5  58n 5  58.5n 0  162n 0  162.5n 5  178n 5  178.5n 0)
+VWL2 wl2 0 PWL(0n 0  72n 0  72.5n 5  88n 5  88.5n 0  192n 0  192.5n 5  208n 5  208.5n 0)
+VWL3 wl3 0 PWL(0n 0  102n 0  102.5n 5  118n 5  118.5n 0  222n 0  222.5n 5  238n 5  238.5n 0)
+
+XA wl0 wl1 wl2 wl3 0 vdd bl0 blb0 bl1 blb1 bl2 blb2 bl3 blb3 sram_array
+XCOL0 bl0 blb0 pre_n we din0 dout0 vdd 0 column
+XCOL1 bl1 blb1 pre_n we din1 dout1 vdd 0 column
+XCOL2 bl2 blb2 pre_n we din2 dout2 vdd 0 column
+XCOL3 bl3 blb3 pre_n we din3 dout3 vdd 0 column
+
+.control
+tran 0.05n 260n
+plot v(wl0)+18 v(wl1)+12 v(wl2)+6 v(wl3) title 'word lines'
+plot v(dout0)+18 v(dout1)+12 v(dout2)+6 v(dout3) title 'DOUT3..0 (reads from 130 ns)'
+plot v(bl0) v(blb0) title 'BL0 / BLB0'
+meas tran r0b0 find v(dout0) at=147n
+meas tran r0b1 find v(dout1) at=147n
+meas tran r0b2 find v(dout2) at=147n
+meas tran r0b3 find v(dout3) at=147n
+meas tran r1b0 find v(dout0) at=177n
+meas tran r1b1 find v(dout1) at=177n
+meas tran r1b2 find v(dout2) at=177n
+meas tran r1b3 find v(dout3) at=177n
+meas tran r2b0 find v(dout0) at=207n
+meas tran r2b1 find v(dout1) at=207n
+meas tran r2b2 find v(dout2) at=207n
+meas tran r2b3 find v(dout3) at=207n
+meas tran r3b0 find v(dout0) at=237n
+meas tran r3b1 find v(dout1) at=237n
+meas tran r3b2 find v(dout2) at=237n
+meas tran r3b3 find v(dout3) at=237n
+echo "row | written | read"
+let thr = 2.5
+let q00 = r0b0 gt thr
+let q01 = r0b1 gt thr
+let q02 = r0b2 gt thr
+let q03 = r0b3 gt thr
+echo "  0 |  1010   |  $&q00$&q01$&q02$&q03"
+let q10 = r1b0 gt thr
+let q11 = r1b1 gt thr
+let q12 = r1b2 gt thr
+let q13 = r1b3 gt thr
+echo "  1 |  0101   |  $&q10$&q11$&q12$&q13"
+let q20 = r2b0 gt thr
+let q21 = r2b1 gt thr
+let q22 = r2b2 gt thr
+let q23 = r2b3 gt thr
+echo "  2 |  1100   |  $&q20$&q21$&q22$&q23"
+let q30 = r3b0 gt thr
+let q31 = r3b1 gt thr
+let q32 = r3b2 gt thr
+let q33 = r3b3 gt thr
+echo "  3 |  0011   |  $&q30$&q31$&q32$&q33"
+.endc
+.end
