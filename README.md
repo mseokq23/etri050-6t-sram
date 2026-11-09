@@ -28,9 +28,9 @@ PDK는 이 레포에 넣지 않았음. 아래 링크에서 받으면 됨.
 
 ## 시작
 
-1. 이 레포를 fork 하거나 Use this template 으로 내 계정에 복사
-2. Code → Codespaces → Create codespace (4-core 추천)
-3. 처음 만들 때 이미지(약 4 GB) 받고 `scripts/setup-etri050.sh`가 자동으로 실행됨
+1. 이 레포를 fork (그냥 열어보기만 할 거면 fork 없이 2번부터 해도 됨)
+2. Code → Codespaces → Create codespace on main (2-core도 되고 4-core면 더 쾌적함)
+3. 처음 만들 때 이미지(압축 풀면 약 17 GB) 받고 `scripts/setup-etri050.sh`가 자동으로 실행됨 (작업 끝나면 codespace 삭제해야 무료 저장 용량이 덜 깎임)
 4. Ports 탭의 6080(EDA Desktop) → 브라우저에서 noVNC 데스크톱 접속 (비밀번호 `abc123`)
 5. 새 터미널에서 점검
 
