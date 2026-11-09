@@ -12,7 +12,7 @@ foreach {wl y} {WL0 6 WL1 112 WL2 124 WL3 230} {
 }
 
 # VSS bus (x 245-256) and VDD bus (x 261-272) on metal2, right of the array
-# (each via sits inside its bus, otherwise KLayout reports 10.MET2.W)
+# (each via sits inside its bus so no thin metal2 piece sticks out of it; the kit KLayout deck flags those)
 box 245 -10 256 243;  paint metal2
 box 261 -10 272 243;  paint metal2
 foreach y {0 118 236} {

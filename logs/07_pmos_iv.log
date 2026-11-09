@@ -5,7 +5,6 @@ Note: No compatibility mode selected!
 Circuit: * pmos i-v with the etri 0.5um kit model (pfet)
 
 Warning: Model issue on line 85 :
-  .model pfet pmos ( level=49 version=3.2 tnom=27 tox=1.05e-8 xj=2.2e-7 nc ...
 unrecognized parameter (n) - ignored
 unrecognized parameter (fc) - ignored
 

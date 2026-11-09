@@ -5,12 +5,10 @@ Note: No compatibility mode selected!
 Circuit: ** sch_path: /workspaces/etri050-6t-sram/sch/inv_tb.sch
 
 Warning: Model issue on line 38 :
-  .model nfet nmos ( level=49 version=3.2 tnom=27 tox=1.05e-8 xj=2.7e-7 nc ...
 unrecognized parameter (n) - ignored
 unrecognized parameter (fc) - ignored
 
 Warning: Model issue on line 85 :
-  .model pfet pmos ( level=49 version=3.2 tnom=27 tox=1.05e-8 xj=2.2e-7 nc ...
 unrecognized parameter (n) - ignored
 unrecognized parameter (fc) - ignored
 

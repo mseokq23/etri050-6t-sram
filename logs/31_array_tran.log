@@ -5,12 +5,10 @@ Note: No compatibility mode selected!
 Circuit: * 4 x 4 array + 4 column circuits: write a pattern into every row, then read it back
 
 Warning: Model issue on line 38 :
-  .model nfet nmos ( level=49 version=3.2 tnom=27 tox=1.05e-8 xj=2.7e-7 nc ...
 unrecognized parameter (n) - ignored
 unrecognized parameter (fc) - ignored
 
 Warning: Model issue on line 85 :
-  .model pfet pmos ( level=49 version=3.2 tnom=27 tox=1.05e-8 xj=2.2e-7 nc ...
 unrecognized parameter (n) - ignored
 unrecognized parameter (fc) - ignored
 
