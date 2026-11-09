@@ -1,0 +1,22 @@
+# Xschem setup for the ETRI 0.5 um kit (start with: xschem-etri)
+#   transistors: nmos4.sym / pmos4.sym with model=nfet / model=pfet
+#   model file : code block with value="tcleval(.include $::ETRI050_MODEL)"
+
+set XSCHEM_LIBRARY_PATH {}
+append XSCHEM_LIBRARY_PATH ${XSCHEM_SHAREDIR}/xschem_library/devices
+append XSCHEM_LIBRARY_PATH :${XSCHEM_SHAREDIR}/xschem_library
+append XSCHEM_LIBRARY_PATH :[file dirname [file normalize [info script]]]/sch
+
+if {[info exists env(ETRI050_DK)]} {
+  set ETRI050_DK $env(ETRI050_DK)
+} else {
+  set ETRI050_DK [file dirname [file normalize [info script]]]/.pdk/ETRI050_DesignKit
+}
+set ETRI050_MODEL $ETRI050_DK/spice/05cmos_model_240201.lib
+
+# netlists go to ./netlist (git-ignored)
+set netlist_dir [file dirname [file normalize [info script]]]/netlist
+
+# hide the operating-point annotation texts (gm=, vgs=...) until there is simulation data
+set enable_layer(15) 0
+set enable_layer(17) 0
