@@ -2,7 +2,7 @@
 """Write the schematic-level netlist of the sram64x4 macro (sim/sram64x4.spice).
 
   16 x 16 sram6t array, 16 row drivers, 16 precharge + mux columns,
-  4 sense amps + 4 write drivers, control block (sim/sram64x4_ctrl.spice from rtl/ via vlog2Spice)
+  4 sense amps + 4 write drivers, control block (sim/sram64x4_ctrl.spice from rtl/ via scripts/v2spice.py)
 
   row r = A[3:0], bit b uses columns 4b..4b+3, column 4b+c is selected by MUX[c] (c = A[5:4])
   wire load from the part 1 extraction: 4 fF per cell on BL / BLB, 1.2 fF per cell on WL,

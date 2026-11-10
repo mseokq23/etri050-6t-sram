@@ -1,6 +1,6 @@
 // sram64x4 control block: input registers, decoders, timing signals
 // gate-level netlist with the ETRI 0.5 um kit standard cells (digital_ETRI),
-// power pins written out so the same file works for vlog2Spice (simulation, LVS) and OpenROAD
+// power pins written out so the same file works for the SPICE netlists (simulation, LVS) and OpenROAD
 //
 //   CLK rise : A, WE, DIN are captured (DFFPOSX1)
 //   CLK high : WL_EN (= CLK & CLK_D1) opens the row predecoder P1 -> one WL goes high
