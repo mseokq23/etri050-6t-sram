@@ -1,0 +1,91 @@
+* one bit of the macro (bit 0): 4 columns x 16 cells, precharge, 4:1 column mux, sense amp, write driver
+* (included by bitslice_tb.spice and sae_sweep.spice; the control lines are sources in those decks:
+*  pre_n, wl0, mux0, sae, wden, dq, dqb)
+* the cell that is written and read: row 0, column 0 (xc0_0)
+VWLOFF wloff 0 0
+VMUXOFF muxoff 0 0
+XP0 bl0 blb0 pre_n vdd pchg
+XP1 bl1 blb1 pre_n vdd pchg
+XP2 bl2 blb2 pre_n vdd pchg
+XP3 bl3 blb3 pre_n vdd pchg
+XM0 bl0 blb0 dl dlb mux0 0 cmux
+XM1 bl1 blb1 dl dlb muxoff 0 cmux
+XM2 bl2 blb2 dl dlb muxoff 0 cmux
+XM3 bl3 blb3 dl dlb muxoff 0 cmux
+XSA dl dlb sae pre_n sao vdd 0 sa
+XWD dl dlb wden dq dqb 0 wdrv
+* wire load as in the macro netlist: 64 fF per bit line, 10 fF per data line
+CDL dl 0 10f
+CDLB dlb 0 10f
+CBL0 bl0 0 64f
+CBLB0 blb0 0 64f
+CBL1 bl1 0 64f
+CBLB1 blb1 0 64f
+CBL2 bl2 0 64f
+CBLB2 blb2 0 64f
+CBL3 bl3 0 64f
+CBLB3 blb3 0 64f
+XC0_0 bl0 blb0 wl0 vdd 0 sram6t
+XC0_1 bl0 blb0 wloff vdd 0 sram6t
+XC0_2 bl0 blb0 wloff vdd 0 sram6t
+XC0_3 bl0 blb0 wloff vdd 0 sram6t
+XC0_4 bl0 blb0 wloff vdd 0 sram6t
+XC0_5 bl0 blb0 wloff vdd 0 sram6t
+XC0_6 bl0 blb0 wloff vdd 0 sram6t
+XC0_7 bl0 blb0 wloff vdd 0 sram6t
+XC0_8 bl0 blb0 wloff vdd 0 sram6t
+XC0_9 bl0 blb0 wloff vdd 0 sram6t
+XC0_10 bl0 blb0 wloff vdd 0 sram6t
+XC0_11 bl0 blb0 wloff vdd 0 sram6t
+XC0_12 bl0 blb0 wloff vdd 0 sram6t
+XC0_13 bl0 blb0 wloff vdd 0 sram6t
+XC0_14 bl0 blb0 wloff vdd 0 sram6t
+XC0_15 bl0 blb0 wloff vdd 0 sram6t
+XC1_0 bl1 blb1 wl0 vdd 0 sram6t
+XC1_1 bl1 blb1 wloff vdd 0 sram6t
+XC1_2 bl1 blb1 wloff vdd 0 sram6t
+XC1_3 bl1 blb1 wloff vdd 0 sram6t
+XC1_4 bl1 blb1 wloff vdd 0 sram6t
+XC1_5 bl1 blb1 wloff vdd 0 sram6t
+XC1_6 bl1 blb1 wloff vdd 0 sram6t
+XC1_7 bl1 blb1 wloff vdd 0 sram6t
+XC1_8 bl1 blb1 wloff vdd 0 sram6t
+XC1_9 bl1 blb1 wloff vdd 0 sram6t
+XC1_10 bl1 blb1 wloff vdd 0 sram6t
+XC1_11 bl1 blb1 wloff vdd 0 sram6t
+XC1_12 bl1 blb1 wloff vdd 0 sram6t
+XC1_13 bl1 blb1 wloff vdd 0 sram6t
+XC1_14 bl1 blb1 wloff vdd 0 sram6t
+XC1_15 bl1 blb1 wloff vdd 0 sram6t
+XC2_0 bl2 blb2 wl0 vdd 0 sram6t
+XC2_1 bl2 blb2 wloff vdd 0 sram6t
+XC2_2 bl2 blb2 wloff vdd 0 sram6t
+XC2_3 bl2 blb2 wloff vdd 0 sram6t
+XC2_4 bl2 blb2 wloff vdd 0 sram6t
+XC2_5 bl2 blb2 wloff vdd 0 sram6t
+XC2_6 bl2 blb2 wloff vdd 0 sram6t
+XC2_7 bl2 blb2 wloff vdd 0 sram6t
+XC2_8 bl2 blb2 wloff vdd 0 sram6t
+XC2_9 bl2 blb2 wloff vdd 0 sram6t
+XC2_10 bl2 blb2 wloff vdd 0 sram6t
+XC2_11 bl2 blb2 wloff vdd 0 sram6t
+XC2_12 bl2 blb2 wloff vdd 0 sram6t
+XC2_13 bl2 blb2 wloff vdd 0 sram6t
+XC2_14 bl2 blb2 wloff vdd 0 sram6t
+XC2_15 bl2 blb2 wloff vdd 0 sram6t
+XC3_0 bl3 blb3 wl0 vdd 0 sram6t
+XC3_1 bl3 blb3 wloff vdd 0 sram6t
+XC3_2 bl3 blb3 wloff vdd 0 sram6t
+XC3_3 bl3 blb3 wloff vdd 0 sram6t
+XC3_4 bl3 blb3 wloff vdd 0 sram6t
+XC3_5 bl3 blb3 wloff vdd 0 sram6t
+XC3_6 bl3 blb3 wloff vdd 0 sram6t
+XC3_7 bl3 blb3 wloff vdd 0 sram6t
+XC3_8 bl3 blb3 wloff vdd 0 sram6t
+XC3_9 bl3 blb3 wloff vdd 0 sram6t
+XC3_10 bl3 blb3 wloff vdd 0 sram6t
+XC3_11 bl3 blb3 wloff vdd 0 sram6t
+XC3_12 bl3 blb3 wloff vdd 0 sram6t
+XC3_13 bl3 blb3 wloff vdd 0 sram6t
+XC3_14 bl3 blb3 wloff vdd 0 sram6t
+XC3_15 bl3 blb3 wloff vdd 0 sram6t

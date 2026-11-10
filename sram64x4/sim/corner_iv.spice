@@ -1,0 +1,30 @@
+* NMOS / PMOS 1.8u/0.6u at one process corner: Vt (constant current 0.3 uA at |VDS| = 0.1 V) and Idsat (|VGS| = |VDS| = 5 V)
+* run: ../scripts/run_corner.sh corner_iv.spice SS     (the script fills in the corner name)
+.lib ../work/corner.lib TT
+VGN gn 0 0
+VDN dn 0 0.1
+MN dn gn 0 0 nfet W=1.8u L=0.6u
+VGP gp 0 5
+VDP dp 0 4.9
+VSP sp 0 5
+MP dp gp sp sp pfet W=1.8u L=0.6u
+.control
+dc VGN 0 5 0.005
+meas dc vt find v(gn) when i(VDN)=-0.3u
+set vtn = $&vt
+dc VGP 5 0 -0.005
+meas dc vg find v(gp) when i(VDP)=0.3u
+let vt = 5 - vg
+set vtp = $&vt
+alter VDN dc=5
+alter VGN dc=5
+alter VGP dc=0
+alter VDP dc=0
+op
+let idn = -i(VDN)*1e6
+let idp = i(VDP)*1e6
+set idn = $&idn
+set idp = $&idp
+echo "CORNER-IV vtn $vtn vtp $vtp idsat_n_uA $idn idsat_p_uA $idp"
+.endc
+.end

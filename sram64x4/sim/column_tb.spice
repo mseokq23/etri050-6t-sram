@@ -1,0 +1,58 @@
+* one column: precharge (pchg) + 16 cells + one column-mux pair (cmux), the data-line side with
+* the sense amp's precharge pair and a pull-down like the write driver
+*   0 - 10 ns : BL / BLB start at 0 V, PRE_BL on            -> how fast the precharge fills 64 fF
+*  10 - 30 ns : mux on, DL pulled to 0 V (like a write)     -> the NMOS passes 0 to BL
+*  30 - 50 ns : pull-down off, only the DL side precharged  -> through the NMOS, BL stops at about VDD - Vt
+*  50 - 60 ns : PRE_BL on again                             -> BL back to 5 V
+*   run: cd sram64x4/sim && ngspice column_tb.spice
+.include ../../.pdk/ETRI050_DesignKit/spice/05cmos_model_240201.lib
+.include ../../sim/sram6t_cell.spice
+.include periph.spice
+
+VDD vdd 0 5
+VPREBL pre_bl 0 PWL(0 0 10n 0 10.2n 5 50n 5 50.2n 0)
+VPREDL pre_dl 0 PWL(0 5 30n 5 30.2n 0)
+VMUX mux 0 PWL(0 0 11n 0 11.2n 5)
+VWD wd 0 PWL(0 0 12n 0 12.2n 5 30n 5 30.2n 0)
+VWL wloff 0 0
+
+XP bl blb pre_bl vdd pchg
+XM bl blb dl dlb mux 0 cmux
+* sense-amp side: its precharge pair, and a write-driver-like pull-down on DL only
+MPP1 dl pre_dl vdd vdd pfet w=2.4u l=0.6u
+MPP2 dlb pre_dl vdd vdd pfet w=2.4u l=0.6u
+MWD dl wd 0 0 nfet w=4.8u l=0.6u
+CDL dl 0 10f
+CDLB dlb 0 10f
+
+* 16 cells (word lines off) + bit-line wire, as in the macro netlist
+XC0  bl blb wloff vdd 0 sram6t
+XC1  bl blb wloff vdd 0 sram6t
+XC2  bl blb wloff vdd 0 sram6t
+XC3  bl blb wloff vdd 0 sram6t
+XC4  bl blb wloff vdd 0 sram6t
+XC5  bl blb wloff vdd 0 sram6t
+XC6  bl blb wloff vdd 0 sram6t
+XC7  bl blb wloff vdd 0 sram6t
+XC8  bl blb wloff vdd 0 sram6t
+XC9  bl blb wloff vdd 0 sram6t
+XC10 bl blb wloff vdd 0 sram6t
+XC11 bl blb wloff vdd 0 sram6t
+XC12 bl blb wloff vdd 0 sram6t
+XC13 bl blb wloff vdd 0 sram6t
+XC14 bl blb wloff vdd 0 sram6t
+XC15 bl blb wloff vdd 0 sram6t
+CBL bl 0 64f
+CBLB blb 0 64f
+
+.ic v(bl)=0 v(blb)=0
+.option noinit
+.control
+tran 0.02n 60n
+meas tran t_pre  when v(bl)=4.5 rise=1
+meas tran bl_low find v(bl) at=29n
+meas tran bl_nmos find v(bl) at=49n
+meas tran dl_nmos find v(dl) at=49n
+plot v(bl) v(dl) v(pre_bl)+6 v(mux)+12 xlabel 'time' ylabel '[V]' title 'BL, DL, PRE_BL (+6), MUX (+12)'
+.endc
+.end

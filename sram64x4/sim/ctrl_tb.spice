@@ -1,0 +1,57 @@
+* control block alone (sim/sram64x4_ctrl.spice: bash ../scripts/ctrl_spice.sh)
+*   cycle 0 (CLK rises at 25 ns): write, address 0, DIN = 0101
+*   cycle 1 (CLK rises at 75 ns): read, address 0 (SAO is driven with 1010 here, so DOUT changes)
+*   outputs loaded with the gate capacitance of what they drive in the macro (estimated) + wire
+*   run: cd sram64x4/sim && ngspice ctrl_tb.spice
+.include ../../.pdk/ETRI050_DesignKit/spice/05cmos_model_240201.lib
+.include sram64x4_ctrl.spice
+
+VDD vdd 0 5
+VCLK clk 0 PULSE(0 5 25n 0.2n 0.2n 24.8n 50n)
+VWE we 0 PWL(0 5 60n 5 60.2n 0)
+VA a 0 0
+VD0 din0 0 5
+VD1 din1 0 0
+VD2 din2 0 5
+VD3 din3 0 0
+VS0 sao0 0 0
+VS1 sao1 0 5
+VS2 sao2 0 0
+VS3 sao3 0 5
+
+XCTRL vdd 0 clk we a a a a a a din0 din1 din2 din3 sao0 sao1 sao2 sao3 dout0 dout1 dout2 dout3
++ p0_0 p0_1 p0_2 p0_3 p1_0 p1_1 p1_2 p1_3 mux0 mux1 mux2 mux3 pre_n sae wden
++ dq0 dq1 dq2 dq3 dqb0 dqb1 dqb2 dqb3 sram64x4_ctrl
+
+* P0 / P1: 4 row-driver NAND inputs each, MUX: 8 pass gates, SAE: 8 tail transistors,
+* WDEN: 8 write-driver transistors, PRE_N: 32 + 8 precharge PMOS
+CP00 p0_0 0 75f
+CP01 p0_1 0 75f
+CP02 p0_2 0 75f
+CP03 p0_3 0 75f
+CP10 p1_0 0 75f
+CP11 p1_1 0 75f
+CP12 p1_2 0 75f
+CP13 p1_3 0 75f
+CM0 mux0 0 60f
+CM1 mux1 0 60f
+CM2 mux2 0 60f
+CM3 mux3 0 60f
+CSAE sae 0 60f
+CWDEN wden 0 75f
+CPRE pre_n 0 230f
+
+.option noinit
+.control
+tran 0.02n 110n
+meas tran wl_w   trig v(clk) val=2.5 rise=1 targ v(p1_0) val=2.5 rise=1
+meas tran wl_r   trig v(clk) val=2.5 rise=2 targ v(p1_0) val=2.5 rise=2
+meas tran sae_r  trig v(clk) val=2.5 rise=2 targ v(sae) val=2.5 rise=1
+meas tran mux_off trig v(clk) val=2.5 rise=2 targ v(mux0) val=2.5 fall=2
+meas tran wl_off trig v(clk) val=2.5 fall=1 targ v(p1_0) val=2.5 fall=1
+meas tran pre_on trig v(p1_0) val=2.5 fall=1 targ v(pre_n) val=2.5 fall=1
+meas tran dout_d trig v(clk) val=2.5 fall=1 targ v(dout0) val=2.5 fall=1
+plot v(clk)+18 v(p1_0)+12 v(wden)+6 v(sae) xlabel 'time' ylabel '[V]' title 'CLK (+18), P1[0] (+12), WDEN (+6), SAE'
+plot v(clk)+12 v(mux0)+6 v(pre_n) xlabel 'time' ylabel '[V]' title 'CLK (+12), MUX[0] (+6), PRE_N'
+.endc
+.end

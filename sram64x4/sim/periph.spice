@@ -1,0 +1,54 @@
+* sram64x4 custom peripheral circuits (W/L in um, l = 0.6u everywhere)
+*   pchg   : bit-line precharge, PRE_N = 0 -> BL = BLB = VDD
+*   cmux   : one column of the 4:1 column mux (NMOS pass gates BL-DL, BLB-DLB)
+*   sa     : latch sense amp on DL / DLB, fires on SAE, DL / DLB precharged by PRE_N
+*   wdrv   : write driver, WDEN = 1 pulls DL (DIN = 0) or DLB (DIN = 1) to 0
+*   rowdrv : row decoder gate + word-line driver, WL = P0 and P1
+
+.subckt pchg BL BLB PRE_N VDD
+MPC1 BL PRE_N VDD VDD pfet w=3.6u l=0.6u
+MPC2 BLB PRE_N VDD VDD pfet w=3.6u l=0.6u
+.ends
+
+.subckt cmux BL BLB DL DLB MUX VSS
+MNM1 BL MUX DL VSS nfet w=3.6u l=0.6u
+MNM2 BLB MUX DLB VSS nfet w=3.6u l=0.6u
+.ends
+
+.subckt sa DL DLB SAE PRE_N SAO VDD VSS
+* latch: cross-coupled pairs, tail switch (2 fingers)
+MN1 DL DLB TAIL VSS nfet w=3.6u l=0.6u
+MN2 DLB DL TAIL VSS nfet w=3.6u l=0.6u
+MP1 DL DLB VDD VDD pfet w=2.4u l=0.6u
+MP2 DLB DL VDD VDD pfet w=2.4u l=0.6u
+MNT1 TAIL SAE VSS VSS nfet w=3.6u l=0.6u
+MNT2 TAIL SAE VSS VSS nfet w=3.6u l=0.6u
+* DL / DLB precharge
+MPP1 DL PRE_N VDD VDD pfet w=2.4u l=0.6u
+MPP2 DLB PRE_N VDD VDD pfet w=2.4u l=0.6u
+* output inverter on DLB (SAO = stored bit) and a matching dummy on DL
+MPO SAO DLB VDD VDD pfet w=3.6u l=0.6u
+MNO SAO DLB VSS VSS nfet w=1.8u l=0.6u
+MPD SAX DL VDD VDD pfet w=3.6u l=0.6u
+MND SAX DL VSS VSS nfet w=1.8u l=0.6u
+.ends
+
+.subckt wdrv DL DLB WDEN DQ DQB VSS
+MW1 DL WDEN N1 VSS nfet w=4.8u l=0.6u
+MW2 N1 DQB VSS VSS nfet w=4.8u l=0.6u
+MW3 DLB WDEN N2 VSS nfet w=4.8u l=0.6u
+MW4 N2 DQ VSS VSS nfet w=4.8u l=0.6u
+.ends
+
+.subckt rowdrv P0 P1 WL VDD VSS
+* NAND2
+MPA X P0 VDD VDD pfet w=5.1u l=0.6u
+MPB X P1 VDD VDD pfet w=5.1u l=0.6u
+MNA M P0 VSS VSS nfet w=4.5u l=0.6u
+MNB X P1 M VSS nfet w=4.5u l=0.6u
+* word-line driver, 2 fingers
+MPI1 WL X VDD VDD pfet w=5.1u l=0.6u
+MPI2 WL X VDD VDD pfet w=5.1u l=0.6u
+MNI1 WL X VSS VSS nfet w=4.5u l=0.6u
+MNI2 WL X VSS VSS nfet w=4.5u l=0.6u
+.ends

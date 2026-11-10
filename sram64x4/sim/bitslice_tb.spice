@@ -1,0 +1,47 @@
+* bit slice with hand-drawn control lines (the control block comes later)
+*   cycle 0 (0-40 ns)    : write 1 to the cell at row 0 / column 0
+*   cycle 1 (40-80 ns)   : read it
+*   cycle 2 (80-120 ns)  : write 0
+*   cycle 3 (120-160 ns) : read it
+*   each cycle: PRE_N off at +1 ns, WL / MUX / WDEN at +3 ns, SAE at +3 ns + tsae (read), precharge from +20.5 ns
+*   run: cd sram64x4/sim && ngspice bitslice_tb.spice
+.include ../../.pdk/ETRI050_DesignKit/spice/05cmos_model_240201.lib
+.include ../../sim/sram6t_cell.spice
+.include periph.spice
+.include bitslice.cir
+.param tsae_ns=1.5 tr=0.2n
+
+VDD vdd 0 5
+VPRE pre_n 0 PWL(0 0 1n 0 1.2n 5 20.5n 5 20.7n 0 41n 0 41.2n 5 60.5n 5 60.7n 0
++ 81n 0 81.2n 5 100.5n 5 100.7n 0 121n 0 121.2n 5 140.5n 5 140.7n 0)
+VWL wl0 0 PWL(0 0 3n 0 3.2n 5 19n 5 19.2n 0 43n 0 43.2n 5 59n 5 59.2n 0
++ 83n 0 83.2n 5 99n 5 99.2n 0 123n 0 123.2n 5 139n 5 139.2n 0)
+VWDEN wden 0 PWL(0 0 3n 0 3.2n 5 19n 5 19.2n 0 83n 0 83.2n 5 99n 5 99.2n 0)
+VDQ dq 0 PWL(0 5 80n 5 80.2n 0)
+BDQB dqb 0 v = 5 - v(dq)
+* read: the mux closes when SAE fires (the sense amp then only sees DL / DLB)
+BMUX mux0 0 v = 5*( min(max((time-3n)/tr,0),1) - min(max((time-19n)/tr,0),1)
++ + min(max((time-43n)/tr,0),1) - min(max((time-43n-tsae_ns*1n)/tr,0),1)
++ + min(max((time-83n)/tr,0),1) - min(max((time-99n)/tr,0),1)
++ + min(max((time-123n)/tr,0),1) - min(max((time-123n-tsae_ns*1n)/tr,0),1) )
+BSAE sae 0 v = 5*( min(max((time-43.3n-tsae_ns*1n)/tr,0),1) - min(max((time-59.5n)/tr,0),1)
++ + min(max((time-123.3n-tsae_ns*1n)/tr,0),1) - min(max((time-139.5n)/tr,0),1) )
+
+.ic v(xc0_0.q)=0 v(xc0_0.qb)=5
+.option noinit
+.control
+tran 0.02n 160n
+let dlx = v(dl) - v(dlb)
+meas tran q_w1  find v(xc0_0.q) at=39n
+meas tran dv_r1 find dlx at=44.5n
+meas tran sao_1 find v(sao) at=59n
+meas tran q_w0  find v(xc0_0.q) at=119n
+meas tran dv_r0 find dlx at=124.5n
+meas tran sao_0 find v(sao) at=139n
+plot v(wl0)+12 v(xc0_0.q)+6 v(dl) v(dlb) xlabel 'time' ylabel '[V]' title 'WL (+12), Q (+6), DL / DLB'
+plot v(sae)+12 v(dl)+6 v(dlb)+6 v(sao) xlimit 42n 52n xlabel 'time' ylabel '[V]'
++ title 'read 1: SAE (+12), DL / DLB (+6), SAO'
+plot v(blb0)+12 v(xc0_0.q)+6 v(xc0_0.qb)+6 v(dlb) xlimit 2n 12n xlabel 'time' ylabel '[V]'
++ title 'write 1: BLB (+12), Q / QB (+6), DLB'
+.endc
+.end

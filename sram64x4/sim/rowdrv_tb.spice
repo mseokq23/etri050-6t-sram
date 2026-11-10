@@ -1,0 +1,43 @@
+* row driver (periph.spice rowdrv) on one word line: 16 cells + wire
+*   P0 is held high (this row's P0 line is selected), P1 is the WL_EN-gated line from the control block
+*   run: cd sram64x4/sim && ngspice rowdrv_tb.spice
+.include ../../.pdk/ETRI050_DesignKit/spice/05cmos_model_240201.lib
+.include ../../sim/sram6t_cell.spice
+.include periph.spice
+
+VDD vdd 0 5
+VP0 p0 0 5
+VP1 p1 0 PWL(0 0 5n 0 5.2n 5 25n 5 25.2n 0)
+XRD p0 p1 wl vdd 0 rowdrv
+
+* the 16 cells of one row (bit lines held at 5 V, as after the precharge)
+XC0  vdd vdd wl vdd 0 sram6t
+XC1  vdd vdd wl vdd 0 sram6t
+XC2  vdd vdd wl vdd 0 sram6t
+XC3  vdd vdd wl vdd 0 sram6t
+XC4  vdd vdd wl vdd 0 sram6t
+XC5  vdd vdd wl vdd 0 sram6t
+XC6  vdd vdd wl vdd 0 sram6t
+XC7  vdd vdd wl vdd 0 sram6t
+XC8  vdd vdd wl vdd 0 sram6t
+XC9  vdd vdd wl vdd 0 sram6t
+XC10 vdd vdd wl vdd 0 sram6t
+XC11 vdd vdd wl vdd 0 sram6t
+XC12 vdd vdd wl vdd 0 sram6t
+XC13 vdd vdd wl vdd 0 sram6t
+XC14 vdd vdd wl vdd 0 sram6t
+XC15 vdd vdd wl vdd 0 sram6t
+* word-line wire: 1.2 fF per cell (part 1 extraction) x 16
+CWL wl 0 19.2f
+
+.option noinit
+.control
+tran 0.01n 35n
+meas tran t_on   trig v(p1) val=2.5 rise=1 targ v(wl) val=2.5 rise=1
+meas tran t_off  trig v(p1) val=2.5 fall=1 targ v(wl) val=2.5 fall=1
+meas tran t_rise trig v(wl) val=0.5 rise=1 targ v(wl) val=4.5 rise=1
+meas tran t_fall trig v(wl) val=4.5 fall=1 targ v(wl) val=0.5 fall=1
+plot v(p1) v(wl) xlabel 'time' ylabel '[V]' title 'P1 -> WL (16 cells + 19.2 fF)'
+plot v(p1) v(wl) xlimit 4.8n 6.8n xlabel 'time' ylabel '[V]' title 'rising edge'
+.endc
+.end

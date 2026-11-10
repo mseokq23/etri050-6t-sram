@@ -1,0 +1,49 @@
+* how long after the word line the sense amp may fire: bitslice_tb.spice with tsae swept
+*   (write 1, read, write 0, read; DL - DLB when SAE fires and SAO at the end of each read)
+*   run: cd sram64x4/sim && ngspice -b sae_sweep.spice
+.include ../../.pdk/ETRI050_DesignKit/spice/05cmos_model_240201.lib
+.include ../../sim/sram6t_cell.spice
+.include periph.spice
+.include bitslice.cir
+.param tsae_ns=1.5 tr=0.2n
+
+VDD vdd 0 5
+VPRE pre_n 0 PWL(0 0 1n 0 1.2n 5 20.5n 5 20.7n 0 41n 0 41.2n 5 60.5n 5 60.7n 0
++ 81n 0 81.2n 5 100.5n 5 100.7n 0 121n 0 121.2n 5 140.5n 5 140.7n 0)
+VWL wl0 0 PWL(0 0 3n 0 3.2n 5 19n 5 19.2n 0 43n 0 43.2n 5 59n 5 59.2n 0
++ 83n 0 83.2n 5 99n 5 99.2n 0 123n 0 123.2n 5 139n 5 139.2n 0)
+VWDEN wden 0 PWL(0 0 3n 0 3.2n 5 19n 5 19.2n 0 83n 0 83.2n 5 99n 5 99.2n 0)
+VDQ dq 0 PWL(0 5 80n 5 80.2n 0)
+BDQB dqb 0 v = 5 - v(dq)
+* read: the mux closes when SAE fires (the sense amp then only sees DL / DLB)
+BMUX mux0 0 v = 5*( min(max((time-3n)/tr,0),1) - min(max((time-19n)/tr,0),1)
++ + min(max((time-43n)/tr,0),1) - min(max((time-43n-tsae_ns*1n)/tr,0),1)
++ + min(max((time-83n)/tr,0),1) - min(max((time-99n)/tr,0),1)
++ + min(max((time-123n)/tr,0),1) - min(max((time-123n-tsae_ns*1n)/tr,0),1) )
+BSAE sae 0 v = 5*( min(max((time-43.3n-tsae_ns*1n)/tr,0),1) - min(max((time-59.5n)/tr,0),1)
++ + min(max((time-123.3n-tsae_ns*1n)/tr,0),1) - min(max((time-139.5n)/tr,0),1) )
+
+* stand-in for transistor mismatch: the latch NMOS on the DL side made a little wider
+* (an extra W/L = 1.2u/1.8u from DL to ground, gated by DLB and SAE: the latch leans to 'read 0',
+*  the way a real sense amp leans to one side because of random mismatch)
+MX1 dl dlb nx 0 nfet w=1.2u l=1.8u
+MX2 nx sae 0 0 nfet w=3.6u l=0.6u
+
+.ic v(xc0_0.q)=0 v(xc0_0.qb)=5
+.control
+echo "tsae [ns]   DL-DLB at SAE (read 1)   SAO   DL-DLB at SAE (read 0)   SAO"
+foreach t 0 0.1 0.2 0.3 0.5 1 1.5 2
+  alterparam tsae_ns = $t
+  reset
+  tran 0.02n 160n
+  let dlx = v(dl) - v(dlb)
+  let t1 = 43.3e-9 + $t * 1e-9
+  let t0 = 123.3e-9 + $t * 1e-9
+  meas tran d1 find dlx at=$&t1
+  meas tran s1 find v(sao) at=59n
+  meas tran d0 find dlx at=$&t0
+  meas tran s0 find v(sao) at=139n
+  echo "$t   $&d1   $&s1   $&d0   $&s0"
+end
+.endc
+.end

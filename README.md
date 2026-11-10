@@ -3,6 +3,13 @@
 ETRI 0.5 µm CMOS(마이칩, 내 칩 제작 서비스) 공정에서 오픈소스 툴만으로 6T SRAM을 설계하는 과정을 정리한 레포.
 velog 시리즈 **MyChip 6T SRAM** 의 코드, 로그, 사진이 전부 여기 있음.
 
+| 시리즈 | 내용 | 폴더 |
+|---|---|---|
+| 1부 (34편) | 6T 셀 1개 → 4 × 4 어레이 (시뮬레이션, 레이아웃, DRC / LVS, 기생 추출, GDS) | 레포 최상위 (`sch/`, `sim/`, `layout/`, `logs/`, `docs/`) |
+| 2부 (32편) | 64 words × 4 bits SRAM 매크로 → 28핀 패드 프레임 칩 GDS | [`sram64x4/`](sram64x4/) (2부 파일은 전부 이 폴더 안) |
+
+아래는 1부 내용이고, 2부는 [sram64x4/README.md](sram64x4/README.md)에 따로 정리함.
+
 - 회로도: Xschem / 시뮬레이션: ngspice
 - 레이아웃·DRC·추출: Magic / LVS: Netgen / GDS·공식 덱 DRC: KLayout
 - 환경: GitHub Codespaces + IIC-OSIC-TOOLS 2026.10 (브라우저 noVNC 데스크톱)
@@ -88,4 +95,13 @@ etri-lvs sram_array ../sim/sram_array.spice
 etri-pex sram_array
 etri-gds sram_array && etri-drc-klayout sram_array.gds
 cd ../sim && ngspice -b array_tran.spice
+```
+
+## 2부: sram64x4
+
+1부 셀 256개로 64 words × 4 bits 매크로(행 디코더, 프리차지, 4:1 열 먹스, 센스 앰프, 쓰기 드라이버, 킷 표준셀 제어 블록)를 만들고, 킷의 28핀 패드 프레임에 넣어서 칩 GDS까지 감.
+1부 파일은 고치지 않았고 2부에서 새로 만든 건 전부 `sram64x4/` 아래에 있음. 사용법, 결과, 핀 배치는 [sram64x4/README.md](sram64x4/README.md) 참고.
+
+```bash
+bash sram64x4/scripts/setup-kit-extra.sh     # 킷의 표준셀(digital_ETRI), 패드(pads_ETRI) 폴더 추가
 ```
