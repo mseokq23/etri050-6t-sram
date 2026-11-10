@@ -1,0 +1,18 @@
+$ sram-drc colperi | grep SRAM-DRC
+SRAM-DRC colperi: 0 error(s)
+
+$ sram-drc sabank | grep SRAM-DRC
+SRAM-DRC sabank: 0 error(s)
+
+$ sram-run lvs_colperi.tcl
+SRAM-RUN lvs_colperi.tcl: ok   (log: lvs_colperi.log)
+
+$ sram-run lvs_sabank.tcl
+SRAM-RUN lvs_sabank.tcl: ok   (log: lvs_sabank.log)
+
+$ sram-lvs colperi_lvs colperi_lvs_ref.spice
+ETRI-LVS colperi_lvs: MATCH   (details: colperi_lvs_lvs.out)
+
+$ sram-lvs sabank_lvs sabank_lvs_ref.spice
+ETRI-LVS sabank_lvs: MATCH   (details: sabank_lvs_lvs.out)
+

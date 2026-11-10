@@ -1,0 +1,53 @@
+Flattening unmatched subcell sabank in circuit sabank_lvs (0)(1 instance)
+Flattening unmatched subcell sabit in circuit sabank_lvs (0)(4 instances)
+Flattening unmatched subcell sa in circuit sabank_lvs (1)(4 instances)
+Flattening unmatched subcell wdrv in circuit sabank_lvs (1)(4 instances)
+
+Class sabank_lvs (0):  Merged 4 parallel devices.
+Class sabank_lvs (1):  Merged 4 parallel devices.
+Subcircuit summary:
+Circuit 1: sabank_lvs                      |Circuit 2: sabank_lvs                      
+-------------------------------------------|-------------------------------------------
+nfet (40->36)                              |nfet (40->36)                              
+pfet (24)                                  |pfet (24)                                  
+Number of devices: 60                      |Number of devices: 60                      
+Number of nets: 41                         |Number of nets: 41                         
+---------------------------------------------------------------------------------------
+Resolving symmetries by property value.
+Resolving symmetries by pin name.
+Netlists match uniquely.
+
+Subcircuit pins:
+Circuit 1: sabank_lvs                      |Circuit 2: sabank_lvs                      
+-------------------------------------------|-------------------------------------------
+SAE                                        |SAE                                        
+DQ[0]                                      |DQ[0]                                      
+DQB[0]                                     |DQB[0]                                     
+DQ[1]                                      |DQ[1]                                      
+DQB[1]                                     |DQB[1]                                     
+DQ[2]                                      |DQ[2]                                      
+DQB[2]                                     |DQB[2]                                     
+DQ[3]                                      |DQ[3]                                      
+DQB[3]                                     |DQB[3]                                     
+SAO[0]                                     |SAO[0]                                     
+SAO[1]                                     |SAO[1]                                     
+SAO[2]                                     |SAO[2]                                     
+SAO[3]                                     |SAO[3]                                     
+VDD                                        |VDD                                        
+PRE_N                                      |PRE_N                                      
+DL[0]                                      |DL[0]                                      
+DLB[0]                                     |DLB[0]                                     
+DL[1]                                      |DL[1]                                      
+DLB[1]                                     |DLB[1]                                     
+DL[2]                                      |DL[2]                                      
+DLB[2]                                     |DLB[2]                                     
+DL[3]                                      |DL[3]                                      
+DLB[3]                                     |DLB[3]                                     
+WDEN                                       |WDEN                                       
+VSS                                        |VSS                                        
+---------------------------------------------------------------------------------------
+Cell pin lists are equivalent.
+Device classes sabank_lvs and sabank_lvs are equivalent.
+
+Final result: Circuits match uniquely.
+.

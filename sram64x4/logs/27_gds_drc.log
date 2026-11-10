@@ -1,0 +1,7 @@
+$ sram-gds sram64x4 | tail -1
+-rw-rw-rw- 1 designer designer 2079858 Nov 10 18:16 sram64x4.gds
+
+$ etri-drc-klayout sram64x4.gds
+ETRI-DRC-KLAYOUT: 0 marker(s) 
+report: sram64x4_drc.lyrdb   (klayout-etri sram64x4.gds -m sram64x4_drc.lyrdb)
+

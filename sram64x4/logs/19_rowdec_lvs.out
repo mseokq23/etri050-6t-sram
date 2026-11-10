@@ -1,0 +1,73 @@
+
+Class rowdrv (0):  Merged 2 parallel devices.
+Class rowdrv (1):  Merged 2 parallel devices.
+Subcircuit summary:
+Circuit 1: rowdrv                          |Circuit 2: rowdrv                          
+-------------------------------------------|-------------------------------------------
+nfet (4->3)                                |nfet (4->3)                                
+pfet (4->3)                                |pfet (4->3)                                
+Number of devices: 6                       |Number of devices: 6                       
+Number of nets: 7                          |Number of nets: 7                          
+---------------------------------------------------------------------------------------
+Netlists match uniquely.
+
+Subcircuit pins:
+Circuit 1: rowdrv                          |Circuit 2: rowdrv                          
+-------------------------------------------|-------------------------------------------
+w_16_60#                                   |VDD **Mismatch**                           
+a_4_48#                                    |P0 **Mismatch**                            
+a_68_8#                                    |P1 **Mismatch**                            
+a_228_12#                                  |WL **Mismatch**                            
+a_28_12#                                   |VSS **Mismatch**                           
+---------------------------------------------------------------------------------------
+Cell pin lists for rowdrv and rowdrv altered to match.
+Device classes rowdrv and rowdrv are equivalent.
+Flattening unmatched subcell rowdec in circuit rowdec_lvs (0)(1 instance)
+Flattening unmatched subcell rowdrv_x2 in circuit rowdec_lvs (0)(8 instances)
+
+Subcircuit summary:
+Circuit 1: rowdec_lvs                      |Circuit 2: rowdec_lvs                      
+-------------------------------------------|-------------------------------------------
+rowdrv (16)                                |rowdrv (16)                                
+Number of devices: 16                      |Number of devices: 16                      
+Number of nets: 26                         |Number of nets: 26                         
+---------------------------------------------------------------------------------------
+Resolving symmetries by property value.
+Resolving symmetries by pin name.
+Netlists match uniquely.
+
+Subcircuit pins:
+Circuit 1: rowdec_lvs                      |Circuit 2: rowdec_lvs                      
+-------------------------------------------|-------------------------------------------
+VDD                                        |VDD                                        
+VSS                                        |VSS                                        
+WL[14]                                     |WL[14]                                     
+WL[0]                                      |WL[0]                                      
+WL[11]                                     |WL[11]                                     
+WL[12]                                     |WL[12]                                     
+WL[9]                                      |WL[9]                                      
+WL[10]                                     |WL[10]                                     
+WL[7]                                      |WL[7]                                      
+WL[8]                                      |WL[8]                                      
+WL[5]                                      |WL[5]                                      
+WL[6]                                      |WL[6]                                      
+WL[3]                                      |WL[3]                                      
+WL[4]                                      |WL[4]                                      
+WL[15]                                     |WL[15]                                     
+WL[1]                                      |WL[1]                                      
+WL[2]                                      |WL[2]                                      
+WL[13]                                     |WL[13]                                     
+P0[0]                                      |P0[0]                                      
+P0[3]                                      |P0[3]                                      
+P0[2]                                      |P0[2]                                      
+P0[1]                                      |P0[1]                                      
+P1[2]                                      |P1[2]                                      
+P1[0]                                      |P1[0]                                      
+P1[3]                                      |P1[3]                                      
+P1[1]                                      |P1[1]                                      
+---------------------------------------------------------------------------------------
+Cell pin lists are equivalent.
+Device classes rowdec_lvs and rowdec_lvs are equivalent.
+
+Final result: Circuits match uniquely.
+.

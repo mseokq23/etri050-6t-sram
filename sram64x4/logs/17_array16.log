@@ -1,0 +1,334 @@
+$ sram-run array16.tcl
+SRAM-RUN array16.tcl: ok   (log: array16.log)
+
+$ sram-drc sram16x16 | grep SRAM-DRC
+SRAM-DRC sram16x16: 0 error(s)
+
+--- array16.log (Magic 메시지) ---
+
+Magic 8.3 revision 685 - Compiled on Thu Oct 15 02:29:39 PM CEST 2026.
+Starting magic under Tcl interpreter
+Using the terminal as the console.
+Using NULL graphics device.
+Processing system .magicrc file
+Switching to WIRING tool.
+Switching to NETLIST tool.
+Switching to PICK tool.
+Switching to BOX tool.
+Input style lambda=0.30(p): scaleFactor=30, multiplier=1
+Contact size value ignored (using GDS generation rules).
+Contact size value ignored (using GDS generation rules).
+Contact size value ignored (using GDS generation rules).
+Contact size value ignored (using GDS generation rules).
+Contact size value ignored (using GDS generation rules).
+Contact size value ignored (using GDS generation rules).
+The following types are not handled by extraction and will be treated as non-electrical types:
+    n_field_implant p_field_implant nselect pselect glass filln filla fillb xp m1p m2p m3p comment bb 
+2 Magic internal units = 1 Lambda
+Using technology "scmos", version 2001a
+Cell sram6t_4x4 couldn't be read
+No such file or directory
+Creating new cell
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:  60000.004 x 60000.004  (-30000.002, -30000.002), ( 30000.002,  30000.002)  3600000256.000
+lambda:   200000.00 x 200000.00  (-100000.00, -100000.00), ( 100000.00,  100000.00)  40000000000.00
+internal: 400000 x 400000  (-200000, -200000), ( 200000,  200000)  160000000000
+Cell sram6t_x2 couldn't be read
+No such file or directory
+Creating new cell
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:  60000.004 x 60000.004  (-30000.002, -30000.002), ( 30000.002,  30000.002)  3600000256.000
+lambda:   200000.00 x 200000.00  (-100000.00, -100000.00), ( 100000.00,  100000.00)  40000000000.00
+internal: 400000 x 400000  (-200000, -200000), ( 200000,  200000)  160000000000
+Cell sram6t couldn't be read
+No such file or directory
+Creating new cell
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:  60000.004 x 60000.004  (-30000.002, -30000.002), ( 30000.002,  30000.002)  3600000256.000
+lambda:   200000.00 x 200000.00  (-100000.00, -100000.00), ( 100000.00,  100000.00)  40000000000.00
+internal: 400000 x 400000  (-200000, -200000), ( 200000,  200000)  160000000000
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:  16.200 x 1.800   ( 0.000,  3.600), ( 16.200,  5.400)  29.160    
+lambda:    54.00 x 6.00    (  0.00,  12.00), ( 54.00,  18.00)  324.00    
+internal:    108 x 12      (     0,  24   ), (   108,  36   )  1296      
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   9.000 x 3.600   ( 3.600,  3.600), ( 12.600,  7.200)  32.400    
+lambda:    30.00 x 12.00   ( 12.00,  12.00), ( 42.00,  24.00)  360.00    
+internal:     60 x 24      (    24,  24   ), (    84,  48   )  1440      
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:  18.000 x 0.600   ( 0.000,  1.500), ( 18.000,  2.100)  10.800    
+lambda:    60.00 x 2.00    (  0.00,  5.00 ), ( 60.00,  7.00 )  120.00    
+internal:    120 x 4       (     0,  10   ), (   120,  14   )  480       
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.600 x 4.500   ( 2.400,  1.500), ( 3.000,  6.000)  2.700     
+lambda:     2.00 x 15.00   (  8.00,  5.00 ), ( 10.00,  20.00)  30.00     
+internal:      4 x 30      (    16,  10   ), (    20,  40   )  120       
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.600 x 4.500   ( 13.200,  1.500), ( 13.800,  6.000)  2.700     
+lambda:     2.00 x 15.00   ( 44.00,  5.00 ), ( 46.00,  20.00)  30.00     
+internal:      4 x 30      (    88,  10   ), (    92,  40   )  120       
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   1.800 x 1.800   ( 0.000,  3.600), ( 1.800,  5.400)  3.240     
+lambda:     6.00 x 6.00    (  0.00,  12.00), (  6.00,  18.00)  36.00     
+internal:     12 x 12      (     0,  24   ), (    12,  36   )  144       
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   1.800 x 3.600   ( 3.600,  3.600), ( 5.400,  7.200)  6.480     
+lambda:     6.00 x 12.00   ( 12.00,  12.00), ( 18.00,  24.00)  72.00     
+internal:     12 x 24      (    24,  24   ), (    36,  48   )  288       
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   1.800 x 3.600   ( 7.200,  3.600), ( 9.000,  7.200)  6.480     
+lambda:     6.00 x 12.00   ( 24.00,  12.00), ( 30.00,  24.00)  72.00     
+internal:     12 x 24      (    48,  24   ), (    60,  48   )  288       
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   1.800 x 3.600   ( 10.800,  3.600), ( 12.600,  7.200)  6.480     
+lambda:     6.00 x 12.00   ( 36.00,  12.00), ( 42.00,  24.00)  72.00     
+internal:     12 x 24      (    72,  24   ), (    84,  48   )  288       
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   1.800 x 1.800   ( 14.400,  3.600), ( 16.200,  5.400)  3.240     
+lambda:     6.00 x 6.00    ( 48.00,  12.00), ( 54.00,  18.00)  36.00     
+internal:     12 x 12      (    96,  24   ), (   108,  36   )  144       
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:  18.000 x 7.500   ( 0.000,  12.000), ( 18.000,  19.500)  135.000   
+lambda:    60.00 x 25.00   (  0.00,  40.00), ( 60.00,  65.00)  1500.00   
+internal:    120 x 50      (     0,  80   ), (   120,  130  )  6000      
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   9.000 x 1.800   ( 3.600,  13.800), ( 12.600,  15.600)  16.200    
+lambda:    30.00 x 6.00    ( 12.00,  46.00), ( 42.00,  52.00)  180.00    
+internal:     60 x 12      (    24,  92   ), (    84,  104  )  720       
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   1.800 x 1.800   ( 3.600,  13.800), ( 5.400,  15.600)  3.240     
+lambda:     6.00 x 6.00    ( 12.00,  46.00), ( 18.00,  52.00)  36.00     
+internal:     12 x 12      (    24,  92   ), (    36,  104  )  144       
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   1.800 x 1.800   ( 7.200,  13.800), ( 9.000,  15.600)  3.240     
+lambda:     6.00 x 6.00    ( 24.00,  46.00), ( 30.00,  52.00)  36.00     
+internal:     12 x 12      (    48,  92   ), (    60,  104  )  144       
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   1.800 x 1.800   ( 10.800,  13.800), ( 12.600,  15.600)  3.240     
+lambda:     6.00 x 6.00    ( 36.00,  46.00), ( 42.00,  52.00)  36.00     
+internal:     12 x 12      (    72,  92   ), (    84,  104  )  144       
+Magic error: writing out-of-date timestamp for sram6t.
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.600 x 13.200  ( 6.000,  3.000), ( 6.600,  16.200)  7.920     
+lambda:     2.00 x 44.00   ( 20.00,  10.00), ( 22.00,  54.00)  88.00     
+internal:      4 x 88      (    40,  20   ), (    44,  108  )  352       
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.600 x 13.200  ( 9.600,  3.000), ( 10.200,  16.200)  7.920     
+lambda:     2.00 x 44.00   ( 32.00,  10.00), ( 34.00,  54.00)  88.00     
+internal:      4 x 88      (    64,  20   ), (    68,  108  )  352       
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   1.800 x 1.800   ( 6.300,  8.100), ( 8.100,  9.900)  3.240     
+lambda:     6.00 x 6.00    ( 21.00,  27.00), ( 27.00,  33.00)  36.00     
+internal:     12 x 12      (    42,  54   ), (    54,  66   )  144       
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   1.800 x 1.800   ( 8.100,  11.100), ( 9.900,  12.900)  3.240     
+lambda:     6.00 x 6.00    ( 27.00,  37.00), ( 33.00,  43.00)  36.00     
+internal:     12 x 12      (    54,  74   ), (    66,  86   )  144       
+Magic error: writing out-of-date timestamp for sram6t.
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   1.800 x 6.600   ( 3.600,  7.200), ( 5.400,  13.800)  11.880    
+lambda:     6.00 x 22.00   ( 12.00,  24.00), ( 18.00,  46.00)  132.00    
+internal:     12 x 44      (    24,  48   ), (    36,  92   )  528       
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   1.800 x 6.600   ( 10.800,  7.200), ( 12.600,  13.800)  11.880    
+lambda:     6.00 x 22.00   ( 36.00,  24.00), ( 42.00,  46.00)  132.00    
+internal:     12 x 44      (    72,  48   ), (    84,  92   )  528       
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   6.300 x 1.800   ( 6.300,  8.100), ( 12.600,  9.900)  11.340    
+lambda:    21.00 x 6.00    ( 21.00,  27.00), ( 42.00,  33.00)  126.00    
+internal:     42 x 12      (    42,  54   ), (    84,  66   )  504       
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   6.300 x 1.800   ( 3.600,  11.100), ( 9.900,  12.900)  11.340    
+lambda:    21.00 x 6.00    ( 12.00,  37.00), ( 33.00,  43.00)  126.00    
+internal:     42 x 12      (    24,  74   ), (    66,  86   )  504       
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:  18.000 x 1.800   ( 0.000, -0.900), ( 18.000,  0.900)  32.400    
+lambda:    60.00 x 6.00    (  0.00, -3.00 ), ( 60.00,  3.00 )  360.00    
+internal:    120 x 12      (     0, -6    ), (   120,  6    )  1440      
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   1.800 x 2.700   ( 7.200,  0.900), ( 9.000,  3.600)  4.860     
+lambda:     6.00 x 9.00    ( 24.00,  3.00 ), ( 30.00,  12.00)  54.00     
+internal:     12 x 18      (    48,  6    ), (    60,  24   )  216       
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:  18.000 x 1.800   ( 0.000,  16.800), ( 18.000,  18.600)  32.400    
+lambda:    60.00 x 6.00    (  0.00,  56.00), ( 60.00,  62.00)  360.00    
+internal:    120 x 12      (     0,  112  ), (   120,  124  )  1440      
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   1.800 x 1.200   ( 7.200,  15.600), ( 9.000,  16.800)  2.160     
+lambda:     6.00 x 4.00    ( 24.00,  52.00), ( 30.00,  56.00)  24.00     
+internal:     12 x 8       (    48,  104  ), (    60,  112  )  96        
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   1.800 x 1.800   ( 7.200, -0.900), ( 9.000,  0.900)  3.240     
+lambda:     6.00 x 6.00    ( 24.00, -3.00 ), ( 30.00,  3.00 )  36.00     
+internal:     12 x 12      (    48, -6    ), (    60,  6    )  144       
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   1.800 x 1.800   ( 7.200,  16.800), ( 9.000,  18.600)  3.240     
+lambda:     6.00 x 6.00    ( 24.00,  56.00), ( 30.00,  62.00)  36.00     
+internal:     12 x 12      (    48,  112  ), (    60,  124  )  144       
+Magic error: writing out-of-date timestamp for sram6t.
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   2.700 x 3.000   (-0.300,  5.400), ( 2.400,  8.400)  8.100     
+lambda:     9.00 x 10.00   ( -1.00,  18.00), (  8.00,  28.00)  90.00     
+internal:     18 x 20      (    -2,  36   ), (    16,  56   )  360       
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   2.100 x 2.100   ( 0.000,  6.000), ( 2.100,  8.100)  4.410     
+lambda:     7.00 x 7.00    (  0.00,  20.00), (  7.00,  27.00)  49.00     
+internal:     14 x 14      (     0,  40   ), (    14,  54   )  196       
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   1.200 x 19.500  ( 0.300, -0.900), ( 1.500,  18.600)  23.400    
+lambda:     4.00 x 65.00   (  1.00, -3.00 ), (  5.00,  62.00)  260.00    
+internal:      8 x 130     (     2, -6    ), (    10,  124  )  1040      
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   2.700 x 3.000   ( 13.800,  5.400), ( 16.500,  8.400)  8.100     
+lambda:     9.00 x 10.00   ( 46.00,  18.00), ( 55.00,  28.00)  90.00     
+internal:     18 x 20      (    92,  36   ), (   110,  56   )  360       
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   2.100 x 2.100   ( 14.100,  6.000), ( 16.200,  8.100)  4.410     
+lambda:     7.00 x 7.00    ( 47.00,  20.00), ( 54.00,  27.00)  49.00     
+internal:     14 x 14      (    94,  40   ), (   108,  54   )  196       
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   1.200 x 19.500  ( 14.700, -0.900), ( 15.900,  18.600)  23.400    
+lambda:     4.00 x 65.00   ( 49.00, -3.00 ), ( 53.00,  62.00)  260.00    
+internal:      8 x 130     (    98, -6    ), (   106,  124  )  1040      
+Magic error: writing out-of-date timestamp for sram6t.
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   1.200 x 1.200   ( 0.300,  12.000), ( 1.500,  13.200)  1.440     
+lambda:     4.00 x 4.00    (  1.00,  40.00), (  5.00,  44.00)  16.00     
+internal:      8 x 8       (     2,  80   ), (    10,  88   )  64        
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   1.200 x 1.200   ( 14.700,  12.000), ( 15.900,  13.200)  1.440     
+lambda:     4.00 x 4.00    ( 49.00,  40.00), ( 53.00,  44.00)  16.00     
+internal:      8 x 8       (    98,  80   ), (   106,  88   )  64        
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.600 x 0.600   ( 16.800,  1.500), ( 17.400,  2.100)  0.360     
+lambda:     2.00 x 2.00    ( 56.00,  5.00 ), ( 58.00,  7.00 )  4.00      
+internal:      4 x 4       (   112,  10   ), (   116,  14   )  16        
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   1.200 x 1.200   ( 16.200,  17.100), ( 17.400,  18.300)  1.440     
+lambda:     4.00 x 4.00    ( 54.00,  57.00), ( 58.00,  61.00)  16.00     
+internal:      8 x 8       (   108,  114  ), (   116,  122  )  64        
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   1.200 x 1.200   ( 16.200, -0.600), ( 17.400,  0.600)  1.440     
+lambda:     4.00 x 4.00    ( 54.00, -2.00 ), ( 58.00,  2.00 )  16.00     
+internal:      8 x 8       (   108, -4    ), (   116,  4    )  64        
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:  18.300 x 20.400  (-0.300, -0.900), ( 18.000,  19.500)  373.320   
+lambda:    61.00 x 68.00   ( -1.00, -3.00 ), ( 60.00,  65.00)  4148.00   
+internal:    122 x 136     (    -2, -6    ), (   120,  130  )  16592     
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.600 x 0.600   ( 4.200,  9.000), ( 4.800,  9.600)  0.360     
+lambda:     2.00 x 2.00    ( 14.00,  30.00), ( 16.00,  32.00)  4.00      
+internal:      4 x 4       (    28,  60   ), (    32,  64   )  16        
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:   0.600 x 0.600   ( 11.400,  10.800), ( 12.000,  11.400)  0.360     
+lambda:     2.00 x 2.00    ( 38.00,  36.00), ( 40.00,  38.00)  4.00      
+internal:      4 x 4       (    76,  72   ), (    80,  76   )  16        
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:  18.000 x 17.700  ( 0.000,  0.000), ( 18.000,  17.700)  318.600   
+lambda:    60.00 x 59.00   (  0.00,  0.00 ), ( 60.00,  59.00)  3540.00   
+internal:    120 x 118     (     0,  0    ), (   120,  118  )  14160     
+Magic error: writing out-of-date timestamp for sram6t.
+Cell sram16x16 couldn't be read
+No such file or directory
+Creating new cell
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
+microns:  60000.004 x 60000.004  (-30000.002, -30000.002), ( 30000.002,  30000.002)  3600000256.000
+lambda:   200000.00 x 200000.00  (-100000.00, -100000.00), ( 100000.00,  100000.00)  40000000000.00
+internal: 400000 x 400000  (-200000, -200000), ( 200000,  200000)  160000000000
+

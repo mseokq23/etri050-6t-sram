@@ -1,0 +1,12 @@
+# ngspice 출력 중 킷 모델 경고 줄(모델 파라미터가 같이 찍힘)은 빼고 저장함
+$ ngspice -b rowdrv_tb.spice
+Circuit: * row driver (periph.spice rowdrv) on one word line: 16 cells + wire
+Doing analysis at TEMP = 27.000000 and TNOM = 27.000000
+Using SPARSE 1.3 as Direct Linear Solver
+No. of Data Rows : 3520
+t_on                =  3.86201e-10 targ=  5.48620e-09 trig=  5.10000e-09
+t_off               =  3.29623e-10 targ=  2.54296e-08 trig=  2.51000e-08
+t_rise              =  3.42862e-10 targ=  5.69083e-09 trig=  5.34797e-09
+t_fall              =  2.00538e-10 targ=  2.55280e-08 trig=  2.53274e-08
+Note: Simulation executed from .control section 
+

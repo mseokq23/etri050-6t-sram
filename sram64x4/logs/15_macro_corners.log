@@ -1,0 +1,79 @@
+$ time bash ../scripts/run_macro_corners.sh
+TT  VDD = 5 V : 16 OK, 0 FAIL
+SS  VDD = 5 V : 16 OK, 0 FAIL
+FF  VDD = 5 V : 16 OK, 0 FAIL
+SF  VDD = 5 V : 16 OK, 0 FAIL
+FS  VDD = 5 V : 16 OK, 0 FAIL
+SS  VDD = 4.5 V : 16 OK, 0 FAIL
+FF  VDD = 5.5 V : 16 OK, 0 FAIL
+
+corner  VDD    words  WL[ns]  SAE[ns]  WL->SAE  dV[V]  DOUT[ns]  PRE gap
+TT      5.0    16/16    4.41     5.88     1.46   2.99      1.35     2.36
+SS      5.0    16/16    4.60     6.15     1.54   2.93      1.39     2.45
+FF      5.0    16/16    4.25     5.65     1.40   3.09      1.32     2.29
+SF      5.0    16/16    4.53     6.07     1.54   2.93      1.41     2.43
+FS      5.0    16/16    4.33     5.73     1.40   3.10      1.30     2.31
+SS      4.5    16/16    4.95     6.59     1.64   2.60      1.47     2.66
+FF      5.5    16/16    4.04     5.38     1.34   3.40      1.27     2.16
+
+real	37m14.115s
+user	41m16.604s
+sys	1m37.377s
+
+--- corners.txt ---
+== TT  VDD = 5 V
+16 words written and read back: 16 OK, 0 FAIL
+CLK fall -> DOUT (slowest bit): 1.35 ns
+CLK rise -> WL on        : 4.40 .. 4.41 ns
+CLK rise -> SAE (read)   : 5.87 .. 5.88 ns
+WL on -> SAE             : 1.46 .. 1.47 ns
+|DL - DLB| at SAE (bit 0): 2.99 .. 3.03 V
+WL off -> PRE_N low      : 2.36 .. 2.38 ns
+== SS  VDD = 5 V
+16 words written and read back: 16 OK, 0 FAIL
+CLK fall -> DOUT (slowest bit): 1.39 ns
+CLK rise -> WL on        : 4.60 .. 4.60 ns
+CLK rise -> SAE (read)   : 6.14 .. 6.15 ns
+WL on -> SAE             : 1.54 .. 1.54 ns
+|DL - DLB| at SAE (bit 0): 2.93 .. 3.00 V
+WL off -> PRE_N low      : 2.45 .. 2.47 ns
+== FF  VDD = 5 V
+16 words written and read back: 16 OK, 0 FAIL
+CLK fall -> DOUT (slowest bit): 1.32 ns
+CLK rise -> WL on        : 4.24 .. 4.25 ns
+CLK rise -> SAE (read)   : 5.64 .. 5.65 ns
+WL on -> SAE             : 1.40 .. 1.41 ns
+|DL - DLB| at SAE (bit 0): 3.09 .. 3.12 V
+WL off -> PRE_N low      : 2.29 .. 2.30 ns
+== SF  VDD = 5 V
+16 words written and read back: 16 OK, 0 FAIL
+CLK fall -> DOUT (slowest bit): 1.41 ns
+CLK rise -> WL on        : 4.52 .. 4.53 ns
+CLK rise -> SAE (read)   : 6.06 .. 6.07 ns
+WL on -> SAE             : 1.54 .. 1.54 ns
+|DL - DLB| at SAE (bit 0): 2.93 .. 2.99 V
+WL off -> PRE_N low      : 2.43 .. 2.44 ns
+== FS  VDD = 5 V
+16 words written and read back: 16 OK, 0 FAIL
+CLK fall -> DOUT (slowest bit): 1.30 ns
+CLK rise -> WL on        : 4.32 .. 4.33 ns
+CLK rise -> SAE (read)   : 5.72 .. 5.73 ns
+WL on -> SAE             : 1.40 .. 1.41 ns
+|DL - DLB| at SAE (bit 0): 3.10 .. 3.16 V
+WL off -> PRE_N low      : 2.31 .. 2.33 ns
+== SS  VDD = 4.5 V
+16 words written and read back: 16 OK, 0 FAIL
+CLK fall -> DOUT (slowest bit): 1.47 ns
+CLK rise -> WL on        : 4.94 .. 4.95 ns
+CLK rise -> SAE (read)   : 6.59 .. 6.59 ns
+WL on -> SAE             : 1.64 .. 1.65 ns
+|DL - DLB| at SAE (bit 0): 2.60 .. 2.65 V
+WL off -> PRE_N low      : 2.66 .. 2.67 ns
+== FF  VDD = 5.5 V
+16 words written and read back: 16 OK, 0 FAIL
+CLK fall -> DOUT (slowest bit): 1.27 ns
+CLK rise -> WL on        : 4.03 .. 4.04 ns
+CLK rise -> SAE (read)   : 5.37 .. 5.38 ns
+WL on -> SAE             : 1.34 .. 1.34 ns
+|DL - DLB| at SAE (bit 0): 3.40 .. 3.51 V
+WL off -> PRE_N low      : 2.16 .. 2.18 ns

@@ -1,0 +1,12 @@
+$ sram-run ctrl.tcl
+SRAM-RUN ctrl.tcl: ok   (log: ctrl.log)
+
+$ bash lvs_ref.sh
+sram64x4_ref.spice: subcircuits 8
+
+$ sram-lvs sram64x4_ctrl sram64x4_ctrl_ref.spice
+ETRI-LVS sram64x4_ctrl: MATCH   (details: sram64x4_ctrl_lvs.out)
+
+$ sram-drc sram64x4_ctrl | grep SRAM-DRC
+SRAM-DRC sram64x4_ctrl: 0 error(s)
+

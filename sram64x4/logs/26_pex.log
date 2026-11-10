@@ -1,0 +1,24 @@
+$ time bash ../scripts/run_pex.sh
+ETRI-PEX sram64x4: sram64x4_pex.spice (3366 capacitors)
+wrote sram64x4_pex.spice: 2380 transistors, 3366 capacitors, probe nodes wl_0 wl_1 wl_2 wl_3 wl_4 wl_5 wl_6 wl_7 wl_8 wl_9 wl_10 wl_11 wl_12 wl_13 wl_14 wl_15 sae pre_n dl_0 dlb_0
+== sch16 (schematic netlist)
+16 words written and read back: 16 OK, 0 FAIL
+CLK fall -> DOUT (slowest bit): 1.46 ns
+CLK rise -> WL on        : 4.67 .. 4.67 ns
+CLK rise -> SAE (read)   : 6.20 .. 6.21 ns
+WL on -> SAE             : 1.53 .. 1.54 ns
+|DL - DLB| at SAE (bit 0): 3.26 .. 3.29 V
+WL off -> PRE_N low      : 2.46 .. 2.48 ns
+== pex16 (extracted netlist)
+16 words written and read back: 16 OK, 0 FAIL
+CLK fall -> DOUT (slowest bit): 1.71 ns
+CLK rise -> WL on        : 5.48 .. 5.55 ns
+CLK rise -> SAE (read)   : 7.32 .. 7.32 ns
+WL on -> SAE             : 1.77 .. 1.83 ns
+|DL - DLB| at SAE (bit 0): 2.63 .. 2.89 V
+WL off -> PRE_N low      : 2.75 .. 2.83 ns
+
+real	5m59.156s
+user	11m6.738s
+sys	0m14.726s
+

@@ -1,0 +1,30 @@
+$ bash ../scripts/ctrl_spice.sh
+sim/sram64x4_ctrl.spice: sram64x4_ctrl = 82 standard cells, 34 subcircuits in the file (kit cells + sram64x4_ctrl)
+
+$ python3 ../scripts/gen_macro_spice.py -o sram64x4.spice
+wrote sram64x4.spice: 256 cells, 16 row drivers, 16 columns, 4 sense amps
+
+$ python3 ../scripts/gen_tb.py --probe -o macro_tb.spice
+wrote macro_tb.spice: 128 cycles (all), tstop 6430 ns, output macro_tb_out.txt
+
+$ time ngspice -b macro_tb.spice > /dev/null 2>&1
+
+real	20m54.883s
+user	23m15.835s
+sys	0m51.584s
+
+$ python3 ../scripts/check_tb.py macro_tb_out.txt
+addr  0: wrote 0011 read 0011 OK
+addr  1: wrote 1000 read 1000 OK
+addr  2: wrote 1101 read 1101 OK
+addr  3: wrote 0010 read 0010 OK
+64 words written and read back: 64 OK, 0 FAIL
+CLK fall -> DOUT (slowest bit): 1.46 ns
+
+$ python3 ../scripts/timing.py macro_tb_out.txt
+CLK rise -> WL on        : 4.67 .. 4.67 ns
+CLK rise -> SAE (read)   : 6.20 .. 6.21 ns
+WL on -> SAE             : 1.53 .. 1.54 ns
+|DL - DLB| at SAE (bit 0): 3.26 .. 3.29 V
+WL off -> PRE_N low      : 2.46 .. 2.48 ns
+

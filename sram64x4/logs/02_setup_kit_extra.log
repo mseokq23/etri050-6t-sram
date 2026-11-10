@@ -1,0 +1,23 @@
+$ bash sram64x4/scripts/setup-kit-extra.sh
+[sram64x4] kit folders: tech spice scripts digital_ETRI pads_ETRI
+[sram64x4] standard cells: 34 .mag, pad frame: /workspaces/etri050-6t-sram/.pdk/ETRI050_DesignKit/pads_ETRI/MPW_PAD_28Pin_IO.mag
+[sram64x4] done. open a new terminal (sram-drc, sram-gds, $ETRI050_PADS ... are then defined)
+
+$ type sram-drc | head -3
+sram-drc is a function
+sram-drc () 
+{ 
+
+$ echo $ETRI050_PADS
+/workspaces/etri050-6t-sram/.pdk/ETRI050_DesignKit/pads_ETRI
+
+$ ls $ETRI050_PADS | head -8
+ETRI050_CMOS.lyp
+ETRI_Logo.bmp
+ETRI_Logo.mag
+ETRI_Logo.png
+games.cel2
+GDS
+GDS_Magic
+IOFILLER18.mag
+

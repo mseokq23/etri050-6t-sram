@@ -1,0 +1,14 @@
+$ sram-drc rowdec | grep SRAM-DRC
+SRAM-DRC rowdec: 0 error(s)
+
+$ python3 ../scripts/gen_block_ref.py
+rowdec_lvs_ref.spice: 16 instances, 26 pins
+colperi_lvs_ref.spice: 32 instances, 47 pins
+sabank_lvs_ref.spice: 8 instances, 25 pins
+
+$ sram-run lvs_rowdec.tcl
+SRAM-RUN lvs_rowdec.tcl: ok   (log: lvs_rowdec.log)
+
+$ sram-lvs rowdec_lvs rowdec_lvs_ref.spice
+ETRI-LVS rowdec_lvs: MATCH   (details: rowdec_lvs_lvs.out)
+

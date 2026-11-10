@@ -1,0 +1,11 @@
+$ python3 ../scripts/cell_corners.py
+corner   VDD   hold SNM   read SNM  write trip V(BL)
+TT       5.0     1.319V     0.671V            1.969V
+SS       5.0     1.369V     0.729V            1.949V
+FF       5.0     1.266V     0.608V            2.004V
+SF       5.0     1.389V     0.756V            1.824V
+FS       5.0     1.242V     0.578V            2.089V
+SS       4.5     1.300V     0.721V            1.739V
+FF       5.5     1.332V     0.605V            2.259V
+saved sim/cell_corners.txt, sim/cell_corners.png
+

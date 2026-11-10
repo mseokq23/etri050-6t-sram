@@ -1,0 +1,12 @@
+$ bash ../scripts/corner_lib.sh
+corner models: /workspaces/etri050-6t-sram/sram64x4/work/corner.lib  (sections: CORRELATION TT SS FF SF FS MOS )
+
+$ bash ../scripts/corner_iv.sh
+corner     Vtn[V] |Vtp|[V]   Idsat_n[uA] |Idsat_p|[uA]
+TT          0.867    0.977           752           330
+SS          0.934    1.075           690           302
+FF          0.800    0.880           822           360
+SF          0.934    0.880           690           360
+FS          0.800    1.075           822           302
+part1       0.764    1.079           831           399
+

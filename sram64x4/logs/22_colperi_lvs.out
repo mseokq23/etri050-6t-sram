@@ -1,0 +1,73 @@
+Flattening unmatched subcell colperi in circuit colperi_lvs (0)(1 instance)
+Flattening unmatched subcell colmux in circuit colperi_lvs (0)(16 instances)
+Flattening unmatched subcell pchg in circuit colperi_lvs (1)(16 instances)
+Flattening unmatched subcell cmux in circuit colperi_lvs (1)(16 instances)
+
+Subcircuit summary:
+Circuit 1: colperi_lvs                     |Circuit 2: colperi_lvs                     
+-------------------------------------------|-------------------------------------------
+pfet (32)                                  |pfet (32)                                  
+nfet (32)                                  |nfet (32)                                  
+Number of devices: 64                      |Number of devices: 64                      
+Number of nets: 47                         |Number of nets: 47                         
+---------------------------------------------------------------------------------------
+Resolving symmetries by property value.
+Resolving symmetries by pin name.
+Netlists match uniquely.
+
+Subcircuit pins:
+Circuit 1: colperi_lvs                     |Circuit 2: colperi_lvs                     
+-------------------------------------------|-------------------------------------------
+PRE_N                                      |PRE_N                                      
+VSS                                        |VSS                                        
+MUX[2]                                     |MUX[2]                                     
+MUX[1]                                     |MUX[1]                                     
+MUX[0]                                     |MUX[0]                                     
+MUX[3]                                     |MUX[3]                                     
+DL[0]                                      |DL[0]                                      
+DL[2]                                      |DL[2]                                      
+DLB[2]                                     |DLB[2]                                     
+DLB[0]                                     |DLB[0]                                     
+DLB[3]                                     |DLB[3]                                     
+DL[3]                                      |DL[3]                                      
+DLB[1]                                     |DLB[1]                                     
+DL[1]                                      |DL[1]                                      
+BL[5]                                      |BL[5]                                      
+BL[9]                                      |BL[9]                                      
+BLB[12]                                    |BLB[12]                                    
+BL[11]                                     |BL[11]                                     
+BL[15]                                     |BL[15]                                     
+BLB[1]                                     |BLB[1]                                     
+BL[0]                                      |BL[0]                                      
+BLB[5]                                     |BLB[5]                                     
+BL[4]                                      |BL[4]                                      
+BLB[9]                                     |BLB[9]                                     
+BL[8]                                      |BL[8]                                      
+BLB[11]                                    |BLB[11]                                    
+BLB[15]                                    |BLB[15]                                    
+BL[10]                                     |BL[10]                                     
+BLB[4]                                     |BLB[4]                                     
+BL[14]                                     |BL[14]                                     
+BLB[0]                                     |BLB[0]                                     
+BLB[8]                                     |BLB[8]                                     
+BL[3]                                      |BL[3]                                      
+BL[7]                                      |BL[7]                                      
+BLB[10]                                    |BLB[10]                                    
+BLB[14]                                    |BLB[14]                                    
+BLB[3]                                     |BLB[3]                                     
+BL[13]                                     |BL[13]                                     
+BL[2]                                      |BL[2]                                      
+BLB[7]                                     |BLB[7]                                     
+BL[6]                                      |BL[6]                                      
+BLB[13]                                    |BLB[13]                                    
+BL[12]                                     |BL[12]                                     
+BLB[2]                                     |BLB[2]                                     
+BLB[6]                                     |BLB[6]                                     
+BL[1]                                      |BL[1]                                      
+VDD                                        |VDD                                        
+---------------------------------------------------------------------------------------
+Cell pin lists are equivalent.
+Device classes colperi_lvs and colperi_lvs are equivalent.
+
+Final result: Circuits match uniquely.
+.

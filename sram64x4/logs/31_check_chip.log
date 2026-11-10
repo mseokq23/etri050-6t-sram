@@ -1,0 +1,26 @@
+$ bash sram64x4/chip/check_chip.sh
+== 1. core DRC (drc_core.sh: the standard cells' overlap rule ignored, as in the kit)
+Total DRC errors found: 0
+No errors found.
+== 2. macro + routes flattened: Magic DRC, stacked vias
+MAGIC-DRC sram64x4_chipnet_F: 0 error(s)
+No errors found.
+Checking Stacked VIA in sram64x4_chipnet_F.mag
+No stacked Contact and/or Via found.
+== 3. routes LVS (pad pin labels -> macro pins)
+ROUTES-LVS: MATCH (chipnet_lvs.out)
+== 4. KLayout DRC: pads alone / kit's chip GDS / final chip GDS
+sram64x4_Top_kit_drc.lyrdb: 124 marker(s) 12.MET3.bad1:28 5.NSD.S1:68 8.MET1.bad1:28
+  same as the pads alone (sram64x4_Pad_drc.lyrdb): 68
+  only in the chip: 56 12.MET3.bad1:28 8.MET1.bad1:28
+    e.g. 12.MET3.bad1  (97.5, 502.5) - (182.5, 587.5)
+    e.g. 12.MET3.bad1  (97.5, 637.5) - (182.5, 722.5)
+    e.g. 12.MET3.bad1  (97.5, 772.5) - (182.5, 857.5)
+sram64x4_Top_drc.lyrdb: 68 marker(s) 5.NSD.S1:68
+  same as the pads alone (sram64x4_Pad_drc.lyrdb): 68
+  only in the chip: 0 
+top cell: sram64x4_chip   box (um): (97.5,97.5;1802.5,1802.5)
+  sram64x4_Core_F        (761.7,561;1138.5,1165.55)
+  sram64x4_Pin_Route_F   (440.6,440.6;1459.4,1370.1)
+  sram64x4_Pad           (97.5,97.5;1802.5,1802.5)
+

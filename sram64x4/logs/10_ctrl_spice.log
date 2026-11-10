@@ -1,0 +1,12 @@
+$ bash ../scripts/ctrl_spice.sh
+sim/sram64x4_ctrl.spice: sram64x4_ctrl = 82 standard cells, 34 subcircuits in the file (kit cells + sram64x4_ctrl)
+
+$ grep -A6 "^.subckt sram64x4_ctrl" sram64x4_ctrl.spice
+.subckt sram64x4_ctrl vdd gnd CLK WE A_0 A_1 A_2 A_3 A_4 A_5 DIN_0 DIN_1 DIN_2 DIN_3 SAO_0 SAO_1 SAO_2 SAO_3 DOUT_0 DOUT_1 DOUT_2 DOUT_3 P0_0 P0_1 P0_2 P0_3 P1_0 P1_1 P1_2 P1_3 MUX_0 MUX_1 MUX_2 MUX_3 PRE_N SAE WDEN DQ_0 DQ_1 DQ_2 DQ_3 DQB_0 DQB_1 DQB_2 DQB_3
+Xubclk CLK clkb vdd gnd BUFX4
+Xubck CLK ck vdd gnd CLKBUF1
+Xra0 A_0 ck aq_0 vdd gnd DFFPOSX1
+Xra1 A_1 ck aq_1 vdd gnd DFFPOSX1
+Xra2 A_2 ck aq_2 vdd gnd DFFPOSX1
+Xra3 A_3 ck aq_3 vdd gnd DFFPOSX1
+

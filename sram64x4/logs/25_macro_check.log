@@ -1,0 +1,9 @@
+$ sram-drc sram64x4 | grep SRAM-DRC
+SRAM-DRC sram64x4: 0 error(s)
+
+$ bash lvs_ref.sh
+sram64x4_ref.spice: subcircuits 8
+
+$ sram-lvs sram64x4 sram64x4_ref.spice
+ETRI-LVS sram64x4: MATCH   (details: sram64x4_lvs.out)
+

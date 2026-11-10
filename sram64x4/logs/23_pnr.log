@@ -1,0 +1,904 @@
+$ bash run_pnr.sh
+[WARNING ODB-0220] WARNING (LEFPARS-2008): NOWIREEXTENSIONATPIN statement is obsolete in version 5.6 or later.
+[WARNING ODB-0220] WARNING (LEFPARS-2009): USEMINSPACING PIN statement is obsolete in version 5.6 or later.
+[WARNING ODB-0220] WARNING (LEFPARS-2077): A SPACING SAMENET section is defined but it is not legal in a LEF 5.7 version file.
+It will be ignored which will probably cause real DRC violations to be ignored, and may
+cause false DRC violations to occur.
+[WARNING ODB-0220] WARNING (LEFPARS-2022): DIRECTION statement in VIARULE is obsolete in version 5.6 and later.
+[WARNING ODB-0220] WARNING (LEFPARS-2023): OVERHANG statement will be translated into similar ENCLOSURE rule See file work/etri050_stdcells.lef at line 113.
+[WARNING ODB-0220] WARNING (LEFPARS-2024): METALOVERHANG statement is obsolete in version 5.6 and later.
+[WARNING ODB-0220] WARNING (LEFPARS-2022): DIRECTION statement in VIARULE is obsolete in version 5.6 and later.
+[WARNING ODB-0220] WARNING (LEFPARS-2023): OVERHANG statement will be translated into similar ENCLOSURE rule See file work/etri050_stdcells.lef at line 118.
+[WARNING ODB-0220] WARNING (LEFPARS-2024): METALOVERHANG statement is obsolete in version 5.6 and later.
+[WARNING ODB-0220] WARNING (LEFPARS-2022): DIRECTION statement in VIARULE is obsolete in version 5.6 and later.
+[WARNING ODB-0220] WARNING (LEFPARS-2023): OVERHANG statement will be translated into similar ENCLOSURE rule See file work/etri050_stdcells.lef at line 130.
+[WARNING ODB-0220] WARNING (LEFPARS-2024): METALOVERHANG statement is obsolete in version 5.6 and later.
+[WARNING ODB-0220] WARNING (LEFPARS-2022): DIRECTION statement in VIARULE is obsolete in version 5.6 and later.
+[WARNING ODB-0220] WARNING (LEFPARS-2023): OVERHANG statement will be translated into similar ENCLOSURE rule See file work/etri050_stdcells.lef at line 135.
+[WARNING ODB-0220] WARNING (LEFPARS-2024): METALOVERHANG statement is obsolete in version 5.6 and later.
+[WARNING ODB-0220] WARNING (LEFPARS-2022): DIRECTION statement in VIARULE is obsolete in version 5.6 and later.
+[WARNING ODB-0220] WARNING (LEFPARS-2022): DIRECTION statement in VIARULE is obsolete in version 5.6 and later.
+[WARNING ODB-0220] WARNING (LEFPARS-2021): turn-via is obsolete in version 5.6 and later.
+[WARNING ODB-0220] WARNING (LEFPARS-2022): DIRECTION statement in VIARULE is obsolete in version 5.6 and later.
+[WARNING ODB-0220] WARNING (LEFPARS-2022): DIRECTION statement in VIARULE is obsolete in version 5.6 and later.
+[WARNING ODB-0220] WARNING (LEFPARS-2021): turn-via is obsolete in version 5.6 and later.
+[WARNING ODB-0220] WARNING (LEFPARS-2022): DIRECTION statement in VIARULE is obsolete in version 5.6 and later.
+[WARNING ODB-0220] WARNING (LEFPARS-2022): DIRECTION statement in VIARULE is obsolete in version 5.6 and later.
+[WARNING ODB-0220] WARNING (LEFPARS-2021): turn-via is obsolete in version 5.6 and later.
+[WARNING STA-0201] ../rtl/sram64x4_ctrl.v line 37, instance ubclk port gnd not found.
+[WARNING STA-0201] ../rtl/sram64x4_ctrl.v line 37, instance ubclk port vdd not found.
+[WARNING STA-0201] ../rtl/sram64x4_ctrl.v line 38, instance ubck port gnd not found.
+[WARNING STA-0201] ../rtl/sram64x4_ctrl.v line 38, instance ubck port vdd not found.
+[WARNING STA-0201] ../rtl/sram64x4_ctrl.v line 41, instance ra0 port gnd not found.
+[WARNING STA-0201] ../rtl/sram64x4_ctrl.v line 41, instance ra0 port vdd not found.
+[WARNING STA-0201] ../rtl/sram64x4_ctrl.v line 42, instance ra1 port gnd not found.
+[WARNING STA-0201] ../rtl/sram64x4_ctrl.v line 42, instance ra1 port vdd not found.
+[WARNING STA-0201] ../rtl/sram64x4_ctrl.v line 43, instance ra2 port gnd not found.
+[WARNING STA-0201] ../rtl/sram64x4_ctrl.v line 43, instance ra2 port vdd not found.
+[WARNING STA-0201] ../rtl/sram64x4_ctrl.v line 44, instance ra3 port gnd not found.
+[WARNING STA-0201] ../rtl/sram64x4_ctrl.v line 44, instance ra3 port vdd not found.
+[WARNING STA-0201] ../rtl/sram64x4_ctrl.v line 45, instance ra4 port gnd not found.
+[WARNING STA-0201] ../rtl/sram64x4_ctrl.v line 45, instance ra4 port vdd not found.
+[WARNING STA-0201] ../rtl/sram64x4_ctrl.v line 46, instance ra5 port gnd not found.
+[WARNING STA-0201] ../rtl/sram64x4_ctrl.v line 46, instance ra5 port vdd not found.
+[WARNING STA-0201] ../rtl/sram64x4_ctrl.v line 47, instance rwe port gnd not found.
+[WARNING STA-0201] ../rtl/sram64x4_ctrl.v line 47, instance rwe port vdd not found.
+[WARNING STA-0201] ../rtl/sram64x4_ctrl.v line 48, instance rd0 port gnd not found.
+[WARNING STA-0201] ../rtl/sram64x4_ctrl.v line 48, instance rd0 port vdd not found.
+[WARNING STA-0201] ../rtl/sram64x4_ctrl.v line 49, instance rd1 port gnd not found.
+[WARNING STA-0201] ../rtl/sram64x4_ctrl.v line 49, instance rd1 port vdd not found.
+[WARNING STA-0201] ../rtl/sram64x4_ctrl.v line 50, instance rd2 port gnd not found.
+[WARNING STA-0201] ../rtl/sram64x4_ctrl.v line 50, instance rd2 port vdd not found.
+[WARNING STA-0201] ../rtl/sram64x4_ctrl.v line 51, instance rd3 port gnd not found.
+[WARNING STA-0201] ../rtl/sram64x4_ctrl.v line 51, instance rd3 port vdd not found.
+[WARNING STA-0201] ../rtl/sram64x4_ctrl.v line 54, instance ia0 port gnd not found.
+[WARNING STA-0201] ../rtl/sram64x4_ctrl.v line 54, instance ia0 port vdd not found.
+[WARNING STA-0201] ../rtl/sram64x4_ctrl.v line 55, instance ia1 port gnd not found.
+[WARNING STA-0201] ../rtl/sram64x4_ctrl.v line 55, instance ia1 port vdd not found.
+[WARNING STA-0201] ../rtl/sram64x4_ctrl.v line 56, instance ia2 port gnd not found.
+[WARNING STA-0201] ../rtl/sram64x4_ctrl.v line 56, instance ia2 port vdd not found.
+[WARNING STA-0201] ../rtl/sram64x4_ctrl.v line 57, instance ia3 port gnd not found.
+[WARNING STA-0201] ../rtl/sram64x4_ctrl.v line 57, instance ia3 port vdd not found.
+[WARNING STA-0201] ../rtl/sram64x4_ctrl.v line 58, instance ia4 port gnd not found.
+[WARNING STA-0201] ../rtl/sram64x4_ctrl.v line 58, instance ia4 port vdd not found.
+[WARNING STA-0201] ../rtl/sram64x4_ctrl.v line 59, instance ia5 port gnd not found.
+[WARNING STA-0201] ../rtl/sram64x4_ctrl.v line 59, instance ia5 port vdd not found.
+[WARNING STA-0201] ../rtl/sram64x4_ctrl.v line 60, instance iwe port gnd not found.
+[WARNING STA-0201] ../rtl/sram64x4_ctrl.v line 60, instance iwe port vdd not found.
+[WARNING STA-0201] ../rtl/sram64x4_ctrl.v line 61, instance id0 port gnd not found.
+[WARNING STA-0201] ../rtl/sram64x4_ctrl.v line 61, instance id0 port vdd not found.
+[WARNING STA-0201] ../rtl/sram64x4_ctrl.v line 62, instance id1 port gnd not found.
+[WARNING STA-0201] ../rtl/sram64x4_ctrl.v line 62, instance id1 port vdd not found.
+[WARNING STA-0201] ../rtl/sram64x4_ctrl.v line 63, instance id2 port gnd not found.
+[WARNING STA-0201] ../rtl/sram64x4_ctrl.v line 63, instance id2 port vdd not found.
+[WARNING STA-0201] ../rtl/sram64x4_ctrl.v line 64, instance id3 port gnd not found.
+[WARNING STA-0201] ../rtl/sram64x4_ctrl.v line 64, instance id3 port vdd not found.
+[WARNING STA-0201] ../rtl/sram64x4_ctrl.v line 67, instance d0 port gnd not found.
+[WARNING STA-0201] ../rtl/sram64x4_ctrl.v line 67, instance d0 port vdd not found.
+[WARNING STA-0201] ../rtl/sram64x4_ctrl.v line 68, instance d1 port gnd not found.
+[WARNING STA-0201] ../rtl/sram64x4_ctrl.v line 68, instance d1 port vdd not found.
+[WARNING STA-0201] ../rtl/sram64x4_ctrl.v line 69, instance d2 port gnd not found.
+[WARNING STA-0201] ../rtl/sram64x4_ctrl.v line 69, instance d2 port vdd not found.
+[WARNING STA-0201] ../rtl/sram64x4_ctrl.v line 70, instance d3 port gnd not found.
+[WARNING STA-0201] ../rtl/sram64x4_ctrl.v line 70, instance d3 port vdd not found.
+[WARNING STA-0201] ../rtl/sram64x4_ctrl.v line 71, instance d4 port gnd not found.
+[WARNING STA-0201] ../rtl/sram64x4_ctrl.v line 71, instance d4 port vdd not found.
+[WARNING STA-0201] ../rtl/sram64x4_ctrl.v line 72, instance d5 port gnd not found.
+[WARNING STA-0201] ../rtl/sram64x4_ctrl.v line 72, instance d5 port vdd not found.
+[WARNING STA-0201] ../rtl/sram64x4_ctrl.v line 73, instance d6 port gnd not found.
+[WARNING STA-0201] ../rtl/sram64x4_ctrl.v line 73, instance d6 port vdd not found.
+[WARNING STA-0201] ../rtl/sram64x4_ctrl.v line 74, instance d7 port gnd not found.
+[WARNING STA-0201] ../rtl/sram64x4_ctrl.v line 74, instance d7 port vdd not found.
+[WARNING STA-0201] ../rtl/sram64x4_ctrl.v line 75, instance d8 port gnd not found.
+[WARNING STA-0201] ../rtl/sram64x4_ctrl.v line 75, instance d8 port vdd not found.
+[WARNING STA-0201] ../rtl/sram64x4_ctrl.v line 76, instance d9 port gnd not found.
+[WARNING STA-0201] ../rtl/sram64x4_ctrl.v line 76, instance d9 port vdd not found.
+[WARNING STA-0201] ../rtl/sram64x4_ctrl.v line 77, instance d10 port gnd not found.
+[WARNING STA-0201] ../rtl/sram64x4_ctrl.v line 77, instance d10 port vdd not found.
+[WARNING STA-0201] ../rtl/sram64x4_ctrl.v line 78, instance d11 port gnd not found.
+[WARNING STA-0201] ../rtl/sram64x4_ctrl.v line 78, instance d11 port vdd not found.
+[WARNING STA-0201] ../rtl/sram64x4_ctrl.v line 79, instance d12 port gnd not found.
+[WARNING STA-0201] ../rtl/sram64x4_ctrl.v line 79, instance d12 port vdd not found.
+[WARNING STA-0201] ../rtl/sram64x4_ctrl.v line 80, instance d13 port gnd not found.
+[WARNING STA-0201] ../rtl/sram64x4_ctrl.v line 80, instance d13 port vdd not found.
+[WARNING STA-0201] ../rtl/sram64x4_ctrl.v line 81, instance d14 port gnd not found.
+[WARNING STA-0201] ../rtl/sram64x4_ctrl.v line 81, instance d14 port vdd not found.
+[WARNING STA-0201] ../rtl/sram64x4_ctrl.v line 82, instance d15 port gnd not found.
+[WARNING STA-0201] ../rtl/sram64x4_ctrl.v line 82, instance d15 port vdd not found.
+[WARNING STA-0201] ../rtl/sram64x4_ctrl.v line 83, instance d16 port gnd not found.
+[WARNING STA-0201] ../rtl/sram64x4_ctrl.v line 83, instance d16 port vdd not found.
+[WARNING STA-0201] ../rtl/sram64x4_ctrl.v line 84, instance d17 port gnd not found.
+[WARNING STA-0201] ../rtl/sram64x4_ctrl.v line 84, instance d17 port vdd not found.
+[WARNING STA-0201] ../rtl/sram64x4_ctrl.v line 87, instance gwl port gnd not found.
+[WARNING STA-0201] ../rtl/sram64x4_ctrl.v line 87, instance gwl port vdd not found.
+[WARNING STA-0201] ../rtl/sram64x4_ctrl.v line 88, instance iwl port gnd not found.
+[WARNING STA-0201] ../rtl/sram64x4_ctrl.v line 88, instance iwl port vdd not found.
+[WARNING STA-0201] ../rtl/sram64x4_ctrl.v line 91, instance n00 port gnd not found.
+[WARNING STA-0201] ../rtl/sram64x4_ctrl.v line 91, instance n00 port vdd not found.
+[WARNING STA-0201] ../rtl/sram64x4_ctrl.v line 92, instance n01 port gnd not found.
+[WARNING STA-0201] ../rtl/sram64x4_ctrl.v line 92, instance n01 port vdd not found.
+[WARNING STA-0201] ../rtl/sram64x4_ctrl.v line 93, instance n02 port gnd not found.
+[WARNING STA-0201] ../rtl/sram64x4_ctrl.v line 93, instance n02 port vdd not found.
+[WARNING STA-0201] ../rtl/sram64x4_ctrl.v line 94, instance n03 port gnd not found.
+[WARNING STA-0201] ../rtl/sram64x4_ctrl.v line 94, instance n03 port vdd not found.
+[WARNING STA-0201] ../rtl/sram64x4_ctrl.v line 95, instance i00 port gnd not found.
+[WARNING STA-0201] ../rtl/sram64x4_ctrl.v line 95, instance i00 port vdd not found.
+[WARNING STA-0201] ../rtl/sram64x4_ctrl.v line 96, instance i01 port gnd not found.
+[WARNING STA-0201] ../rtl/sram64x4_ctrl.v line 96, instance i01 port vdd not found.
+[WARNING STA-0201] ../rtl/sram64x4_ctrl.v line 97, instance i02 port gnd not found.
+[WARNING STA-0201] ../rtl/sram64x4_ctrl.v line 97, instance i02 port vdd not found.
+[WARNING STA-0201] ../rtl/sram64x4_ctrl.v line 98, instance i03 port gnd not found.
+[WARNING STA-0201] ../rtl/sram64x4_ctrl.v line 98, instance i03 port vdd not found.
+[WARNING STA-0201] ../rtl/sram64x4_ctrl.v line 99, instance n10 port gnd not found.
+[WARNING STA-0201] ../rtl/sram64x4_ctrl.v line 99, instance n10 port vdd not found.
+[WARNING STA-0201] ../rtl/sram64x4_ctrl.v line 100, instance n11 port gnd not found.
+[WARNING STA-0201] ../rtl/sram64x4_ctrl.v line 100, instance n11 port vdd not found.
+[WARNING STA-0201] ../rtl/sram64x4_ctrl.v line 101, instance n12 port gnd not found.
+[WARNING STA-0201] ../rtl/sram64x4_ctrl.v line 101, instance n12 port vdd not found.
+[WARNING STA-0201] ../rtl/sram64x4_ctrl.v line 102, instance n13 port gnd not found.
+[WARNING STA-0201] ../rtl/sram64x4_ctrl.v line 102, instance n13 port vdd not found.
+[WARNING STA-0201] ../rtl/sram64x4_ctrl.v line 103, instance i10 port gnd not found.
+[WARNING STA-0201] ../rtl/sram64x4_ctrl.v line 103, instance i10 port vdd not found.
+[WARNING STA-0201] ../rtl/sram64x4_ctrl.v line 104, instance i11 port gnd not found.
+[WARNING STA-0201] ../rtl/sram64x4_ctrl.v line 104, instance i11 port vdd not found.
+[WARNING STA-0201] ../rtl/sram64x4_ctrl.v line 105, instance i12 port gnd not found.
+[WARNING STA-0201] ../rtl/sram64x4_ctrl.v line 105, instance i12 port vdd not found.
+[WARNING STA-0201] ../rtl/sram64x4_ctrl.v line 106, instance i13 port gnd not found.
+[WARNING STA-0201] ../rtl/sram64x4_ctrl.v line 106, instance i13 port vdd not found.
+[WARNING STA-0201] ../rtl/sram64x4_ctrl.v line 109, instance gpre port gnd not found.
+[WARNING STA-0201] ../rtl/sram64x4_ctrl.v line 109, instance gpre port vdd not found.
+[WARNING STA-0201] ../rtl/sram64x4_ctrl.v line 110, instance ipre port gnd not found.
+[WARNING STA-0201] ../rtl/sram64x4_ctrl.v line 110, instance ipre port vdd not found.
+[WARNING STA-0201] ../rtl/sram64x4_ctrl.v line 113, instance gsen port gnd not found.
+[WARNING STA-0201] ../rtl/sram64x4_ctrl.v line 113, instance gsen port vdd not found.
+[WARNING STA-0201] ../rtl/sram64x4_ctrl.v line 116, instance gmux port gnd not found.
+[WARNING STA-0201] ../rtl/sram64x4_ctrl.v line 116, instance gmux port vdd not found.
+[WARNING STA-0201] ../rtl/sram64x4_ctrl.v line 117, instance m0 port gnd not found.
+[WARNING STA-0201] ../rtl/sram64x4_ctrl.v line 117, instance m0 port vdd not found.
+[WARNING STA-0201] ../rtl/sram64x4_ctrl.v line 118, instance m1 port gnd not found.
+[WARNING STA-0201] ../rtl/sram64x4_ctrl.v line 118, instance m1 port vdd not found.
+[WARNING STA-0201] ../rtl/sram64x4_ctrl.v line 119, instance m2 port gnd not found.
+[WARNING STA-0201] ../rtl/sram64x4_ctrl.v line 119, instance m2 port vdd not found.
+[WARNING STA-0201] ../rtl/sram64x4_ctrl.v line 120, instance m3 port gnd not found.
+[WARNING STA-0201] ../rtl/sram64x4_ctrl.v line 120, instance m3 port vdd not found.
+[WARNING STA-0201] ../rtl/sram64x4_ctrl.v line 121, instance im0 port gnd not found.
+[WARNING STA-0201] ../rtl/sram64x4_ctrl.v line 121, instance im0 port vdd not found.
+[WARNING STA-0201] ../rtl/sram64x4_ctrl.v line 122, instance im1 port gnd not found.
+[WARNING STA-0201] ../rtl/sram64x4_ctrl.v line 122, instance im1 port vdd not found.
+[WARNING STA-0201] ../rtl/sram64x4_ctrl.v line 123, instance im2 port gnd not found.
+[WARNING STA-0201] ../rtl/sram64x4_ctrl.v line 123, instance im2 port vdd not found.
+[WARNING STA-0201] ../rtl/sram64x4_ctrl.v line 124, instance im3 port gnd not found.
+[WARNING STA-0201] ../rtl/sram64x4_ctrl.v line 124, instance im3 port vdd not found.
+[WARNING STA-0201] ../rtl/sram64x4_ctrl.v line 127, instance gse0 port gnd not found.
+[WARNING STA-0201] ../rtl/sram64x4_ctrl.v line 127, instance gse0 port vdd not found.
+[WARNING STA-0201] ../rtl/sram64x4_ctrl.v line 128, instance gse1 port gnd not found.
+[WARNING STA-0201] ../rtl/sram64x4_ctrl.v line 128, instance gse1 port vdd not found.
+[WARNING STA-0201] ../rtl/sram64x4_ctrl.v line 129, instance gse2 port gnd not found.
+[WARNING STA-0201] ../rtl/sram64x4_ctrl.v line 129, instance gse2 port vdd not found.
+[WARNING STA-0201] ../rtl/sram64x4_ctrl.v line 130, instance gse3 port gnd not found.
+[WARNING STA-0201] ../rtl/sram64x4_ctrl.v line 130, instance gse3 port vdd not found.
+[WARNING STA-0201] ../rtl/sram64x4_ctrl.v line 133, instance gwd port gnd not found.
+[WARNING STA-0201] ../rtl/sram64x4_ctrl.v line 133, instance gwd port vdd not found.
+[WARNING STA-0201] ../rtl/sram64x4_ctrl.v line 134, instance iwd port gnd not found.
+[WARNING STA-0201] ../rtl/sram64x4_ctrl.v line 134, instance iwd port vdd not found.
+[WARNING STA-0201] ../rtl/sram64x4_ctrl.v line 137, instance rq0 port gnd not found.
+[WARNING STA-0201] ../rtl/sram64x4_ctrl.v line 137, instance rq0 port vdd not found.
+[WARNING STA-0201] ../rtl/sram64x4_ctrl.v line 138, instance rq1 port gnd not found.
+[WARNING STA-0201] ../rtl/sram64x4_ctrl.v line 138, instance rq1 port vdd not found.
+[WARNING STA-0201] ../rtl/sram64x4_ctrl.v line 139, instance rq2 port gnd not found.
+[WARNING STA-0201] ../rtl/sram64x4_ctrl.v line 139, instance rq2 port vdd not found.
+[WARNING STA-0201] ../rtl/sram64x4_ctrl.v line 140, instance rq3 port gnd not found.
+[WARNING STA-0201] ../rtl/sram64x4_ctrl.v line 140, instance rq3 port vdd not found.
+[WARNING ORD-2056] The following 7 liberty cell(s) do not have LEF masters and will be marked as dont-use:
+[WARNING IFP-0028] Core area lower left (3.000, 15.000) snapped to (3.000, 36.000).
+[WARNING GPL-0302] Target density 0.6000 is too low for the available free area.
+[WARNING GPL-1015] High uniform density (>1.00) may cause congestion or legalization issues.
+[WARNING DPL-0700] Negotiation phase 1: violations stuck at 4 for 3 consecutive iterations.
+Detailed Placement Analysis
+    Completing 100% with 5 violations.
+[INFO DRT-0199]   Number of violations = 5.
+Total wire length = 10689 um.
+Total wire length on LAYER metal1 = 0 um.
+Total wire length on LAYER metal2 = 6591 um.
+Total wire length on LAYER metal3 = 4098 um.
+    Completing 50% with 5 violations.
+    Completing 100% with 3 violations.
+[INFO DRT-0199]   Number of violations = 3.
+Total wire length = 10656 um.
+Total wire length on LAYER metal1 = 0 um.
+Total wire length on LAYER metal2 = 6474 um.
+Total wire length on LAYER metal3 = 4182 um.
+    Completing 20% with 3 violations.
+    Completing 50% with 3 violations.
+    Completing 70% with 1 violations.
+    Completing 100% with 1 violations.
+[INFO DRT-0199]   Number of violations = 1.
+Total wire length = 10708 um.
+Total wire length on LAYER metal1 = 0 um.
+Total wire length on LAYER metal2 = 6507 um.
+Total wire length on LAYER metal3 = 4201 um.
+    Completing 100% with 0 violations.
+[INFO DRT-0199]   Number of violations = 0.
+Total wire length = 10705 um.
+Total wire length on LAYER metal1 = 0 um.
+Total wire length on LAYER metal2 = 6474 um.
+Total wire length on LAYER metal3 = 4231 um.
+Total wire length = 10705 um.
+Total wire length on LAYER metal1 = 0 um.
+Total wire length on LAYER metal2 = 6474 um.
+Total wire length on LAYER metal3 = 4231 um.
+die origin in macro lambda: -206 -990.0
+
+--- work/pnr.log (OpenROAD 전체 출력) ---
+OpenROAD 26Q4-407-geb14e40b7 
+Features included (+) or not (-): -GPU +GUI -Python
+This program is licensed under the BSD-3 license. See the LICENSE file for details.
+Components of this program may be licensed under more restrictive licenses which must be honored.
+[WARNING ODB-0220] WARNING (LEFPARS-2008): NOWIREEXTENSIONATPIN statement is obsolete in version 5.6 or later.
+The NOWIREEXTENSIONATPIN statement will be ignored. See file work/etri050_stdcells.lef at line 7.
+
+[WARNING ODB-0220] WARNING (LEFPARS-2009): USEMINSPACING PIN statement is obsolete in version 5.6 or later.
+ The USEMINSPACING PIN statement will be ignored. See file work/etri050_stdcells.lef at line 16.
+
+[WARNING ODB-0220] WARNING (LEFPARS-2077): A SPACING SAMENET section is defined but it is not legal in a LEF 5.7 version file.
+It will be ignored which will probably cause real DRC violations to be ignored, and may
+cause false DRC violations to occur.
+
+To avoid this warning, and correctly handle these DRC rules, you should modify your
+LEF to use the appropriate SAMENET keywords as described in the LEF/DEF 5.7
+manual under the SPACING statements in the LAYER (Routing) and LAYER (Cut)
+sections listed in the LEF Table of Contents. See file work/etri050_stdcells.lef at line 85.
+
+[WARNING ODB-0220] WARNING (LEFPARS-2022): DIRECTION statement in VIARULE is obsolete in version 5.6 and later.
+The LEF parser will ignore this statement.
+To avoid this warning in the future, remove this statement from the LEF file with version 5.6 or later. See file work/etri050_stdcells.lef at line 111.
+
+[WARNING ODB-0220] WARNING (LEFPARS-2023): OVERHANG statement will be translated into similar ENCLOSURE rule See file work/etri050_stdcells.lef at line 113.
+
+[WARNING ODB-0220] WARNING (LEFPARS-2024): METALOVERHANG statement is obsolete in version 5.6 and later.
+The LEF parser will ignore this statement.
+To avoid this warning in the future, remove this statement from the LEF file with version 5.6 or later. See file work/etri050_stdcells.lef at line 114.
+
+[WARNING ODB-0220] WARNING (LEFPARS-2022): DIRECTION statement in VIARULE is obsolete in version 5.6 and later.
+The LEF parser will ignore this statement.
+To avoid this warning in the future, remove this statement from the LEF file with version 5.6 or later. See file work/etri050_stdcells.lef at line 116.
+
+[WARNING ODB-0220] WARNING (LEFPARS-2023): OVERHANG statement will be translated into similar ENCLOSURE rule See file work/etri050_stdcells.lef at line 118.
+
+[WARNING ODB-0220] WARNING (LEFPARS-2024): METALOVERHANG statement is obsolete in version 5.6 and later.
+The LEF parser will ignore this statement.
+To avoid this warning in the future, remove this statement from the LEF file with version 5.6 or later. See file work/etri050_stdcells.lef at line 119.
+
+[WARNING ODB-0220] WARNING (LEFPARS-2022): DIRECTION statement in VIARULE is obsolete in version 5.6 and later.
+The LEF parser will ignore this statement.
+To avoid this warning in the future, remove this statement from the LEF file with version 5.6 or later. See file work/etri050_stdcells.lef at line 128.
+
+[WARNING ODB-0220] WARNING (LEFPARS-2023): OVERHANG statement will be translated into similar ENCLOSURE rule See file work/etri050_stdcells.lef at line 130.
+
+[WARNING ODB-0220] WARNING (LEFPARS-2024): METALOVERHANG statement is obsolete in version 5.6 and later.
+The LEF parser will ignore this statement.
+To avoid this warning in the future, remove this statement from the LEF file with version 5.6 or later. See file work/etri050_stdcells.lef at line 131.
+
+[WARNING ODB-0220] WARNING (LEFPARS-2022): DIRECTION statement in VIARULE is obsolete in version 5.6 and later.
+The LEF parser will ignore this statement.
+To avoid this warning in the future, remove this statement from the LEF file with version 5.6 or later. See file work/etri050_stdcells.lef at line 133.
+
+[WARNING ODB-0220] WARNING (LEFPARS-2023): OVERHANG statement will be translated into similar ENCLOSURE rule See file work/etri050_stdcells.lef at line 135.
+
+[WARNING ODB-0220] WARNING (LEFPARS-2024): METALOVERHANG statement is obsolete in version 5.6 and later.
+The LEF parser will ignore this statement.
+To avoid this warning in the future, remove this statement from the LEF file with version 5.6 or later. See file work/etri050_stdcells.lef at line 136.
+
+[WARNING ODB-0220] WARNING (LEFPARS-2022): DIRECTION statement in VIARULE is obsolete in version 5.6 and later.
+The LEF parser will ignore this statement.
+To avoid this warning in the future, remove this statement from the LEF file with version 5.6 or later. See file work/etri050_stdcells.lef at line 145.
+
+[WARNING ODB-0220] WARNING (LEFPARS-2022): DIRECTION statement in VIARULE is obsolete in version 5.6 and later.
+The LEF parser will ignore this statement.
+To avoid this warning in the future, remove this statement from the LEF file with version 5.6 or later. See file work/etri050_stdcells.lef at line 147.
+
+[WARNING ODB-0220] WARNING (LEFPARS-2021): turn-via is obsolete in version 5.6 and later.
+The LEF parser will ignore this statement.
+To avoid this warning in the future, remove this statement from the LEF file with version 5.6 or later. See file work/etri050_stdcells.lef at line 148.
+
+[WARNING ODB-0220] WARNING (LEFPARS-2022): DIRECTION statement in VIARULE is obsolete in version 5.6 and later.
+The LEF parser will ignore this statement.
+To avoid this warning in the future, remove this statement from the LEF file with version 5.6 or later. See file work/etri050_stdcells.lef at line 152.
+
+[WARNING ODB-0220] WARNING (LEFPARS-2022): DIRECTION statement in VIARULE is obsolete in version 5.6 and later.
+The LEF parser will ignore this statement.
+To avoid this warning in the future, remove this statement from the LEF file with version 5.6 or later. See file work/etri050_stdcells.lef at line 154.
+
+[WARNING ODB-0220] WARNING (LEFPARS-2021): turn-via is obsolete in version 5.6 and later.
+The LEF parser will ignore this statement.
+To avoid this warning in the future, remove this statement from the LEF file with version 5.6 or later. See file work/etri050_stdcells.lef at line 155.
+
+[WARNING ODB-0220] WARNING (LEFPARS-2022): DIRECTION statement in VIARULE is obsolete in version 5.6 and later.
+The LEF parser will ignore this statement.
+To avoid this warning in the future, remove this statement from the LEF file with version 5.6 or later. See file work/etri050_stdcells.lef at line 159.
+
+[WARNING ODB-0220] WARNING (LEFPARS-2022): DIRECTION statement in VIARULE is obsolete in version 5.6 and later.
+The LEF parser will ignore this statement.
+To avoid this warning in the future, remove this statement from the LEF file with version 5.6 or later. See file work/etri050_stdcells.lef at line 161.
+
+[WARNING ODB-0220] WARNING (LEFPARS-2021): turn-via is obsolete in version 5.6 and later.
+The LEF parser will ignore this statement.
+To avoid this warning in the future, remove this statement from the LEF file with version 5.6 or later. See file work/etri050_stdcells.lef at line 162.
+
+[INFO ODB-0227] LEF file: work/etri050_stdcells.lef, created 10 layers, 2 vias, 33 library cells
+[WARNING STA-0201] ../rtl/sram64x4_ctrl.v line 37, instance ubclk port gnd not found.
+[WARNING STA-0201] ../rtl/sram64x4_ctrl.v line 37, instance ubclk port vdd not found.
+[WARNING STA-0201] ../rtl/sram64x4_ctrl.v line 38, instance ubck port gnd not found.
+[WARNING STA-0201] ../rtl/sram64x4_ctrl.v line 38, instance ubck port vdd not found.
+[WARNING STA-0201] ../rtl/sram64x4_ctrl.v line 41, instance ra0 port gnd not found.
+[WARNING STA-0201] ../rtl/sram64x4_ctrl.v line 41, instance ra0 port vdd not found.
+[WARNING STA-0201] ../rtl/sram64x4_ctrl.v line 42, instance ra1 port gnd not found.
+[WARNING STA-0201] ../rtl/sram64x4_ctrl.v line 42, instance ra1 port vdd not found.
+[WARNING STA-0201] ../rtl/sram64x4_ctrl.v line 43, instance ra2 port gnd not found.
+[WARNING STA-0201] ../rtl/sram64x4_ctrl.v line 43, instance ra2 port vdd not found.
+[WARNING STA-0201] ../rtl/sram64x4_ctrl.v line 44, instance ra3 port gnd not found.
+[WARNING STA-0201] ../rtl/sram64x4_ctrl.v line 44, instance ra3 port vdd not found.
+[WARNING STA-0201] ../rtl/sram64x4_ctrl.v line 45, instance ra4 port gnd not found.
+[WARNING STA-0201] ../rtl/sram64x4_ctrl.v line 45, instance ra4 port vdd not found.
+[WARNING STA-0201] ../rtl/sram64x4_ctrl.v line 46, instance ra5 port gnd not found.
+[WARNING STA-0201] ../rtl/sram64x4_ctrl.v line 46, instance ra5 port vdd not found.
+[WARNING STA-0201] ../rtl/sram64x4_ctrl.v line 47, instance rwe port gnd not found.
+[WARNING STA-0201] ../rtl/sram64x4_ctrl.v line 47, instance rwe port vdd not found.
+[WARNING STA-0201] ../rtl/sram64x4_ctrl.v line 48, instance rd0 port gnd not found.
+[WARNING STA-0201] ../rtl/sram64x4_ctrl.v line 48, instance rd0 port vdd not found.
+[WARNING STA-0201] ../rtl/sram64x4_ctrl.v line 49, instance rd1 port gnd not found.
+[WARNING STA-0201] ../rtl/sram64x4_ctrl.v line 49, instance rd1 port vdd not found.
+[WARNING STA-0201] ../rtl/sram64x4_ctrl.v line 50, instance rd2 port gnd not found.
+[WARNING STA-0201] ../rtl/sram64x4_ctrl.v line 50, instance rd2 port vdd not found.
+[WARNING STA-0201] ../rtl/sram64x4_ctrl.v line 51, instance rd3 port gnd not found.
+[WARNING STA-0201] ../rtl/sram64x4_ctrl.v line 51, instance rd3 port vdd not found.
+[WARNING STA-0201] ../rtl/sram64x4_ctrl.v line 54, instance ia0 port gnd not found.
+[WARNING STA-0201] ../rtl/sram64x4_ctrl.v line 54, instance ia0 port vdd not found.
+[WARNING STA-0201] ../rtl/sram64x4_ctrl.v line 55, instance ia1 port gnd not found.
+[WARNING STA-0201] ../rtl/sram64x4_ctrl.v line 55, instance ia1 port vdd not found.
+[WARNING STA-0201] ../rtl/sram64x4_ctrl.v line 56, instance ia2 port gnd not found.
+[WARNING STA-0201] ../rtl/sram64x4_ctrl.v line 56, instance ia2 port vdd not found.
+[WARNING STA-0201] ../rtl/sram64x4_ctrl.v line 57, instance ia3 port gnd not found.
+[WARNING STA-0201] ../rtl/sram64x4_ctrl.v line 57, instance ia3 port vdd not found.
+[WARNING STA-0201] ../rtl/sram64x4_ctrl.v line 58, instance ia4 port gnd not found.
+[WARNING STA-0201] ../rtl/sram64x4_ctrl.v line 58, instance ia4 port vdd not found.
+[WARNING STA-0201] ../rtl/sram64x4_ctrl.v line 59, instance ia5 port gnd not found.
+[WARNING STA-0201] ../rtl/sram64x4_ctrl.v line 59, instance ia5 port vdd not found.
+[WARNING STA-0201] ../rtl/sram64x4_ctrl.v line 60, instance iwe port gnd not found.
+[WARNING STA-0201] ../rtl/sram64x4_ctrl.v line 60, instance iwe port vdd not found.
+[WARNING STA-0201] ../rtl/sram64x4_ctrl.v line 61, instance id0 port gnd not found.
+[WARNING STA-0201] ../rtl/sram64x4_ctrl.v line 61, instance id0 port vdd not found.
+[WARNING STA-0201] ../rtl/sram64x4_ctrl.v line 62, instance id1 port gnd not found.
+[WARNING STA-0201] ../rtl/sram64x4_ctrl.v line 62, instance id1 port vdd not found.
+[WARNING STA-0201] ../rtl/sram64x4_ctrl.v line 63, instance id2 port gnd not found.
+[WARNING STA-0201] ../rtl/sram64x4_ctrl.v line 63, instance id2 port vdd not found.
+[WARNING STA-0201] ../rtl/sram64x4_ctrl.v line 64, instance id3 port gnd not found.
+[WARNING STA-0201] ../rtl/sram64x4_ctrl.v line 64, instance id3 port vdd not found.
+[WARNING STA-0201] ../rtl/sram64x4_ctrl.v line 67, instance d0 port gnd not found.
+[WARNING STA-0201] ../rtl/sram64x4_ctrl.v line 67, instance d0 port vdd not found.
+[WARNING STA-0201] ../rtl/sram64x4_ctrl.v line 68, instance d1 port gnd not found.
+[WARNING STA-0201] ../rtl/sram64x4_ctrl.v line 68, instance d1 port vdd not found.
+[WARNING STA-0201] ../rtl/sram64x4_ctrl.v line 69, instance d2 port gnd not found.
+[WARNING STA-0201] ../rtl/sram64x4_ctrl.v line 69, instance d2 port vdd not found.
+[WARNING STA-0201] ../rtl/sram64x4_ctrl.v line 70, instance d3 port gnd not found.
+[WARNING STA-0201] ../rtl/sram64x4_ctrl.v line 70, instance d3 port vdd not found.
+[WARNING STA-0201] ../rtl/sram64x4_ctrl.v line 71, instance d4 port gnd not found.
+[WARNING STA-0201] ../rtl/sram64x4_ctrl.v line 71, instance d4 port vdd not found.
+[WARNING STA-0201] ../rtl/sram64x4_ctrl.v line 72, instance d5 port gnd not found.
+[WARNING STA-0201] ../rtl/sram64x4_ctrl.v line 72, instance d5 port vdd not found.
+[WARNING STA-0201] ../rtl/sram64x4_ctrl.v line 73, instance d6 port gnd not found.
+[WARNING STA-0201] ../rtl/sram64x4_ctrl.v line 73, instance d6 port vdd not found.
+[WARNING STA-0201] ../rtl/sram64x4_ctrl.v line 74, instance d7 port gnd not found.
+[WARNING STA-0201] ../rtl/sram64x4_ctrl.v line 74, instance d7 port vdd not found.
+[WARNING STA-0201] ../rtl/sram64x4_ctrl.v line 75, instance d8 port gnd not found.
+[WARNING STA-0201] ../rtl/sram64x4_ctrl.v line 75, instance d8 port vdd not found.
+[WARNING STA-0201] ../rtl/sram64x4_ctrl.v line 76, instance d9 port gnd not found.
+[WARNING STA-0201] ../rtl/sram64x4_ctrl.v line 76, instance d9 port vdd not found.
+[WARNING STA-0201] ../rtl/sram64x4_ctrl.v line 77, instance d10 port gnd not found.
+[WARNING STA-0201] ../rtl/sram64x4_ctrl.v line 77, instance d10 port vdd not found.
+[WARNING STA-0201] ../rtl/sram64x4_ctrl.v line 78, instance d11 port gnd not found.
+[WARNING STA-0201] ../rtl/sram64x4_ctrl.v line 78, instance d11 port vdd not found.
+[WARNING STA-0201] ../rtl/sram64x4_ctrl.v line 79, instance d12 port gnd not found.
+[WARNING STA-0201] ../rtl/sram64x4_ctrl.v line 79, instance d12 port vdd not found.
+[WARNING STA-0201] ../rtl/sram64x4_ctrl.v line 80, instance d13 port gnd not found.
+[WARNING STA-0201] ../rtl/sram64x4_ctrl.v line 80, instance d13 port vdd not found.
+[WARNING STA-0201] ../rtl/sram64x4_ctrl.v line 81, instance d14 port gnd not found.
+[WARNING STA-0201] ../rtl/sram64x4_ctrl.v line 81, instance d14 port vdd not found.
+[WARNING STA-0201] ../rtl/sram64x4_ctrl.v line 82, instance d15 port gnd not found.
+[WARNING STA-0201] ../rtl/sram64x4_ctrl.v line 82, instance d15 port vdd not found.
+[WARNING STA-0201] ../rtl/sram64x4_ctrl.v line 83, instance d16 port gnd not found.
+[WARNING STA-0201] ../rtl/sram64x4_ctrl.v line 83, instance d16 port vdd not found.
+[WARNING STA-0201] ../rtl/sram64x4_ctrl.v line 84, instance d17 port gnd not found.
+[WARNING STA-0201] ../rtl/sram64x4_ctrl.v line 84, instance d17 port vdd not found.
+[WARNING STA-0201] ../rtl/sram64x4_ctrl.v line 87, instance gwl port gnd not found.
+[WARNING STA-0201] ../rtl/sram64x4_ctrl.v line 87, instance gwl port vdd not found.
+[WARNING STA-0201] ../rtl/sram64x4_ctrl.v line 88, instance iwl port gnd not found.
+[WARNING STA-0201] ../rtl/sram64x4_ctrl.v line 88, instance iwl port vdd not found.
+[WARNING STA-0201] ../rtl/sram64x4_ctrl.v line 91, instance n00 port gnd not found.
+[WARNING STA-0201] ../rtl/sram64x4_ctrl.v line 91, instance n00 port vdd not found.
+[WARNING STA-0201] ../rtl/sram64x4_ctrl.v line 92, instance n01 port gnd not found.
+[WARNING STA-0201] ../rtl/sram64x4_ctrl.v line 92, instance n01 port vdd not found.
+[WARNING STA-0201] ../rtl/sram64x4_ctrl.v line 93, instance n02 port gnd not found.
+[WARNING STA-0201] ../rtl/sram64x4_ctrl.v line 93, instance n02 port vdd not found.
+[WARNING STA-0201] ../rtl/sram64x4_ctrl.v line 94, instance n03 port gnd not found.
+[WARNING STA-0201] ../rtl/sram64x4_ctrl.v line 94, instance n03 port vdd not found.
+[WARNING STA-0201] ../rtl/sram64x4_ctrl.v line 95, instance i00 port gnd not found.
+[WARNING STA-0201] ../rtl/sram64x4_ctrl.v line 95, instance i00 port vdd not found.
+[WARNING STA-0201] ../rtl/sram64x4_ctrl.v line 96, instance i01 port gnd not found.
+[WARNING STA-0201] ../rtl/sram64x4_ctrl.v line 96, instance i01 port vdd not found.
+[WARNING STA-0201] ../rtl/sram64x4_ctrl.v line 97, instance i02 port gnd not found.
+[WARNING STA-0201] ../rtl/sram64x4_ctrl.v line 97, instance i02 port vdd not found.
+[WARNING STA-0201] ../rtl/sram64x4_ctrl.v line 98, instance i03 port gnd not found.
+[WARNING STA-0201] ../rtl/sram64x4_ctrl.v line 98, instance i03 port vdd not found.
+[WARNING STA-0201] ../rtl/sram64x4_ctrl.v line 99, instance n10 port gnd not found.
+[WARNING STA-0201] ../rtl/sram64x4_ctrl.v line 99, instance n10 port vdd not found.
+[WARNING STA-0201] ../rtl/sram64x4_ctrl.v line 100, instance n11 port gnd not found.
+[WARNING STA-0201] ../rtl/sram64x4_ctrl.v line 100, instance n11 port vdd not found.
+[WARNING STA-0201] ../rtl/sram64x4_ctrl.v line 101, instance n12 port gnd not found.
+[WARNING STA-0201] ../rtl/sram64x4_ctrl.v line 101, instance n12 port vdd not found.
+[WARNING STA-0201] ../rtl/sram64x4_ctrl.v line 102, instance n13 port gnd not found.
+[WARNING STA-0201] ../rtl/sram64x4_ctrl.v line 102, instance n13 port vdd not found.
+[WARNING STA-0201] ../rtl/sram64x4_ctrl.v line 103, instance i10 port gnd not found.
+[WARNING STA-0201] ../rtl/sram64x4_ctrl.v line 103, instance i10 port vdd not found.
+[WARNING STA-0201] ../rtl/sram64x4_ctrl.v line 104, instance i11 port gnd not found.
+[WARNING STA-0201] ../rtl/sram64x4_ctrl.v line 104, instance i11 port vdd not found.
+[WARNING STA-0201] ../rtl/sram64x4_ctrl.v line 105, instance i12 port gnd not found.
+[WARNING STA-0201] ../rtl/sram64x4_ctrl.v line 105, instance i12 port vdd not found.
+[WARNING STA-0201] ../rtl/sram64x4_ctrl.v line 106, instance i13 port gnd not found.
+[WARNING STA-0201] ../rtl/sram64x4_ctrl.v line 106, instance i13 port vdd not found.
+[WARNING STA-0201] ../rtl/sram64x4_ctrl.v line 109, instance gpre port gnd not found.
+[WARNING STA-0201] ../rtl/sram64x4_ctrl.v line 109, instance gpre port vdd not found.
+[WARNING STA-0201] ../rtl/sram64x4_ctrl.v line 110, instance ipre port gnd not found.
+[WARNING STA-0201] ../rtl/sram64x4_ctrl.v line 110, instance ipre port vdd not found.
+[WARNING STA-0201] ../rtl/sram64x4_ctrl.v line 113, instance gsen port gnd not found.
+[WARNING STA-0201] ../rtl/sram64x4_ctrl.v line 113, instance gsen port vdd not found.
+[WARNING STA-0201] ../rtl/sram64x4_ctrl.v line 116, instance gmux port gnd not found.
+[WARNING STA-0201] ../rtl/sram64x4_ctrl.v line 116, instance gmux port vdd not found.
+[WARNING STA-0201] ../rtl/sram64x4_ctrl.v line 117, instance m0 port gnd not found.
+[WARNING STA-0201] ../rtl/sram64x4_ctrl.v line 117, instance m0 port vdd not found.
+[WARNING STA-0201] ../rtl/sram64x4_ctrl.v line 118, instance m1 port gnd not found.
+[WARNING STA-0201] ../rtl/sram64x4_ctrl.v line 118, instance m1 port vdd not found.
+[WARNING STA-0201] ../rtl/sram64x4_ctrl.v line 119, instance m2 port gnd not found.
+[WARNING STA-0201] ../rtl/sram64x4_ctrl.v line 119, instance m2 port vdd not found.
+[WARNING STA-0201] ../rtl/sram64x4_ctrl.v line 120, instance m3 port gnd not found.
+[WARNING STA-0201] ../rtl/sram64x4_ctrl.v line 120, instance m3 port vdd not found.
+[WARNING STA-0201] ../rtl/sram64x4_ctrl.v line 121, instance im0 port gnd not found.
+[WARNING STA-0201] ../rtl/sram64x4_ctrl.v line 121, instance im0 port vdd not found.
+[WARNING STA-0201] ../rtl/sram64x4_ctrl.v line 122, instance im1 port gnd not found.
+[WARNING STA-0201] ../rtl/sram64x4_ctrl.v line 122, instance im1 port vdd not found.
+[WARNING STA-0201] ../rtl/sram64x4_ctrl.v line 123, instance im2 port gnd not found.
+[WARNING STA-0201] ../rtl/sram64x4_ctrl.v line 123, instance im2 port vdd not found.
+[WARNING STA-0201] ../rtl/sram64x4_ctrl.v line 124, instance im3 port gnd not found.
+[WARNING STA-0201] ../rtl/sram64x4_ctrl.v line 124, instance im3 port vdd not found.
+[WARNING STA-0201] ../rtl/sram64x4_ctrl.v line 127, instance gse0 port gnd not found.
+[WARNING STA-0201] ../rtl/sram64x4_ctrl.v line 127, instance gse0 port vdd not found.
+[WARNING STA-0201] ../rtl/sram64x4_ctrl.v line 128, instance gse1 port gnd not found.
+[WARNING STA-0201] ../rtl/sram64x4_ctrl.v line 128, instance gse1 port vdd not found.
+[WARNING STA-0201] ../rtl/sram64x4_ctrl.v line 129, instance gse2 port gnd not found.
+[WARNING STA-0201] ../rtl/sram64x4_ctrl.v line 129, instance gse2 port vdd not found.
+[WARNING STA-0201] ../rtl/sram64x4_ctrl.v line 130, instance gse3 port gnd not found.
+[WARNING STA-0201] ../rtl/sram64x4_ctrl.v line 130, instance gse3 port vdd not found.
+[WARNING STA-0201] ../rtl/sram64x4_ctrl.v line 133, instance gwd port gnd not found.
+[WARNING STA-0201] ../rtl/sram64x4_ctrl.v line 133, instance gwd port vdd not found.
+[WARNING STA-0201] ../rtl/sram64x4_ctrl.v line 134, instance iwd port gnd not found.
+[WARNING STA-0201] ../rtl/sram64x4_ctrl.v line 134, instance iwd port vdd not found.
+[WARNING STA-0201] ../rtl/sram64x4_ctrl.v line 137, instance rq0 port gnd not found.
+[WARNING STA-0201] ../rtl/sram64x4_ctrl.v line 137, instance rq0 port vdd not found.
+[WARNING STA-0201] ../rtl/sram64x4_ctrl.v line 138, instance rq1 port gnd not found.
+[WARNING STA-0201] ../rtl/sram64x4_ctrl.v line 138, instance rq1 port vdd not found.
+[WARNING STA-0201] ../rtl/sram64x4_ctrl.v line 139, instance rq2 port gnd not found.
+[WARNING STA-0201] ../rtl/sram64x4_ctrl.v line 139, instance rq2 port vdd not found.
+[WARNING STA-0201] ../rtl/sram64x4_ctrl.v line 140, instance rq3 port gnd not found.
+[WARNING STA-0201] ../rtl/sram64x4_ctrl.v line 140, instance rq3 port vdd not found.
+[WARNING ORD-2056] The following 7 liberty cell(s) do not have LEF masters and will be marked as dont-use:
+  PADFC
+  PADGND
+  PADINC
+  PADINOUT
+  PADNC
+  PADOUT
+  PADVDD
+[WARNING IFP-0028] Core area lower left (3.000, 15.000) snapped to (3.000, 36.000).
+[INFO IFP-0001] Added 4 rows of 115 site core.
+[INFO IFP-0100] Die BBox:  (  0.000  0.000 ) ( 351.000 210.000 ) um
+[INFO IFP-0101] Core BBox: (  3.000 36.000 ) ( 348.000 180.000 ) um
+[INFO IFP-0102] Core area:                        49680.000 um^2
+[INFO IFP-0103] Total instances area:             47844.000 um^2
+[INFO IFP-0104] Effective utilization:                0.963
+[INFO IFP-0105] Number of instances:                     82
+[INFO PDN-0001] Inserting grid: core
+[INFO PDN-0500] Runtime: 0.00s
+[INFO PPL-0070] Pin P0[0] placed at (4.50um, 208.80um) instead of (4.50um, 210.00um). Pin was snapped to a routing track, to the manufacturing grid or moved away from blocked region.
+[INFO PPL-0070] Pin P1[0] placed at (34.50um, 208.80um) instead of (34.50um, 210.00um). Pin was snapped to a routing track, to the manufacturing grid or moved away from blocked region.
+[INFO PPL-0070] Pin MUX[0] placed at (16.50um, 208.80um) instead of (16.50um, 210.00um). Pin was snapped to a routing track, to the manufacturing grid or moved away from blocked region.
+[INFO PPL-0070] Pin SAO[0] placed at (94.50um, 208.80um) instead of (94.50um, 210.00um). Pin was snapped to a routing track, to the manufacturing grid or moved away from blocked region.
+[INFO PPL-0070] Pin DQB[0] placed at (106.50um, 208.80um) instead of (106.50um, 210.00um). Pin was snapped to a routing track, to the manufacturing grid or moved away from blocked region.
+[INFO PPL-0070] Pin DQ[0] placed at (109.50um, 208.80um) instead of (109.50um, 210.00um). Pin was snapped to a routing track, to the manufacturing grid or moved away from blocked region.
+[INFO PPL-0070] Pin P0[1] placed at (7.50um, 208.80um) instead of (7.50um, 210.00um). Pin was snapped to a routing track, to the manufacturing grid or moved away from blocked region.
+[INFO PPL-0070] Pin P1[1] placed at (37.50um, 208.80um) instead of (37.50um, 210.00um). Pin was snapped to a routing track, to the manufacturing grid or moved away from blocked region.
+[INFO PPL-0070] Pin MUX[1] placed at (19.50um, 208.80um) instead of (19.50um, 210.00um). Pin was snapped to a routing track, to the manufacturing grid or moved away from blocked region.
+[INFO PPL-0070] Pin SAO[1] placed at (166.50um, 208.80um) instead of (166.50um, 210.00um). Pin was snapped to a routing track, to the manufacturing grid or moved away from blocked region.
+[INFO PPL-0070] Pin DQB[1] placed at (178.50um, 208.80um) instead of (178.50um, 210.00um). Pin was snapped to a routing track, to the manufacturing grid or moved away from blocked region.
+[INFO PPL-0070] Pin DQ[1] placed at (181.50um, 208.80um) instead of (181.50um, 210.00um). Pin was snapped to a routing track, to the manufacturing grid or moved away from blocked region.
+[INFO PPL-0070] Pin P0[2] placed at (10.50um, 208.80um) instead of (10.50um, 210.00um). Pin was snapped to a routing track, to the manufacturing grid or moved away from blocked region.
+[INFO PPL-0070] Pin P1[2] placed at (40.50um, 208.80um) instead of (40.50um, 210.00um). Pin was snapped to a routing track, to the manufacturing grid or moved away from blocked region.
+[INFO PPL-0070] Pin MUX[2] placed at (22.50um, 208.80um) instead of (22.50um, 210.00um). Pin was snapped to a routing track, to the manufacturing grid or moved away from blocked region.
+[INFO PPL-0070] Pin SAO[2] placed at (238.50um, 208.80um) instead of (238.50um, 210.00um). Pin was snapped to a routing track, to the manufacturing grid or moved away from blocked region.
+[INFO PPL-0070] Pin DQB[2] placed at (250.50um, 208.80um) instead of (250.50um, 210.00um). Pin was snapped to a routing track, to the manufacturing grid or moved away from blocked region.
+[INFO PPL-0070] Pin DQ[2] placed at (253.50um, 208.80um) instead of (253.50um, 210.00um). Pin was snapped to a routing track, to the manufacturing grid or moved away from blocked region.
+[INFO PPL-0070] Pin P0[3] placed at (13.50um, 208.80um) instead of (13.50um, 210.00um). Pin was snapped to a routing track, to the manufacturing grid or moved away from blocked region.
+[INFO PPL-0070] Pin P1[3] placed at (43.50um, 208.80um) instead of (43.50um, 210.00um). Pin was snapped to a routing track, to the manufacturing grid or moved away from blocked region.
+[INFO PPL-0070] Pin MUX[3] placed at (25.50um, 208.80um) instead of (25.50um, 210.00um). Pin was snapped to a routing track, to the manufacturing grid or moved away from blocked region.
+[INFO PPL-0070] Pin SAO[3] placed at (310.50um, 208.80um) instead of (310.50um, 210.00um). Pin was snapped to a routing track, to the manufacturing grid or moved away from blocked region.
+[INFO PPL-0070] Pin DQB[3] placed at (322.50um, 208.80um) instead of (322.50um, 210.00um). Pin was snapped to a routing track, to the manufacturing grid or moved away from blocked region.
+[INFO PPL-0070] Pin DQ[3] placed at (325.50um, 208.80um) instead of (325.50um, 210.00um). Pin was snapped to a routing track, to the manufacturing grid or moved away from blocked region.
+[INFO PPL-0070] Pin SAE placed at (28.50um, 208.80um) instead of (28.50um, 210.00um). Pin was snapped to a routing track, to the manufacturing grid or moved away from blocked region.
+[INFO PPL-0070] Pin WDEN placed at (31.50um, 208.80um) instead of (31.50um, 210.00um). Pin was snapped to a routing track, to the manufacturing grid or moved away from blocked region.
+[INFO PPL-0070] Pin PRE_N placed at (49.50um, 208.80um) instead of (49.50um, 210.00um). Pin was snapped to a routing track, to the manufacturing grid or moved away from blocked region.
+[INFO PPL-0070] Pin A[0] placed at (4.50um, 1.20um) instead of (4.50um, 0.00um). Pin was snapped to a routing track, to the manufacturing grid or moved away from blocked region.
+[INFO PPL-0070] Pin A[1] placed at (25.50um, 1.20um) instead of (25.50um, 0.00um). Pin was snapped to a routing track, to the manufacturing grid or moved away from blocked region.
+[INFO PPL-0070] Pin A[2] placed at (46.50um, 1.20um) instead of (46.50um, 0.00um). Pin was snapped to a routing track, to the manufacturing grid or moved away from blocked region.
+[INFO PPL-0070] Pin A[3] placed at (67.50um, 1.20um) instead of (67.50um, 0.00um). Pin was snapped to a routing track, to the manufacturing grid or moved away from blocked region.
+[INFO PPL-0070] Pin A[4] placed at (88.50um, 1.20um) instead of (88.50um, 0.00um). Pin was snapped to a routing track, to the manufacturing grid or moved away from blocked region.
+[INFO PPL-0070] Pin A[5] placed at (109.50um, 1.20um) instead of (109.50um, 0.00um). Pin was snapped to a routing track, to the manufacturing grid or moved away from blocked region.
+[INFO PPL-0070] Pin WE placed at (130.50um, 1.20um) instead of (130.50um, 0.00um). Pin was snapped to a routing track, to the manufacturing grid or moved away from blocked region.
+[INFO PPL-0070] Pin CLK placed at (151.50um, 1.20um) instead of (151.50um, 0.00um). Pin was snapped to a routing track, to the manufacturing grid or moved away from blocked region.
+[INFO PPL-0070] Pin DIN[0] placed at (172.50um, 1.20um) instead of (172.50um, 0.00um). Pin was snapped to a routing track, to the manufacturing grid or moved away from blocked region.
+[INFO PPL-0070] Pin DIN[1] placed at (193.50um, 1.20um) instead of (193.50um, 0.00um). Pin was snapped to a routing track, to the manufacturing grid or moved away from blocked region.
+[INFO PPL-0070] Pin DIN[2] placed at (214.50um, 1.20um) instead of (214.50um, 0.00um). Pin was snapped to a routing track, to the manufacturing grid or moved away from blocked region.
+[INFO PPL-0070] Pin DIN[3] placed at (235.50um, 1.20um) instead of (235.50um, 0.00um). Pin was snapped to a routing track, to the manufacturing grid or moved away from blocked region.
+[INFO PPL-0070] Pin DOUT[0] placed at (256.50um, 1.20um) instead of (256.50um, 0.00um). Pin was snapped to a routing track, to the manufacturing grid or moved away from blocked region.
+[INFO PPL-0070] Pin DOUT[1] placed at (277.50um, 1.20um) instead of (277.50um, 0.00um). Pin was snapped to a routing track, to the manufacturing grid or moved away from blocked region.
+[INFO PPL-0070] Pin DOUT[2] placed at (298.50um, 1.20um) instead of (298.50um, 0.00um). Pin was snapped to a routing track, to the manufacturing grid or moved away from blocked region.
+[INFO PPL-0070] Pin DOUT[3] placed at (319.50um, 1.20um) instead of (319.50um, 0.00um). Pin was snapped to a routing track, to the manufacturing grid or moved away from blocked region.
+[INFO GPL-0001] ---- Initialize GPL Main Data Structures
+[INFO GPL-0002] DBU: 1000
+[INFO GPL-0003] SiteSize: (  3.000 36.000 ) um
+[INFO GPL-0004] CoreBBox: (  3.000 36.000 ) ( 348.000 180.000 ) um
+[INFO GPL-0016] Core area:                   49680.000 um^2
+[INFO GPL-0036] Movable instances area:      47844.000 um^2
+[INFO GPL-0037] Total instances area:        47844.000 um^2
+[INFO GPL-0035] Pin density area adjust:      1733.703 um^2
+[INFO GPL-0032] ---- Initialize Region: Top-level
+[INFO GPL-0006] Number of instances:                82
+[INFO GPL-0007] Movable instances:                  82
+[INFO GPL-0008] Fixed instances:                     0
+[INFO GPL-0009] Dummy instances:                     0
+[INFO GPL-0010] Number of nets:                     98
+[INFO GPL-0011] Number of pins:                    248
+[INFO GPL-0012] Die BBox:       (  0.000  0.000 ) ( 351.000 210.000 ) um
+[INFO GPL-0013] Placement BBox: (  3.000 36.000 ) ( 348.000 180.000 ) um
+[INFO GPL-0014] Region name: top-level.
+[INFO GPL-0015] Region area:                 49680.000 um^2
+[INFO GPL-0017] Fixed instances area:            0.000 um^2
+[INFO GPL-0018] Movable instances area:      49577.703 um^2
+[INFO GPL-0019] Utilization:                    99.794 %
+[INFO GPL-0020] Standard cells area:         49577.703 um^2
+[INFO GPL-0021] Large instances area:            0.000 um^2
+[INFO GPL-0005] ---- Execute Conjugate Gradient Initial Placement.
+[INFO GPL-0051] Source of initial instance position counters:
+	Odb location = 0	Core center = 82	Region center = 0
+[InitialPlace]  Iter: 1 conjugate gradient residual: 0.00000011 HPWL: 14727900
+[InitialPlace]  Iter: 2 conjugate gradient residual: 0.00000007 HPWL: 11585956
+[InitialPlace]  Iter: 3 conjugate gradient residual: 0.00000009 HPWL: 10289574
+[InitialPlace]  Iter: 4 conjugate gradient residual: 0.00000011 HPWL: 9868493
+[InitialPlace]  Iter: 5 conjugate gradient residual: 0.00000011 HPWL: 9746675
+[INFO GPL-0033] ---- Initialize Nesterov Region: Top-level
+[WARNING GPL-0302] Target density 0.6000 is too low for the available free area.
+Automatically adjusting to uniform density 1.0000.
+[INFO GPL-0023] Placement target density:       1.0000
+[INFO GPL-0024] Movable insts average area:    604.606 um^2
+[INFO GPL-0025] Ideal bin area:                604.606 um^2
+[INFO GPL-0026] Ideal bin count:                    82
+[INFO GPL-0027] Total bin area:              49680.000 um^2
+[INFO GPL-0028] Bin count (X, Y):           8 ,      4
+[INFO GPL-0029] Bin size (W * H):      43.125 * 36.000 um
+[INFO GPL-0030] Number of bins:                     32
+[INFO GPL-0084] ---- Execute Nesterov Global Placement.
+[INFO GPL-0031] HPWL: Half-Perimeter Wirelength
+Iteration | Overflow |     HPWL (um) |  HPWL(%) |   Penalty | Group
+---------------------------------------------------------------
+        0 |   0.5706 |  5.878398e+03 |   +0.00% |  4.87e-15 |      
+       10 |   0.4614 |  6.265323e+03 |   +6.58% |  7.93e-15 |      
+       20 |   0.4349 |  6.248009e+03 |   -0.28% |  1.29e-14 |      
+       30 |   0.4355 |  6.252669e+03 |   +0.07% |  2.10e-14 |      
+       40 |   0.4361 |  6.259006e+03 |   +0.10% |  3.43e-14 |      
+       50 |   0.4359 |  6.257445e+03 |   -0.02% |  5.58e-14 |      
+       60 |   0.4349 |  6.253487e+03 |   -0.06% |  9.09e-14 |      
+       70 |   0.4344 |  6.251472e+03 |   -0.03% |  1.48e-13 |      
+       80 |   0.4351 |  6.253236e+03 |   +0.03% |  2.41e-13 |      
+       90 |   0.4354 |  6.256083e+03 |   +0.05% |  3.93e-13 |      
+      100 |   0.4353 |  6.258084e+03 |   +0.03% |  6.40e-13 |      
+      110 |   0.4349 |  6.259734e+03 |   +0.03% |  1.04e-12 |      
+      120 |   0.4343 |  6.262349e+03 |   +0.04% |  1.70e-12 |      
+      130 |   0.4337 |  6.267816e+03 |   +0.09% |  2.77e-12 |      
+      140 |   0.4330 |  6.277449e+03 |   +0.15% |  4.50e-12 |      
+      150 |   0.4317 |  6.296482e+03 |   +0.30% |  7.34e-12 |      
+      160 |   0.4192 |  6.324334e+03 |   +0.44% |  1.20e-11 |      
+      170 |   0.4006 |  6.357489e+03 |   +0.52% |  1.95e-11 |      
+      180 |   0.3817 |  6.416813e+03 |   +0.93% |  3.17e-11 |      
+      190 |   0.3543 |  6.467343e+03 |   +0.79% |  5.17e-11 |      
+      200 |   0.3112 |  6.521821e+03 |   +0.84% |  7.84e-11 |      
+      210 |   0.2741 |  6.515024e+03 |   -0.10% |  1.16e-10 |      
+      220 |   0.2549 |  6.575859e+03 |   +0.93% |  1.70e-10 |      
+      230 |   0.2365 |  6.697724e+03 |   +1.85% |  2.51e-10 |      
+      240 |   0.2144 |  6.779900e+03 |   +1.23% |  3.69e-10 |      
+      250 |   0.1980 |  6.864389e+03 |   +1.25% |  5.44e-10 |      
+      260 |   0.1849 |  6.942948e+03 |   +1.14% |  8.02e-10 |      
+      270 |   0.1585 |  7.008725e+03 |   +0.95% |  1.18e-09 |      
+      280 |   0.1404 |  7.071635e+03 |   +0.90% |  1.74e-09 |      
+      290 |   0.1198 |  7.099855e+03 |   +0.40% |  2.56e-09 |      
+      299 |   0.0978 |  7.145989e+03 |          |  3.77e-09 |      
+---------------------------------------------------------------
+[INFO GPL-1001] Global placement finished at iteration 299
+[INFO GPL-1002] Placed Cell Area            49577.7034
+[INFO GPL-1003] Available Free Area         49680.0000
+[INFO GPL-1004] Minimum Feasible Density        1.0000 (cell_area / free_area)
+[INFO GPL-1006]   Suggested Target Densities:
+[INFO GPL-1007]     - For 90% usage of free space: 1.1088
+[INFO GPL-1008]     - For 80% usage of free space: 1.2474
+[WARNING GPL-1015] High uniform density (>1.00) may cause congestion or legalization issues.
+[INFO GPL-1014] Final placement area: 49577.70 (+0.00%)
+[INFO GPL-1018] Final HPWL (um): 7158.80
+[INFO DPL-0006] Core area: 49680.00 um^2
+[INFO DPL-0007] Movable instances area: 47844.00 um^2
+[INFO DPL-0008] Fixed instances area within core: 0.00 um^2
+[INFO DPL-0009] Utilization: 96.3%
+[INFO DPL-0005] Diamond search max displacement: +/- 500 sites horizontally, +/- 100 rows vertically.
+[INFO DPL-1102] Legalizing using negotiation legalizer.
+[INFO DPL-1103] Negotiation base search window: +/-20 sites horizontally, +/-5 rows vertically 
+	Automatic search window extension enabled.
+	Search window extendable up to the max displacement cap of +/-500 sites, +/-100 rows near walls.
+[INFO DPL-1104] NegotiationLegalizer DRC penalty: 5.
+[INFO DPL-0392] Negotiation cell height distribution (1 unique row-count(s)):
+[INFO DPL-0393]   height 1 row(s): 82 cells
+          |      Total |  Illegal |  Illegal
+Iteration | Violations |    Cells |    Sites
+---------------------------------------------
+        0 |        181 |        33 |       145
+        1 |        109 |        23 |        86
+        2 |         97 |        17 |        74
+        3 |         41 |        11 |        30
+        4 |         43 |        13 |        30
+        5 |         60 |        10 |        50
+        6 |         56 |        12 |        44
+        7 |         47 |         9 |        38
+        8 |         40 |        10 |        30
+        9 |         44 |        12 |        29
+       10 |         27 |         9 |        18
+       20 |         11 |         3 |         8
+       30 |         34 |         8 |        26
+       40 |         12 |         4 |         8
+       50 |         24 |         6 |        18
+       59 |          4 |         2 |         2
+[WARNING DPL-0700] Negotiation phase 1: violations stuck at 4 for 3 consecutive iterations.
+Using old diamond search for 2 remaining illegal cells.
+diamond recovery: recovered 1/2 stuck cells.
+Negotiation phase 2: isolation point active, 1000 iterations.
+      400 |          0 |         0 |         0
+Negotiation phase 2 converged at iteration 0.
+[INFO DPL-0500] Runtime: 0.01s
+Detailed Placement Analysis
+---------------------------------
+legalizer            negotiation
+total moves                 513
+total displacement       4123.2 u
+average displacement       50.3 u
+max displacement          136.1 u
+original HPWL            7158.8 u
+legalized HPWL           9516.9 u
+delta HPWL                   33 %
+
+[INFO DPL-0001] Placed 17 filler instances.
+[INFO DRT-0149] Reading tech and libs.
+
+Units:                1000
+Number of layers:     7
+Number of macros:     33
+Number of vias:       2
+Number of viarulegen: 2
+
+[INFO DRT-0150] Reading design.
+
+Design:                   sram64x4_ctrl
+Die area:                 ( 0 0 ) ( 351000 210000 )
+Number of track patterns: 6
+Number of DEF vias:       0
+Number of components:     99
+Number of terminals:      45
+Number of snets:          2
+Number of nets:           98
+
+[INFO DRT-0167] List of default vias:
+  Layer via2
+    default via: M3_M2
+[INFO DRT-0162] Library cell analysis.
+[INFO DRT-0163] Instance analysis.
+[INFO DRT-0164] Number of unique instances = 20.
+[INFO DRT-0168] Init region query.
+[INFO DRT-0024]   Complete poly.
+[INFO DRT-0024]   Complete cc.
+[INFO DRT-0024]   Complete metal1.
+[INFO DRT-0024]   Complete via1.
+[INFO DRT-0024]   Complete metal2.
+[INFO DRT-0024]   Complete via2.
+[INFO DRT-0024]   Complete metal3.
+[INFO DRT-0033] poly shape region query size = 0.
+[INFO DRT-0033] cc shape region query size = 0.
+[INFO DRT-0033] metal1 shape region query size = 2093.
+[INFO DRT-0033] via1 shape region query size = 0.
+[INFO DRT-0033] metal2 shape region query size = 574.
+[INFO DRT-0033] via2 shape region query size = 0.
+[INFO DRT-0033] metal3 shape region query size = 0.
+[INFO DRT-0165] Start pin access.
+[INFO DRT-0078]   Complete 87 pins.
+[INFO DRT-0081]   Complete 20 unique inst patterns.
+[INFO DRT-0084]   Complete 17 groups.
+#scanned instances     = 99
+#unique  instances     = 20
+#stdCellGenAp          = 47
+#stdCellValidPlanarAp  = 47
+#stdCellValidViaAp     = 47
+#stdCellPinNoAp        = 0
+#stdCellPinCnt         = 205
+#instTermValidViaApCnt = 0
+#macroGenAp            = 0
+#macroValidPlanarAp    = 0
+#macroValidViaAp       = 0
+#macroNoAp             = 0
+[INFO DRT-0166] Complete pin access.
+[INFO DRT-0267] cpu time = 00:00:00, elapsed time = 00:00:00, memory = 157.80 (MB), peak = 157.57 (MB)
+
+[INFO DRT-0157] Number of guides:     290
+
+[INFO DRT-0169] Post process guides.
+[INFO DRT-0176] GCELLGRID X 0 DO 7 STEP 45000 ;
+[INFO DRT-0177] GCELLGRID Y 0 DO 4 STEP 45000 ;
+[INFO DRT-0028]   Complete poly.
+[INFO DRT-0028]   Complete cc.
+[INFO DRT-0028]   Complete metal1.
+[INFO DRT-0028]   Complete via1.
+[INFO DRT-0028]   Complete metal2.
+[INFO DRT-0028]   Complete via2.
+[INFO DRT-0028]   Complete metal3.
+[INFO DRT-0178] Init guide query.
+[INFO DRT-0035]   Complete poly (guide).
+[INFO DRT-0035]   Complete cc (guide).
+[INFO DRT-0035]   Complete metal1 (guide).
+[INFO DRT-0035]   Complete via1 (guide).
+[INFO DRT-0035]   Complete metal2 (guide).
+[INFO DRT-0035]   Complete via2 (guide).
+[INFO DRT-0035]   Complete metal3 (guide).
+[INFO DRT-0036] poly guide region query size = 0.
+[INFO DRT-0036] cc guide region query size = 0.
+[INFO DRT-0036] metal1 guide region query size = 0.
+[INFO DRT-0036] via1 guide region query size = 0.
+[INFO DRT-0036] metal2 guide region query size = 179.
+[INFO DRT-0036] via2 guide region query size = 0.
+[INFO DRT-0036] metal3 guide region query size = 63.
+[INFO DRT-0179] Init gr pin query.
+[INFO DRT-0267] cpu time = 00:00:00, elapsed time = 00:00:00, memory = 157.98 (MB), peak = 157.70 (MB)
+[INFO DRT-0245] skipped writing guide updates to database.
+[INFO DRT-0181] Start track assignment.
+[INFO DRT-0184] Done with 179 vertical wires in 1 frboxes and 63 horizontal wires in 1 frboxes.
+[INFO DRT-0186] Done with 62 vertical wires in 1 frboxes and 28 horizontal wires in 1 frboxes.
+[INFO DRT-0182] Complete track assignment.
+[INFO DRT-0267] cpu time = 00:00:00, elapsed time = 00:00:00, memory = 159.07 (MB), peak = 158.84 (MB)
+[INFO DRT-0187] Start routing data preparation.
+[INFO DRT-0267] cpu time = 00:00:00, elapsed time = 00:00:00, memory = 159.07 (MB), peak = 158.84 (MB)
+[INFO DRT-0194] Start detail routing.
+[INFO DRT-0195] Start 0th optimization iteration.
+    Completing 100% with 5 violations.
+    elapsed time = 00:00:00, memory = 162.45 (MB).
+[INFO DRT-0199]   Number of violations = 5.
+Viol/Layer      metal2 metal3
+Short                4      1
+[INFO DRT-0267] cpu time = 00:00:00, elapsed time = 00:00:00, memory = 176.64 (MB), peak = 323.34 (MB)
+Total wire length = 10689 um.
+Total wire length on LAYER metal1 = 0 um.
+Total wire length on LAYER metal2 = 6591 um.
+Total wire length on LAYER metal3 = 4098 um.
+Total number of vias = 204.
+Up-via summary (total 204):
+
+--------------
+   poly      0
+ metal1      0
+ metal2    204
+--------------
+       204
+
+
+[INFO DRT-0195] Start 1st optimization iteration.
+    Completing 50% with 5 violations.
+    elapsed time = 00:00:00, memory = 176.80 (MB).
+    Completing 100% with 3 violations.
+    elapsed time = 00:00:00, memory = 176.93 (MB).
+[INFO DRT-0199]   Number of violations = 3.
+Viol/Layer      metal2
+Short                3
+[INFO DRT-0267] cpu time = 00:00:00, elapsed time = 00:00:00, memory = 323.38 (MB), peak = 323.34 (MB)
+Total wire length = 10656 um.
+Total wire length on LAYER metal1 = 0 um.
+Total wire length on LAYER metal2 = 6474 um.
+Total wire length on LAYER metal3 = 4182 um.
+Total number of vias = 219.
+Up-via summary (total 219):
+
+--------------
+   poly      0
+ metal1      0
+ metal2    219
+--------------
+       219
+
+
+[INFO DRT-0195] Start 2nd optimization iteration.
+    Completing 20% with 3 violations.
+    elapsed time = 00:00:00, memory = 323.38 (MB).
+    Completing 50% with 3 violations.
+    elapsed time = 00:00:00, memory = 323.39 (MB).
+    Completing 70% with 1 violations.
+    elapsed time = 00:00:00, memory = 323.39 (MB).
+    Completing 100% with 1 violations.
+    elapsed time = 00:00:00, memory = 323.39 (MB).
+[INFO DRT-0199]   Number of violations = 1.
+Viol/Layer      metal2
+Short                1
+[INFO DRT-0267] cpu time = 00:00:00, elapsed time = 00:00:00, memory = 333.27 (MB), peak = 332.97 (MB)
+Total wire length = 10708 um.
+Total wire length on LAYER metal1 = 0 um.
+Total wire length on LAYER metal2 = 6507 um.
+Total wire length on LAYER metal3 = 4201 um.
+Total number of vias = 218.
+Up-via summary (total 218):
+
+--------------
+   poly      0
+ metal1      0
+ metal2    218
+--------------
+       218
+
+
+[INFO DRT-0195] Start 3rd guides tiles iteration.
+    Completing 100% with 0 violations.
+    elapsed time = 00:00:00, memory = 333.27 (MB).
+[INFO DRT-0199]   Number of violations = 0.
+[INFO DRT-0267] cpu time = 00:00:00, elapsed time = 00:00:00, memory = 335.27 (MB), peak = 334.97 (MB)
+Total wire length = 10705 um.
+Total wire length on LAYER metal1 = 0 um.
+Total wire length on LAYER metal2 = 6474 um.
+Total wire length on LAYER metal3 = 4231 um.
+Total number of vias = 223.
+Up-via summary (total 223):
+
+--------------
+   poly      0
+ metal1      0
+ metal2    223
+--------------
+       223
+
+
+[INFO DRT-0198] Complete detail routing.
+Total wire length = 10705 um.
+Total wire length on LAYER metal1 = 0 um.
+Total wire length on LAYER metal2 = 6474 um.
+Total wire length on LAYER metal3 = 4231 um.
+Total number of vias = 223.
+Up-via summary (total 223):
+
+--------------
+   poly      0
+ metal1      0
+ metal2    223
+--------------
+       223
+
+
+[INFO DRT-0267] cpu time = 00:00:00, elapsed time = 00:00:01, memory = 335.27 (MB), peak = 334.97 (MB)
+
+[INFO DRT-0180] Post processing.
+[INFO DRT-0501] Runtime: 1.21s
+die origin in macro lambda: -206 -990.0

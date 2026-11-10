@@ -1,0 +1,78 @@
+# ngspice 출력 중 킷 모델 경고 줄(모델 파라미터가 같이 찍힘)은 빼고 저장함
+$ ngspice -b sae_sweep.spice
+Circuit: * how long after the word line the sense amp may fire: bitslice_tb.spice with tsae swept
+tsae [ns]   DL-DLB at SAE (read 1)   SAO   DL-DLB at SAE (read 0)   SAO
+Circuit: * how long after the word line the sense amp may fire: bitslice_tb.spice with tsae swept
+Doing analysis at TEMP = 27.000000 and TNOM = 27.000000
+Using SPARSE 1.3 as Direct Linear Solver
+No. of Data Rows : 8110
+d1                  =  -7.42495e-04
+s1                  =  5.09598e-08
+d0                  =  -4.65447e-03
+s0                  =  5.73813e-08
+0   -0.000742495   5.09598E-08   -0.00465447   5.73813E-08
+Circuit: * how long after the word line the sense amp may fire: bitslice_tb.spice with tsae swept
+Doing analysis at TEMP = 27.000000 and TNOM = 27.000000
+Using SPARSE 1.3 as Direct Linear Solver
+No. of Data Rows : 8110
+d1                  =  -7.57728e-04
+s1                  =  -3.37605e-08
+d0                  =  -5.14792e-03
+s0                  =  -4.09294e-08
+0.1   -0.000757728   -3.37605E-08   -0.00514793   -4.09294E-08
+Circuit: * how long after the word line the sense amp may fire: bitslice_tb.spice with tsae swept
+Doing analysis at TEMP = 27.000000 and TNOM = 27.000000
+Using SPARSE 1.3 as Direct Linear Solver
+No. of Data Rows : 8110
+d1                  =  -7.82042e-04
+s1                  =  5.06779e-08
+d0                  =  -5.69010e-03
+s0                  =  5.91359e-08
+0.2   -0.000782042   5.06779E-08   -0.0056901   5.91359E-08
+Circuit: * how long after the word line the sense amp may fire: bitslice_tb.spice with tsae swept
+Doing analysis at TEMP = 27.000000 and TNOM = 27.000000
+Using SPARSE 1.3 as Direct Linear Solver
+No. of Data Rows : 8110
+d1                  =  -8.06629e-04
+s1                  =  -3.36387e-08
+d0                  =  -6.20818e-03
+s0                  =  -4.29669e-08
+0.3   -0.000806629   -3.36387E-08   -0.00620818   -4.29669E-08
+Circuit: * how long after the word line the sense amp may fire: bitslice_tb.spice with tsae swept
+Doing analysis at TEMP = 27.000000 and TNOM = 27.000000
+Using SPARSE 1.3 as Direct Linear Solver
+No. of Data Rows : 8110
+d1                  =  1.28701e-02
+s1                  =  -3.06015e-08
+d0                  =  -2.08125e-02
+s0                  =  -4.43133e-08
+0.5   0.0128701   -3.06015E-08   -0.0208125   -4.43133E-08
+Circuit: * how long after the word line the sense amp may fire: bitslice_tb.spice with tsae swept
+Doing analysis at TEMP = 27.000000 and TNOM = 27.000000
+Using SPARSE 1.3 as Direct Linear Solver
+No. of Data Rows : 8110
+d1                  =  2.13295e+00
+s1                  =  5.00000e+00
+d0                  =  -2.07851e+00
+s0                  =  1.67587e-08
+1   2.13295   5   -2.07851   1.67587E-08
+Circuit: * how long after the word line the sense amp may fire: bitslice_tb.spice with tsae swept
+Doing analysis at TEMP = 27.000000 and TNOM = 27.000000
+Using SPARSE 1.3 as Direct Linear Solver
+No. of Data Rows : 8110
+d1                  =  3.54350e+00
+s1                  =  5.00000e+00
+d0                  =  -3.37341e+00
+s0                  =  -4.08444e-09
+1.5   3.5435   5   -3.37341   -4.08444E-09
+Circuit: * how long after the word line the sense amp may fire: bitslice_tb.spice with tsae swept
+Doing analysis at TEMP = 27.000000 and TNOM = 27.000000
+Using SPARSE 1.3 as Direct Linear Solver
+No. of Data Rows : 8110
+d1                  =  4.30029e+00
+s1                  =  5.00000e+00
+d0                  =  -4.15564e+00
+s0                  =  1.46134e-08
+2   4.30029   5   -4.15564   1.46134E-08
+Note: Simulation executed from .control section 
+
