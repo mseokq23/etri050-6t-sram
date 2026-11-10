@@ -61,12 +61,12 @@ cd sram64x4/sim
 bash ../scripts/ctrl_spice.sh
 python3 ../scripts/gen_macro_spice.py -o sram64x4.spice
 python3 ../scripts/gen_tb.py --probe -o macro_tb.spice
-ngspice -b macro_tb.spice > /dev/null 2>&1            # 약 22분
+ngspice -b macro_tb.spice > /dev/null 2>&1            # 약 23분
 python3 ../scripts/check_tb.py macro_tb_out.txt
 python3 ../scripts/timing.py macro_tb_out.txt
 bash ../scripts/corner_iv.sh
 python3 ../scripts/cell_corners.py
-bash ../scripts/run_macro_corners.sh                   # 약 35분
+bash ../scripts/run_macro_corners.sh                   # 약 40분
 
 # 레이아웃 (sram64x4/pnr, sram64x4/layout)
 cd ../pnr && bash run_pnr.sh

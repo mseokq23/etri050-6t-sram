@@ -7,4 +7,6 @@ set -euo pipefail
 S="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
 vlog2Spice -i -l "$ETRI050_STDCELL_SPICE" -o "$S/sim/sram64x4_ctrl.spice" "$S/rtl/sram64x4_ctrl.v" > /dev/null
 sed -i -E 's/\[([0-9]+)\]/_\1/g' "$S/sim/sram64x4_ctrl.spice"
-echo "sim/sram64x4_ctrl.spice: $(grep -c '^X' "$S/sim/sram64x4_ctrl.spice") cells, $(grep -c '^\.subckt' "$S/sim/sram64x4_ctrl.spice") subcircuits"
+n_top=$(awk '/^\.subckt sram64x4_ctrl /{f=1} f && /^X/{n++} f && /^\.ends/{f=0} END{print n}' "$S/sim/sram64x4_ctrl.spice")
+n_sub=$(grep -c '^\.subckt' "$S/sim/sram64x4_ctrl.spice")
+echo "sim/sram64x4_ctrl.spice: sram64x4_ctrl = ${n_top} standard cells, ${n_sub} subcircuits in the file (kit cells + sram64x4_ctrl)"

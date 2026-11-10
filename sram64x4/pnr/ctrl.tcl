@@ -14,7 +14,8 @@ read_liberty $::env(ETRI050_STDCELL_LIB)
 read_verilog ../rtl/sram64x4_ctrl.v
 link_design sram64x4_ctrl
 
-# 5 rows of 36 um, 15 um above and below for the pins
+# core 15 um in from the top / bottom edges (room for the pins); the rows snap to multiples of
+# the 36 um site height -> 4 rows, y 36 .. 180 um
 initialize_floorplan -site core -die_area "0 0 $W $H" -core_area "3 15 [expr {$W - 3}] [expr {$H - 15}]"
 make_tracks
 

@@ -2,7 +2,7 @@
 """Circuit pictures of the part 2 peripheral circuits (sim/periph.spice) for the posts.
 
   python3 sram64x4/docs/circuits.py        (pip install schemdraw)
-    -> docs/img/05/rowdrv.png, 06/pchg_cmux.png, 07/sa.png, 09/wdrv.png
+    -> docs/img/04/rowdrv.png, 06/pchg_cmux.png, 07/sa.png, 09/wdrv.png
   W/L in um, the same numbers as sim/periph.spice
 """
 import os
@@ -174,8 +174,8 @@ def rowdrv(fn):
 
 
 if __name__ == "__main__":
-    rowdrv(out("05", "rowdrv.png"))
+    rowdrv(out("04", "rowdrv.png"))
     pchg_cmux(out("06", "pchg_cmux.png"))
     sa(out("07", "sa.png"))
     wdrv(out("09", "wdrv.png"))
-    print("docs/img/05/rowdrv.png 06/pchg_cmux.png 07/sa.png 09/wdrv.png")
+    print("docs/img/04/rowdrv.png 06/pchg_cmux.png 07/sa.png 09/wdrv.png")

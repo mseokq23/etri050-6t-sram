@@ -30,6 +30,7 @@ MX1 dl dlb nx 0 nfet w=1.2u l=1.8u
 MX2 nx sae 0 0 nfet w=3.6u l=0.6u
 
 .ic v(xc0_0.q)=0 v(xc0_0.qb)=5
+.option noinit
 .control
 echo "tsae [ns]   DL-DLB at SAE (read 1)   SAO   DL-DLB at SAE (read 0)   SAO"
 foreach t 0 0.1 0.2 0.3 0.5 1 1.5 2
